@@ -1,0 +1,8 @@
+<div *ngIf="column!='Actions'" >{{element[column]}}</div>  
+<div *ngIf="column=='Actions'" >
+    <button mat-icon-button>
+    <mat-icon>edit</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon>delete</mat-icon>
+  </button></div> 
