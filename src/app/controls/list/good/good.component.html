@@ -1,8 +1,21 @@
-<div *ngIf="column!='Actions'" >{{element[column]}}</div>  
-<div *ngIf="column=='Actions'" >
+<!--<div *ngIf="column!='Actions'" >{{element[column]}}</div>  -->
+<app-controls [templateCtr]="templateCtr" [data]="dataSource" >
+  <ng-template #templateCtr let-data="data" >
+<app-list [templateList]="templateList" [data]="data" [displayedColumns]="displayedColumns" >
+<ng-template #templateList let-element="element" let-column="column">
+  <div *ngIf="column!= 'Actions'" >
+    {{element}}
+  </div>
+ 
+  <div *ngIf="column== 'Actions'">
     <button mat-icon-button>
-    <mat-icon>edit</mat-icon>
-  </button>
-  <button mat-icon-button>
-    <mat-icon>delete</mat-icon>
-  </button></div> 
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</ng-template>
+</app-list>
+</ng-template>
+</app-controls>

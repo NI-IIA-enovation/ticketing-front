@@ -1,0 +1,34 @@
+@import "../../css/utilities/variables";
+
+mat-form-field.mat-form-field {
+  .mat-form-field-wrapper {
+    margin: 0;
+    padding-bottom: 0;
+    .mat-form-field-flex {
+      margin-top: 0;
+      .mat-form-field-outline {
+        top: 0;
+      }
+      .mat-form-field-infix {
+        border-top: none;
+      }
+      .mat-select-arrow-wrapper {
+        transform: translateY(0);
+      }
+    }
+  }
+  .mat-form-field-label {
+    margin-top: 0 !important;
+  }
+  &.mat-form-field-invalid {
+    .mat-form-field-wrapper {
+      padding-bottom: $spacing-r;
+    }
+  }
+}
+
+#date-picker .mat-form-field-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}

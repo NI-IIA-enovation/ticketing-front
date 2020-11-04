@@ -1,0 +1,49 @@
+@import "variables";
+@import "mixins";
+@import "responsive";
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.grid-container {
+  @include flexbox($direction: column);
+  margin: $neg-spacing-xs;
+  @include bp-small {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @include bp-medium {
+    margin: $neg-spacing-s;
+  }
+}
+
+.grid-element {
+  width: calc(100% - #{$spacing-r});
+  margin: $spacing-xs;
+  @include bp-small {
+    &__small-2 {
+      width: calc((100% - (2 * #{$spacing-r})) / 2);
+    }
+    &__small-3 {
+      width: calc((100% - (3 * #{$spacing-r})) / 3);
+    }
+    &__small-4 {
+      width: calc((100% - (4 * #{$spacing-r})) / 4);
+    }
+  }
+  @include bp-medium {
+    margin: $spacing-s;
+    &__medium-2 {
+      width: calc((100% - (2 * #{$spacing-m})) / 2);
+    }
+    &__medium-3 {
+      width: calc((100% - (3 * #{$spacing-m})) / 3);
+    }
+    &__medium-4 {
+      width: calc((100% - (4 * #{$spacing-m})) / 4);
+    }
+  }
+}

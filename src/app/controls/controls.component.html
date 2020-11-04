@@ -1,24 +1,31 @@
 
-<div class="example-container mat-elevation-z8">
-    <div class="row col-md-8">
-        
-        <div class="col-md-3 **col-sm-12">
-            <button mat-stroked-button color="primary">Nouveau Bien</button>
-            
-        </div>
-        <div class="col-md-3 **col-sm-12"><button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
-           <mat-icon>view_module</mat-icon> Tableau 
-          </button></div>
-          <div class="col-md-3 **col-sm-12"><button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
-           <mat-icon>list</mat-icon> Filtrer
-          </button></div>
-        <div class="col-md-3 **col-sm-12" >
-            <mat-form-field >
-            <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Search">
+
+<section class="ds-section" id="colors-sections">
+ <div class="ds-example-container">
+
+    <div class="ds-example grid-container">
+      <div class="grid-element grid-element__small-4 grid-element__medium-4 ">  <button mat-stroked-button color="primary">Nouveau Bien</button></div>
+      <div class="grid-element grid-element__small-4 grid-element__medium-4 "><button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+        <mat-icon>view_module</mat-icon> Tableau 
+       </button></div>
+      <div class="grid-element grid-element__small-4 grid-element__medium-4 "><button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+        <mat-icon>list</mat-icon> Filtrer
+       </button></div>
+      <div class="grid-element grid-element__small-4 grid-element__medium-4">
+        <div class="ds-example">
+          <mat-form-field appearance="outline">
+            <mat-label>Search</mat-label>
+            <input matInput placeholder="Search" type="text" (keyup)="doFilter($event.target.value)" />
           </mat-form-field>
         </div>
-      </div>
+       </div>
    
-    
-</div>
-<app-list [data]="dataSource"></app-list>
+    </div>
+    <ng-template [ngTemplateOutletContext]="{ data: data}" [ngTemplateOutlet]="templateCtr">
+    </ng-template>
+   
+  </div>
+ 
+</section>
+
+

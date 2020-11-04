@@ -1,0 +1,107 @@
+@import "utilities/responsive";
+@import "utilities/mixins";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: $light-background;
+  color: $text-color;
+  font-family: "Fira Sans";
+  font-weight: 400;
+  @extend .bodySmall;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: calculateRem(16px);
+  @include bp-medium {
+    margin-bottom: calculateRem(24px);
+  }
+}
+
+h1 {
+  font-size: calculateRem(96px);
+}
+
+h2 {
+  font-size: calculateRem(60px);
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  font-size: calculateRem(48px);
+  letter-spacing: 0px;
+}
+
+h4 {
+  font-size: calculateRem(34px);
+  letter-spacing: 0.25px;
+}
+
+h5 {
+  font-size: calculateRem(24px);
+  line-height: calculateRem(32px);
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+h6 {
+  font-size: calculateRem(20px);
+  line-height: calculateRem(26px);
+  letter-spacing: 0.15px;
+}
+
+.subtitle {
+  font-size: calculateRem(16px);
+  letter-spacing: 0.15px;
+}
+
+.subtitleSmall {
+  font-size: calculateRem(14px);
+  letter-spacing: 0.1px;
+}
+
+.body {
+  font-size: calculateRem(16px);
+  letter-spacing: 0.5px;
+}
+
+.bodySmall {
+  font-size: calculateRem(14px);
+  letter-spacing: 0.25px;
+  line-height: calculateRem(18px);
+}
+
+.caption {
+  font-size: calculateRem(12px);
+  letter-spacing: 0.4px;
+}
+
+p {
+  @extend .bodySmall;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.accent-color {
+  color: $accent;
+}
+
+.width-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+a {
+  cursor: pointer;
+}

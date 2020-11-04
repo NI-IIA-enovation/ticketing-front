@@ -1,0 +1,297 @@
+@import "../../css/utilities/variables";
+@import "../../css/utilities/mixins";
+@import "../../css/utilities/responsive";
+
+#step-money {
+  background: white;
+  margin-top: $spacing-r;
+  border-radius: 0 0 $basic-radius $basic-radius;
+  @include bp-medium {
+    margin-top: $spacing-m;
+  }
+}
+
+#step-money-result {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: $accent;
+  color: white;
+  padding: $spacing-r;
+  border-radius: 0 0 $basic-radius $basic-radius;
+  @include bp-medium {
+    padding: $spacing-m;
+  }
+  .title {
+    font-size: calculateRem(20px);
+  }
+  .result {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: calculateRem(20px);
+    @include bp-small {
+      flex-direction: row;
+      align-items: center;
+    }
+    span + span {
+      margin: $spacing-xs 0 0 0;
+      @include bp-small {
+        margin: 0 0 0 $spacing-m;
+        position: relative;
+        &:before {
+          display: inline-block;
+          content: "";
+          height: calculateRem(16px);
+          width: 1px;
+          background: white;
+          position: absolute;
+          left: -12px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    small {
+      font-size: 60%;
+    }
+  }
+}
+
+#step-money-details {
+  padding: $spacing-r $spacing-r 0 $spacing-r;
+  @include bp-medium {
+    padding: $spacing-m $spacing-m 0 $spacing-m;
+  }
+  > div {
+    padding: $spacing-r 0;
+    @include bp-medium {
+      padding: $spacing-m 0;
+    }
+    &:not(:last-child) {
+      border-bottom: $basic-border;
+    }
+  }
+  .products-reduction {
+    .reduction-total {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      .btn-link {
+        &.btn-less {
+          display: none;
+        }
+      }
+    }
+    .reduction-details {
+      display: none;
+    }
+    &.show-details {
+      .reduction-total {
+        .btn-link {
+          &.btn-more {
+            display: none;
+          }
+          &.btn-less {
+            display: inline-block;
+          }
+        }
+      }
+      .reduction-details {
+        display: block;
+        border-left: $basic-border;
+        margin: $spacing-xs 0 0 0;
+        padding: 0 0 0 $spacing-xs;
+        li {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          list-style-type: none;
+          color: $mid-gray;
+          & + li {
+            margin-top: $spacing-xs;
+          }
+        }
+      }
+    }
+  }
+  .commission {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .commission-action {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .slider-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: $spacing-m;
+        span {
+          color: $mid-gray;
+        }
+        .mat-slider {
+          margin: 0 $spacing-xs;
+        }
+      }
+    }
+  }
+  .final-options {
+    &.is-summary {
+      padding: 0 0 $spacing-r 0;
+      @include bp-medium {
+        padding: 0 0 $spacing-m 0;
+      }
+    }
+    .internet-payment {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      .mat-checkbox-label {
+        display: inline-block;
+        max-width: calculateRem(215px);
+        @include bp-medium {
+          max-width: inherit;
+        }
+      }
+    }
+
+    .urgence-action {
+      margin-top: $spacing-xs;
+      .mat-checkbox {
+        margin-right: $spacing-xxs;
+      }
+    }
+    .promo-reduction {
+      margin-top: $spacing-s;
+      display: flex;
+      flex-direction: column;
+      @include bp-medium {
+        flex-direction: row;
+        align-items: center;
+      }
+      .title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        app-tooltip {
+          margin-left: $spacing-xxs;
+        }
+        .valid-icon {
+          display: none;
+          color: $accent;
+          margin: 0 $spacing-xs 0 calculateRem(2px);
+        }
+        .valid-promo-code {
+          display: none;
+        }
+      }
+      .result {
+        display: none;
+      }
+      .form-container {
+        width: 100%;
+        @include bp-medium {
+          display: flex;
+          flex-direction: row;
+          width: auto;
+        }
+        .mat-form-field {
+          display: block;
+          margin: $spacing-xs 0 0 0;
+          @include bp-medium {
+            margin: 0 0 0 $spacing-xs;
+          }
+        }
+        button {
+          display: block;
+          margin: $spacing-xs 0 0 0;
+          width: 100%;
+          @include bp-medium {
+            margin: 0 0 0 $spacing-xs;
+          }
+        }
+        .error-msg {
+          display: none;
+          margin: $spacing-xs 0 0 0;
+          color: $danger;
+          flex: 2 0 auto;
+          @include bp-medium {
+            margin: $spacing-s 0 0 $spacing-xs;
+          }
+        }
+      }
+      &.valid {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include bp-medium {
+          justify-content: flex-start;
+        }
+        .title .valid-promo-code {
+          display: block;
+          margin-left: $spacing-xxs;
+        }
+        .result {
+          display: block;
+          @include bp-medium {
+            order: 99;
+            flex-grow: 2;
+            text-align: right;
+          }
+        }
+        .form-container {
+          display: none;
+        }
+      }
+      &.invalid {
+        .form-container {
+          .error-msg {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
+
+#product-list {
+  margin: 0;
+  padding: 0 0 $spacing-r 0;
+  border-bottom: $basic-border;
+  list-style-type: none;
+  @include bp-medium {
+    padding: 0 0 $spacing-m 0;
+  }
+  .product-list--element {
+    @include flexbox($justify: space-between, $wrap: wrap);
+    .btn-link {
+      margin-left: $spacing-xs;
+    }
+    & + .product-list--element {
+      margin-top: $spacing-xs;
+    }
+  }
+}
+
+#list-details {
+  display: block;
+  border-left: $basic-border;
+  margin: $spacing-xs 0 0 0;
+  padding: 0 0 0 $spacing-xs;
+  flex: 0 0 100%;
+  list-style-type: none;
+  .list-details--element {
+    @include flexbox($justify: space-between);
+    color: $mid-gray;
+    & + .list-details--element {
+      margin-top: $spacing-xs;
+    }
+  }
+}

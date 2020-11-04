@@ -1,0 +1,92 @@
+@import "../../css/utilities/variables";
+@import "../../css/utilities/mixins";
+
+.certiorder {
+  .mat-horizontal-stepper-header-container {
+    max-width: calculateRem(1000px);
+    margin: 0 $spacing-m;
+  }
+  .mat-horizontal-stepper-header {
+    position: relative;
+    background: transparent;
+    z-index: 1;
+    &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: rgba(0, 0, 0, 0.04);
+      @include transition(0.2);
+      z-index: -1;
+    }
+    .mat-step-icon {
+      margin-right: 0;
+      @include bp-medium {
+        margin-right: $spacing-xs;
+      }
+      .mat-step-icon-content {
+        display: none;
+      }
+    }
+    .mat-step-label {
+      min-width: auto;
+      .icon {
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: calculateRem(36px);
+        transform: translate(-50%, -50%);
+        font-size: $spacing-s;
+      }
+      .label {
+        display: none;
+        @include bp-medium {
+          display: block;
+        }
+      }
+    }
+    &:hover {
+      background: transparent;
+      &:after {
+        height: 100%;
+      }
+    }
+    &[ng-reflect-active="true"],
+    &[ng-reflect-state="edit"]:hover {
+      .mat-step-label {
+        .label {
+          color: $accent;
+        }
+      }
+      .mat-step-icon {
+        background: $accent;
+      }
+    }
+    &[ng-reflect-state="edit"] {
+      .mat-step-label {
+        .icon {
+          display: none;
+        }
+        .label {
+          color: $primary;
+        }
+      }
+      .mat-step-icon {
+        background: $primary;
+        .mat-step-icon-content {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+// mat-step-header .mat-step-icon-not-touched span,
+// mat-step-header .mat-step-icon span,
+// mat-step-header .mat-step-icon-not-touched .mat-icon,
+// mat-step-header .mat-step-icon .mat-icon {
+//   display: none;
+// }

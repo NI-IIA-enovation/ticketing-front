@@ -1,0 +1,63 @@
+// Pixel to Rem
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+// Transition
+@mixin transition($duree: 0.4, $effet: ease-in-out) {
+  transition: $duree + s all $effet;
+}
+
+// FLEXBOX
+@mixin flexbox($direction: row, $justify: flex-start, $align-items: stretch, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align-items;
+  flex-wrap: $wrap;
+}
+
+// Buttons
+@mixin button($background, $color, $border, $before-background, $hover-text-color, $hover-border-color) {
+  position: relative;
+  font-size: calculateRem(14px);
+  line-height: calculateRem(18px);
+  padding: $spacing-s $spacing-m;
+  background: $background;
+  border: $border;
+  border-radius: $basic-radius;
+  color: $color;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  &:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    left: 0;
+    top: 0;
+    background: $before-background;
+    @include transition(0.2);
+    z-index: -1;
+  }
+  &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    color: $hover-text-color;
+    border-color: $hover-border-color;
+    &:before {
+      height: 100%;
+    }
+  }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}
+
+// @mixin rem($propertie, $value) {
+//   #{$propertie}: $value;
+//   #{$propertie}: calculateRem($value);
+// }

@@ -1,0 +1,143 @@
+@import "../../css/utilities/variables";
+@import "../../css/utilities/mixins";
+@import "../../css/utilities/responsive";
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  // margin: $neg-spacing-xs;
+  @include bp-small {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: $neg-spacing-xs;
+  }
+  @include bp-medium {
+    margin: $neg-spacing-s;
+  }
+}
+
+.option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  // .grid-4 & {
+  //   @include bp-small {
+  //     width: calc((100% - 64px) / 4);
+  //   }
+  //   @include bp-medium {
+  //     width: calc((100% - 96px) / 4);
+  //   }
+  // }
+  .options-container & {
+    position: relative;
+    cursor: pointer;
+    padding: $spacing-r;
+    border-radius: $basic-radius;
+    border: $basic-border;
+    margin: $spacing-xs;
+    @include bp-small {
+      flex-direction: column;
+      justify-content: center;
+    }
+    @include bp-medium {
+      margin: $spacing-s;
+      padding: $spacing-m;
+    }
+    @include bp-large {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: rgba(0, 0, 0, 0.04);
+      @include transition(0.2);
+    }
+    &:after {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      content: "\f00c";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: calculateRem(10px);
+      color: white;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: calculateRem(20px);
+      height: calculateRem(20px);
+      transform: translate(+50%, -50%);
+      background: $accent;
+      border-radius: 50%;
+      opacity: 0;
+      @include transition(0.2);
+    }
+    &:focus,
+    &:hover,
+    &.selected {
+      border-color: $mid-gray;
+      &:before {
+        height: 100%;
+      }
+    }
+    &.selected {
+      border: 2px solid $accent;
+      &:after {
+        opacity: 1;
+      }
+    }
+    &.free-service {
+      cursor: inherit;
+      &:not(.selected) {
+        opacity: 0.5;
+        &:hover:before,
+        &:focus:before {
+          height: 0;
+        }
+      }
+    }
+  }
+  picture {
+    display: flex;
+    width: calculateRem(45px);
+    text-align: center;
+    margin: 0 $spacing-m 0 0;
+    @include bp-small {
+      margin: 0 0 $spacing-r 0;
+    }
+    @include bp-large {
+      margin: 0 $spacing-m 0 0;
+    }
+    img {
+      display: inline-block;
+      margin: auto;
+      height: calculateRem(35px);
+      @include bp-small {
+        height: calculateRem(40px);
+      }
+    }
+  }
+  p {
+    margin: 0;
+    text-align: center;
+    @include bp-large {
+      text-align: left;
+    }
+  }
+  app-tooltip {
+    margin-left: $spacing-xs;
+  }
+  .tooltip-trigger {
+    margin-left: $spacing-xs;
+    color: $mid-gray;
+  }
+}

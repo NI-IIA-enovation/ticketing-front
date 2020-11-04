@@ -1,0 +1,52 @@
+@import "../../css/utilities/variables";
+
+mat-form-field.mat-form-field-type-mat-select {
+  .mat-form-field-wrapper {
+    margin: 0;
+    padding-bottom: 0;
+    .mat-form-field-flex {
+      margin-top: 0;
+      .mat-form-field-outline {
+        top: 0;
+      }
+      .mat-form-field-infix {
+        border-top: none;
+      }
+      .mat-select-arrow-wrapper {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+.select-container {
+  display: flex;
+  &.horizontal-select-container {
+    align-items: center;
+    label {
+      margin: 0 $spacing-xs 0 0;
+    }
+  }
+  &.vertical-select-container {
+    flex-direction: column;
+    align-items: flex-start;
+    label {
+      margin: 0 0 $spacing-xs 0;
+    }
+  }
+}
+
+.big-select-option {
+  height: auto !important;
+}
+
+.selected {
+  .mat-form-field-appearance-outline {
+    .mat-form-field-outline-start,
+    .mat-form-field-outline-gap,
+    .mat-form-field-outline-end {
+      border-width: 2px;
+      border-color: $accent;
+    }
+  }
+}
