@@ -1,0 +1,36 @@
+@import 'variables';
+
+@mixin bp-extralarge {
+  @media screen and (min-width: map-get($grid-breakpoints, xl)) {
+    @content;
+  }
+}
+
+@mixin bp-large {
+  @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media screen and (min-width: map-get($grid-breakpoints, md)) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media screen and (min-width: map-get($grid-breakpoints, sm)) {
+    @content;
+  }
+}
+
+@mixin bp-extrasmall {
+  @media screen and (min-width: map-get($grid-breakpoints, xs)) {
+    @content;
+  }
+}
+// to set breakpoints :
+// element {
+//   @include bp-small {
+//   }
+// }

@@ -1,0 +1,114 @@
+mat-dialog-container.mat-dialog-container {
+  border-radius: $basic-radius;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  padding: 0;
+}
+
+.full-screen-dialog {
+  max-width: calc(100% - 48px) !important;
+}
+
+// No padding dialog modal
+.no-padding-dialog {
+  .mat-dialog-container {
+    padding: 0;
+    background: none;
+  }
+}
+
+.no-shadow-dialog .mat-dialog-container {
+  box-shadow: none;
+}
+
+#dialog-header {
+  padding: $spacing-r;
+  @include bp-medium {
+    padding: $spacing-m;
+  }
+  h5 {
+    @include flexbox($direction: column);
+    color: $primary;
+    text-align: center;
+    margin: 0;
+    @include bp-small {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    img,
+    fa-icon {
+      margin: 0 0 $spacing-s 0;
+      @include bp-small {
+        margin: 0 $spacing-r 0 0;
+      }
+    }
+    img {
+      height: calculateRem(30px);
+    }
+  }
+}
+
+#dialog-intro {
+  text-align: center;
+  margin: 0 0 $spacing-m 0;
+  padding: 0 $spacing-r;
+  @include bp-medium {
+    padding: 0 $spacing-m;
+  }
+}
+
+#dialog-content {
+  padding: 0 $spacing-r;
+  @include bp-medium {
+    padding: 0 $spacing-m;
+  }
+}
+
+#dialog-footer {
+  @include flexbox($align-items: center, $justify: center);
+  padding: $spacing-r;
+  border-top: $basic-border;
+  margin-top: $spacing-m;
+  @include bp-medium {
+    padding: $spacing-m;
+  }
+  button + button {
+    margin-left: $spacing-r;
+  }
+}
+
+#dialog-confirm {
+  padding: $spacing-r;
+  text-align: center;
+  max-width: calculateRem(350px);
+  @include bp-medium {
+    padding: $spacing-m;
+  }
+  picture {
+    display: flex;
+    background: $accent;
+    height: calculateRem(60px);
+    width: calculateRem(60px);
+    border-radius: calculateRem(60px);
+    margin: 0 auto $spacing-r;
+    fa-icon {
+      color: white;
+      font-size: calculateRem(18px);
+      margin: auto;
+    }
+  }
+  h6,
+  p {
+    text-align: center;
+  }
+  p {
+    margin: 0;
+  }
+  .btn {
+    margin-top: $spacing-r;
+    @include bp-medium {
+      margin-top: $spacing-m;
+    }
+  }
+}

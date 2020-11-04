@@ -1,0 +1,55 @@
+@import "mixins";
+@import "../../theme";
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// Value
+$xxs: calculateRem(4px);
+$xs: calculateRem(8px);
+$s: calculateRem(12px);
+$r: calculateRem(16px);
+$m: calculateRem(24px);
+$l: calculateRem(48px);
+$xl: calculateRem(60px);
+$xxl: calculateRem(72px);
+
+// Positive spacing
+$spacing-xxs: $xxs;
+$spacing-xs: $xs;
+$spacing-s: $s;
+$spacing-r: $r;
+$spacing-m: $m;
+$spacing-l: $l;
+$spacing-xl: $xl;
+$spacing-xxl: $xxl;
+
+// Negative spacing
+$neg-spacing-xxs: -$xxs;
+$neg-spacing-xs: -$xs;
+$neg-spacing-s: -$s;
+$neg-spacing-r: -$r;
+$neg-spacing-m: -$m;
+$neg-spacing-l: -$l;
+$neg-spacing-xl: -$xl;
+$neg-spacing-xxl: -$xxl;
+
+$grid-small-2: 2 * $r;
+$grid-small-3: 3 * $r;
+$grid-small-4: 4 * $r;
+
+$grid-medium-2: 2 * $m;
+$grid-medium-3: 3 * $m;
+$grid-medium-4: 4 * $m;
+
+$link-hover-decoration: none;
+
+$basic-border: 1px solid $light-gray;
+
+$small-dialog-width: calculateRem(500px);
+$medium-dialog-width: calculateRem(700px);

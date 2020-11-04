@@ -1,0 +1,92 @@
+@import "../../css/utilities/variables";
+@import "../../css/utilities/mixins";
+
+button {
+  cursor: pointer;
+}
+
+mat-stroked-button {
+  &.mat-stroked-button {
+    border-radius: $basic-radius;
+  }
+}
+
+// White liseret button
+.btn-invert.mat-stroked-button[_ngcontent-c18]:not([disabled]) {
+  border-color: white;
+  color: white;
+}
+
+.btn-link {
+  border: none;
+  padding: 0;
+  background: none;
+  line-height: inherit;
+  text-decoration: underline;
+  &:before {
+    display: none;
+  }
+  &:not([disabled]):hover,
+  &:not([disabled]):focus {
+    color: $accent;
+  }
+}
+
+.btn {
+  @include button(
+    $background: transparent,
+    $color: $text-color,
+    $border: $basic-border,
+    $before-background: $extralight-gray,
+    $hover-text-color: $text-color,
+    $hover-border-color: $light-gray
+  );
+}
+
+.btn-invert {
+  @include button(
+    $background: transparent,
+    $color: white,
+    $border: 1px solid white,
+    $before-background: white,
+    $hover-text-color: $accent,
+    $hover-border-color: $light-gray
+  );
+}
+
+.btn-primary {
+  @include button(
+    $background: $primary,
+    $color: white,
+    $border: 1px solid $primary,
+    $before-background: $primary-darken,
+    $hover-text-color: white,
+    $hover-border-color: $primary
+  );
+}
+
+.btn-accent {
+  @include button(
+    $background: $accent,
+    $color: white,
+    $border: 1px solid $accent,
+    $before-background: $accent-darken,
+    $hover-text-color: white,
+    $hover-border-color: $accent
+  );
+}
+
+.btn-warning {
+  @include button(
+    $background: $warning,
+    $color: white,
+    $border: 1px solid $warning,
+    $before-background: $warning-darken,
+    $hover-text-color: white,
+    $hover-border-color: $warning
+  );
+}
+
+.btn-big {
+  padding: $spacing-m;
+}

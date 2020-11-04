@@ -1,0 +1,21 @@
+@import "../../css/utilities/mixins";
+
+.mat-checkbox {
+  .mat-checkbox-frame {
+    border-width: 1px;
+    border-color: $light-gray;
+  }
+  .mat-checkbox-layout {
+    white-space: initial;
+    .mat-checkbox-label {
+      line-height: calculateRem(19px);
+    }
+  }
+}
+
+.checkbox-container {
+  @include flexbox($direction: column);
+  .mat-checkbox + .mat-checkbox {
+    margin-top: $spacing-s;
+  }
+}

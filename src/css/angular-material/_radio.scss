@@ -1,0 +1,39 @@
+@import "../../css/utilities/variables";
+
+.mat-radio-button {
+  .mat-radio-label-content {
+    white-space: initial;
+    line-height: inherit;
+  }
+  .mat-radio-outer-circle {
+    border-width: 1px;
+    border-color: $light-gray;
+  }
+}
+
+mat-radio-group.horizotal-mat-radio-group {
+  .mat-radio-button:not(:last-child) {
+    margin: 0 $spacing-r 0 0;
+    @include bp-medium {
+      margin: 0 $spacing-m 0 0;
+    }
+  }
+}
+
+mat-radio-group.vertical-mat-radio-group {
+  @include flexbox($direction: column, $align-items: flex-start);
+  .mat-radio-button:not(:last-child) {
+    margin: 0 0 $spacing-s 0;
+  }
+}
+
+// .date-element {
+.mat-radio-button.date-element {
+  display: block;
+  .mat-radio-label {
+    width: 100%;
+  }
+  .mat-radio-label-content {
+    flex-grow: 2;
+  }
+}

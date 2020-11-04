@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
-import { PeriodicElement, data } from '../services/data';
+import { Component, Input, OnInit } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-controls',
@@ -8,14 +8,14 @@ import { PeriodicElement, data } from '../services/data';
   styleUrls: ['./controls.component.scss']
 })
 export class ControlsComponent implements OnInit {
-  dataSource = new MatTableDataSource<PeriodicElement>(data);
-
+  @Input() data: any;
+  @Input() templateCtr: any;
   constructor() { }
 
   ngOnInit(): void {
   }
  public doFilter = (value: string) => {
-    this.dataSource.filter = value.trim().toLocaleLowerCase();
+    this.data.filter = value.trim().toLocaleLowerCase();
   }
 }
 

@@ -1,0 +1,21 @@
+@import "../../css/utilities/variables";
+
+.mat-menu-panel {
+  button:focus,
+  button:hover {
+    outline: none;
+  }
+  .mat-menu-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .ng-fa-icon {
+      margin-right: $spacing-xs;
+      color: $mid-gray;
+    }
+  }
+}
+
+.mat-menu-panel.menu-langage {
+  min-width: inherit;
+}

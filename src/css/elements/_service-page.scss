@@ -1,0 +1,98 @@
+@import "../../css/utilities/variables";
+@import "../../css/utilities/mixins";
+@import "../../css/utilities/responsive";
+
+.service-page {
+  flex-grow: 2;
+  width: 100%;
+  max-width: 1048px; // 1000px + 24px margin from stepper and all angular material stuff
+  margin: 0 auto;
+  padding: 0 $spacing-m;
+  text-align: center;
+  header {
+    padding: $spacing-m 0 0 0;
+    @include bp-medium {
+      position: relative;
+    }
+  }
+  h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: calculateRem(32px);
+    line-height: calculateRem(42px);
+    color: $primary;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 0 $spacing-m 0;
+    width: 100%;
+    @include bp-medium {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      color: white;
+    }
+    &:before {
+      display: block;
+      content: "";
+      height: 30px;
+      width: 100%;
+      margin-bottom: $spacing-xs;
+      @include bp-medium {
+        height: 40px;
+      }
+    }
+  }
+
+  .service-page-banner {
+    display: block;
+    position: relative;
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(51, 51, 102, 0.78) 0%, rgba(142, 198, 64, 0.75) 100%);
+      opacity: 0.65;
+      border-radius: $basic-radius $basic-radius 0 0;
+      z-index: 1;
+    }
+    img {
+      display: block;
+      border-radius: $basic-radius $basic-radius 0 0;
+      width: 100%;
+    }
+  }
+
+  .content {
+    background: white;
+    border-radius: 0 0 $basic-radius $basic-radius;
+    padding: $spacing-r;
+    @include bp-medium {
+      padding: $spacing-m;
+    }
+    h2 {
+      font-size: calculateRem(16px);
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      text-align: left;
+      color: $primary;
+    }
+    p {
+      text-align: left;
+    }
+    .btn-big {
+      display: block;
+      margin-top: $spacing-r;
+      @include bp-medium {
+        display: inline-block;
+        margin-top: $spacing-m;
+      }
+    }
+  }
+}

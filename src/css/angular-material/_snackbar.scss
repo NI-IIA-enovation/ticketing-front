@@ -1,0 +1,72 @@
+@import "../../css/utilities/variables";
+@import "../../css/utilities/mixins";
+
+snack-bar-container.mat-snack-bar-container {
+  background: white;
+  position: relative;
+  color: $text-color;
+  &:before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: calculateRem(4px);
+    border-radius: $basic-radius 0 0 $basic-radius;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    .ng-fa-icon {
+      font-size: calculateRem(16px);
+      animation: shake-lr 0.7s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+    }
+    .content {
+      position: relative;
+      margin-left: calculateRem(32px);
+      &:before {
+        display: block;
+        content: "";
+        position: absolute;
+        left: -16px;
+        top: -3px;
+        width: 1px;
+        height: 24px;
+        animation: none;
+      }
+      p {
+        em {
+          font-weight: 600;
+          font-style: normal;
+        }
+        &:first-child {
+          margin-top: 0;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+snack-bar-container.mat-snack-bar-container.snackbar-success {
+  &:before {
+    background: $accent;
+  }
+  .container {
+    .ng-fa-icon {
+      color: $accent;
+    }
+    .content {
+      &:before {
+        background: $accent;
+      }
+      em {
+        color: $accent;
+      }
+    }
+  }
+}

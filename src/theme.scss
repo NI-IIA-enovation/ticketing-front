@@ -1,0 +1,104 @@
+@import "~@angular/material/theming";
+
+$my-app-accent: (
+  50: #f1f8e8,
+  100: #ddeec6,
+  200: #c7e3a0,
+  300: #b0d779,
+  400: #9fcf5d,
+  500: #8ec640,
+  600: #86c03a,
+  700: #7bb932,
+  800: #71b12a,
+  900: #5fa41c,
+  A100: #ecffdc,
+  A200: #d1ffa9,
+  A400: #b5ff76,
+  A700: #a7ff5d,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+$my-app-primary: (
+  50: #e7e7ed,
+  100: #c2c2d1,
+  200: #9999b3,
+  300: #707094,
+  400: #52527d,
+  500: #333366,
+  600: #2e2e5e,
+  700: #272753,
+  800: #202049,
+  900: #141438,
+  A100: #7777ff,
+  A200: #4444ff,
+  A400: #1111ff,
+  A700: #0000f6,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff
+  )
+);
+
+$warning: #ea9c57;
+$warning-darken: #d39055;
+$info: #5795ea;
+$info-darken: #427ccb;
+
+// Export usefull colors
+$light-background: #f3f3f3;
+$text-color: rgba(0, 0, 0, 0.87);
+$extralight-gray: rgba(0, 0, 0, 0.04);
+$light-gray: rgba(0, 0, 0, 0.12);
+$mid-gray: rgba(0, 0, 0, 0.54);
+$overlay: rgba(0, 0, 0, 0.32);
+
+// FONTS
+$custom-typography: mat-typography-config(
+  $font-family: "Fira Sans"
+);
+
+// BORDER RADIUS
+$basic-radius: calculateRem(5px);
+
+$my-app-primary: mat-palette($my-app-primary);
+$my-app-accent: mat-palette($my-app-accent, 500, 900, A100);
+$my-app-warn: mat-palette($mat-deep-orange);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
+@include mat-core($custom-typography);
+
+$primary: mat-color($my-app-primary);
+$primary-darken: map-get($my-app-primary, 900);
+$accent: mat-color($my-app-accent);
+$accent-darken: map-get($my-app-accent, 900);
+$danger: mat-color($my-app-warn);
+
+$link-color: $accent; // set link color based on the used material theme
+$link-hover-color: currentColor;
