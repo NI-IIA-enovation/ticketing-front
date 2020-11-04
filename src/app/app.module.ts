@@ -23,6 +23,7 @@ import { MatTableResponsiveModule } from './controls/list/mat-table-responsive/m
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatBadgeModule} from '@angular/material/badge';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +34,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   ],
   imports: [
     BrowserModule,
+    MatBadgeModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CdkTableModule,

@@ -9,7 +9,7 @@ import { MatTableDataSource } from '@angular/material/table';
 export class GoodComponent implements OnInit {
   @ViewChild('templateList') templateList: TemplateRef<any>;
   @ViewChild('templateCtr') templateCtr: TemplateRef<any>;
-  displayedColumns: string[] = ['name', 'user', 'weight', 'Actions'];
+  displayedColumns: string[] = ['name',  'user', 'visite','notif', 'deadline', 'priority', 'status', 'actions'];
   dataSource = new MatTableDataSource<PeriodicElement>(data);
 
 

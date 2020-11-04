@@ -1,4 +1,35 @@
+@media (min-width: 768px) {
+.control {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after the columns */
+.controls{
+  display: table;
+  clear: both;
+  width: 80%;
+  margin-bottom: 20px;
+
+}}
 @media (max-width: 768px) {
+  .control:nth-of-type(n+1){
+    float: left;
+    width:100%;
+  }
+  .control:nth-of-type(n+2){
+    float: left;
+    width: 33.33%;
+  }
+ 
+  /* Clear floats after the columns */
+  .controls{
+    display: table;
+    clear: both;
+    width: 100%;
+    margin-bottom: 20px;
+  
+  }
     .mat-table[matTableResponsive] {
       .mat-header-row {
         display: flex;
@@ -29,7 +60,7 @@
   
       .mat-row {
         height: auto;
-  
+        border-top: 1px solid #777;
         td.mat-cell:not(.mat-column-actions) {
           display: grid;
          // grid-template-columns: 50% 50%;
@@ -46,12 +77,22 @@
             text-align: left;
           }
         }
-  
+       
+        td:nth-of-type(n+2){
+          
+          display: inline-block !important;
+          width: 25%;
+        }
+        td:nth-of-type(n+6){
+       
+          width:50%;
+        }
         td.mat-column-actions {
-          display: flex;
-          justify-content: center;
+          display: none !important;
+          justify-content: center !important;
           padding: 0 0.5rem;
-  
+          width:100% !important;
+          border-bottom: 1px solid #777 !important;
           & > button {
             margin: 0.5rem 0;
           }
