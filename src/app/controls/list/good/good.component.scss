@@ -1,8 +1,10 @@
 .span-h{
     display: block;display: block;font-size: 18px;color: cornflowerblue;
+    font-family: system-ui;
 }
 .span-h2{
     font-size: 11px;color: #777;
+    font-family: system-ui;
 }
 .div-date{
     max-width: 126px;
@@ -11,7 +13,7 @@
     text-align: center;
     line-height: 27px;
     border-radius: 5px;
-    font-weight: bold;
+    font-weight: bold;font-family: system-ui;
 }
 .div-status{
     max-width: 126px;
@@ -20,12 +22,12 @@
     text-align: center;
     line-height: 27px;
     border-radius: 5px;
-    font-weight: bold;color: #ef7c2a;
+    font-weight: bold;color: #ef7c2a;font-family: system-ui;
 }
 .div-status2{
     max-width:200px;
             margin:auto;
-             font-weight: bold;
+             font-weight: bold;font-family: system-ui;text-transform: uppercase;
 }
 .div-name{
     line-height: 27px;
@@ -40,3 +42,6 @@
     margin-bottom: 5px;
     border: 1px solid #ccc
 }
+.mat-badge-content{
+    background-color: #fcb73d !important;
+  }
