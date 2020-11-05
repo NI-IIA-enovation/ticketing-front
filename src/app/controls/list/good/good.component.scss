@@ -14,6 +14,7 @@
     line-height: 27px;
     border-radius: 5px;
     font-weight: bold;font-family: system-ui;
+    font-size: 11px;
 }
 .div-status{
     max-width: 126px;
@@ -23,11 +24,18 @@
     line-height: 27px;
     border-radius: 5px;
     font-weight: bold;color: #ef7c2a;font-family: system-ui;
+    background-color: rgb(253 63 20 / 20%);
 }
 .div-status2{
     max-width:200px;
             margin:auto;
              font-weight: bold;font-family: system-ui;text-transform: uppercase;
+             font-size: 12px;
+}
+.div-status2 mat-icon{
+color:cornflowerblue;
+position: absolute;
+    font-size: 23px;
 }
 .div-name{
     line-height: 27px;
@@ -45,3 +53,10 @@
 .mat-badge-content{
     background-color: #fcb73d !important;
   }
+.mat-column-actions mat-icon{
+    color:cornflowerblue;
+}
+.mat-icon-button {
+
+    float: left;
+}
