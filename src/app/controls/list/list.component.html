@@ -1,7 +1,7 @@
 
 <table mat-table matSort matTableResponsive data-table="col-three" [dataSource]="data">
   <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
-      <th mat-header-cell *matHeaderCellDef>{{column}}</th>
+      <th mat-header-cell *matHeaderCellDef><div class="hr-div" *ngIf="column!= 'actions'">{{column}}</div></th>
       <td mat-cell *matCellDef="let element">
           <ng-template
               [ngTemplateOutletContext]="{
