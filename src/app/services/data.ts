@@ -10,11 +10,11 @@ export class PeriodicElement {
     actions: number;
   }
 export const data = 
-[{name: 'Aerified', info:'Seattle',user :'Alex',notif: 5, visite:19, deadline: '6/25/2020', priority: 'org', status: 'Washington', actions: 4},
-{name: 'Treeflex', info: 'San Antonio',user : 'Alex', notif: 11, visite:6, deadline: '7/26/2020', priority: 'info', status: 'Texas', actions: 18},
-{name: 'Greenlam', info: 'San Diego',user : 'Alex', notif: 8, visite:18, deadline: '3/27/2020', priority: 'biz', status: 'California', actions: 16},
-{name: 'Voltsillam', info: 'Abilene',user : 'Alex', notif: 13, visite:4, deadline: '8/14/2020', priority: 'name', status: 'Texas', actions: 14},
-{name: 'Voyatouch', info: 'Boston',user : 'Alex', notif: 15, visite:18, deadline: '9/5/2020', priority: 'net', status: 'Massachusetts', actions: 8},
+[{name: 'Maison bleue - Overijse', info:'4 chambres -2 salles de bain - 75m',user :'Alex',notif: 5, visite:19, deadline: '20 SEPT-10 OCT.', priority: 'org', status: 'Visite en cours', actions: 4},
+{name: 'Maison bleue - Wavre', info: '2 chambres -2 salles de bain - 90m',user : 'Alex', notif: 11, visite:6, deadline: '01 OCT-11 NOV.', priority: 'info', status: 'Visite en cours', actions: 18},
+{name: 'Maison bleue - Terveren', info: '1 chambres -4 salles de bain - 80m',user : 'Alex', notif: 8, visite:18, deadline: '09 DEC-02 JAN.', priority: 'biz', status: 'Visite en cours', actions: 16},
+{name: 'Maison bleue - Bruxelle', info: '2 chambres -3 salles de bain - 75m',user : 'Alex', notif: 13, visite:4, deadline: '10 DEC-07 JAN.', priority: 'name', status: 'Visite en cours', actions: 14},
+{name: 'Maison bleue - Overijse', info: '1 chambres -2 salles de bain - 50m',user : 'Alex', notif: 15, visite:18, deadline: '9/5/2020', priority: 'net', status: 'Visite en cours', actions: 8},
 {name: 'Stronghold', info: 'Norfolk',user : 'Alex', notif: 14, visite:12, deadline: '4/5/2020', priority: 'mil', status: 'Virginia', actions: 2},
 {name: 'Aerified', info: 'Charleston',user : 'Alex', notif: 11, visite:7, deadline: '7/19/2020', priority: 'gov', status: 'South Carolina', actions: 4},
 {name: 'Daltfresh', info: 'Denver',user : 'Alex', notif: 14, visite:17, deadline: '5/7/2020', priority: 'info', status: 'Colorado', actions: 8},

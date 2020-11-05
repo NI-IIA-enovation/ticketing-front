@@ -2,7 +2,8 @@
   <ng-template #templateCtr let-data="data">
       <app-list [templateList]="templateList" [data]="data" [displayedColumns]="displayedColumns">
           <ng-template #templateList let-element="element" let-column="column">
-            <div *ngIf="column== 'name' ">
+            <div class="div-name" *ngIf="column== 'name' ">
+              <img  src="https://i.pinimg.com/474x/00/c3/fb/00c3fb3506ceb708715066f0a8e8e451.jpg"   />
             <span class="span-h" >{{element[column]}}</span> 
              <span class="span-h2" style="">{{element['info']}}</span> 
            </div>
