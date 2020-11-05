@@ -24,12 +24,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatBadgeModule} from '@angular/material/badge';
+import { ContactComponent } from './controls/list/contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
     ControlsComponent,
     ListComponent,
     GoodComponent,
+    ContactComponent,
 
   ],
   imports: [
