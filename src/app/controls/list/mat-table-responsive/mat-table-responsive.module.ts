@@ -1,5 +1,5 @@
-import { NgModule } from "@angular/core";
-import { MatTableResponsiveDirective } from "./mat-table-responsive.directive";
+import { NgModule } from '@angular/core';
+import { MatTableResponsiveDirective } from './mat-table-responsive.directive';
 
 @NgModule({
   declarations: [MatTableResponsiveDirective],
