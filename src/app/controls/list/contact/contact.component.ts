@@ -10,11 +10,11 @@ import { MatTableDataSource } from '@angular/material/table';
 export class ContactComponent implements OnInit {
   @ViewChild('templateList') templateList: TemplateRef<any>;
   @ViewChild('templateCtr') templateCtr: TemplateRef<any>;
+  element: any;
+  column: any;
   displayedColumns: string[] = ['name',  'address', 'gsm', 'code', 'city','actions'];
   dataSource = new MatTableDataSource<contact>(data);
-  
-
-  constructor() { }
+   constructor() { }
 
   ngOnInit(): void {
   }

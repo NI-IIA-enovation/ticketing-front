@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { PeriodicElement, data } from '../../../services/data';
 import { MatTableDataSource } from '@angular/material/table';
 @Component({
@@ -7,15 +7,17 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./good.component.scss']
 })
 export class GoodComponent implements OnInit {
-  @ViewChild('templateList') templateList: TemplateRef<any>;
-  @ViewChild('templateCtr') templateCtr: TemplateRef<any>;
-  displayedColumns: string[] = ['name',  'user', 'visite','notif', 'deadline', 'priority', 'status', 'actions'];
+  element: any;
+  column: any;
   dataSource = new MatTableDataSource<PeriodicElement>(data);
-
-
-  constructor() { }
+  Periodi: any;
+  constructor(Periodi: PeriodicElement) {
+   this.Periodi = Periodi;
+  }
 
   ngOnInit(): void {
+  this.column = this.Periodi[0];
+  this.element = this.Periodi[1];
   }
 
 }

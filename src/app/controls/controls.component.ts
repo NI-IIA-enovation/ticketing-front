@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 
 
 
@@ -8,14 +9,15 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./controls.component.scss']
 })
 export class ControlsComponent implements OnInit {
-  @Input() data: any;
-  @Input() templateCtr: any;
+  @Input() data: MatTableDataSource<any>;
+  @Output() datasearch  = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
   }
  public doFilter = (value: string) => {
     this.data.filter = value.trim().toLocaleLowerCase();
-  }
+    this.datasearch.emit(this.data);
+ }
 }
 
