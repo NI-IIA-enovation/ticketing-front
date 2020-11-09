@@ -1,8 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {CdkTableModule} from '@angular/cdk/table';
-import {MatTableModule} from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatRippleModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule} from '@angular/material/toolbar';
@@ -12,21 +9,18 @@ import {   MatTabsModule} from '@angular/material/tabs';
 import {   MatExpansionModule} from '@angular/material/expansion';
 import {   MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
-import { MatSortModule } from '@angular/material/sort';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ControlsComponent } from './controls/controls.component';
-import { ListComponent } from './controls/list/list.component';
-import { GoodComponent } from './controls/list/good/good.component';
+import { GoodComponent } from './goods/good/good.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatBadgeModule} from '@angular/material/badge';
-import { ContactComponent } from './controls/list/contact/contact.component';
 import { GoodsComponent } from './goods/goods.component';
 import { IResponsiveConfig, ResponsiveModule } from 'ngx-responsive';
-
+import { TableModule } from 'table';
 const config: IResponsiveConfig = {
   breakPoints: {
     xs: { max: 600 },
@@ -42,20 +36,15 @@ const config: IResponsiveConfig = {
   declarations: [
     AppComponent,
     ControlsComponent,
-    ListComponent,
     GoodComponent,
-    ContactComponent,
-    GoodsComponent
-    
+    GoodsComponent,
   ],
   imports: [
+    TableModule,
     BrowserModule,
     MatBadgeModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CdkTableModule,
-    MatTableModule,
-    MatPaginatorModule,
     MatGridListModule,
     MatRippleModule,
     MatButtonModule,
@@ -66,7 +55,6 @@ const config: IResponsiveConfig = {
     MatIconModule,
     MatExpansionModule,
     MatFormFieldModule,
-    MatSortModule,
     MatInputModule,
     FlexLayoutModule,
     ResponsiveModule.forRoot(config)

@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
-import { PeriodicElement, data } from '../../../services/data';
 import { MatTableDataSource } from '@angular/material/table';
+import { PeriodicElement } from 'src/app/services/data';
 @Component({
   selector: 'app-good',
   templateUrl: './good.component.html',
@@ -9,7 +9,7 @@ import { MatTableDataSource } from '@angular/material/table';
 export class GoodComponent implements OnInit {
   element: any;
   column: any;
-  dataSource = new MatTableDataSource<PeriodicElement>(data);
+
   Periodi: any;
   constructor(Periodi: PeriodicElement) {
    this.Periodi = Periodi;
