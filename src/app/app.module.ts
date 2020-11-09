@@ -19,12 +19,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ControlsComponent } from './controls/controls.component';
 import { ListComponent } from './controls/list/list.component';
 import { GoodComponent } from './controls/list/good/good.component';
-import { MatTableResponsiveModule } from './controls/list/mat-table-responsive/mat-table-responsive.module';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatBadgeModule} from '@angular/material/badge';
 import { ContactComponent } from './controls/list/contact/contact.component';
+import { GoodsComponent } from './goods/goods.component';
+import { IResponsiveConfig, ResponsiveModule } from 'ngx-responsive';
+
+const config: IResponsiveConfig = {
+  breakPoints: {
+    xs: { max: 600 },
+    sm: { min: 601, max: 859 },
+    md: { min: 860, max: 1279 },
+    lg: { min: 1280, max: 1919 },
+    xl: { min: 1920 }
+  },
+  debounceTime: 100
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +45,8 @@ import { ContactComponent } from './controls/list/contact/contact.component';
     ListComponent,
     GoodComponent,
     ContactComponent,
-
+    GoodsComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -51,13 +65,14 @@ import { ContactComponent } from './controls/list/contact/contact.component';
     MatTabsModule,
     MatIconModule,
     MatExpansionModule,
-    MatTableResponsiveModule,
     MatFormFieldModule,
     MatSortModule,
     MatInputModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ResponsiveModule.forRoot(config)
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ ]
 })
 export class AppModule { }
