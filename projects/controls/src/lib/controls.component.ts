@@ -4,7 +4,7 @@ import { MatTableDataSource } from '@angular/material/table';
 
 
 @Component({
-  selector: 'app-controls',
+  selector: 'lib-controls',
   templateUrl: './controls.component.html',
   styleUrls: ['./controls.component.scss']
 })

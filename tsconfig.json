@@ -19,6 +19,10 @@
       "table": [
         "dist/table/table",
         "dist/table"
+      ],
+      "controls": [
+        "dist/controls/controls",
+        "dist/controls"
       ]
     }
   }
