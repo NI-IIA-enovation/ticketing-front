@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {data, PeriodicElement} from './../services/data';
-import {GoodComponent} from '../controls/list/good/good.component';
+import {GoodComponent} from './good/good.component';
 import { MatTableDataSource } from '@angular/material/table';
 @Component({
   selector: 'app-goods',
