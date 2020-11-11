@@ -1,18 +1,31 @@
+
+@import "../../../../src/css/utilities/variables";
+@import "../../../../src/css/utilities/mixins";
+@import "../../../../src/css/utilities/responsive";
+:host {
+  flex-grow: 2;
+  width: 100%;
+  max-width: 1248px; // 1200px + 24px margin from stepper and all angular material stuff
+  margin: calculateRem(88px) auto 0 auto;
+  padding: 0 $spacing-m;
+  @include bp-medium {
+    margin-top: calculateRem(117px);
+  }
+}
+
 .mat-stroked-button{
   color: #7892f6 !important;
     border-radius: 27px;
     border: 1px solid #7892f6 !important;
-    font-family: system-ui;
+    
 }
-.control button{
-  font-family: system-ui !important;
-} 
-.control input{
-  font-family: system-ui !important;
-} 
+
 .control mat-icon{
   color: #AAA !important;
 } 
 .control button.mat-stroked-button mat-icon{
   color: #7892f6 !important;
 } 
+.ds-section{
+    margin-top:10px !important;
+}
