@@ -14,9 +14,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatBadgeModule} from '@angular/material/badge';
 import { GoodsComponent } from './goods/goods.component';
 import { IResponsiveConfig, ResponsiveModule } from 'ngx-responsive';
-import { TableModule } from 'table';
-import { ControlsModule } from 'controls';
 import { MatButtonModule } from '@angular/material/button';
+import { TableModule } from 'projects/table/src/lib/table.module';
+import { ControlsModule } from 'projects/controls/src/lib/controls.module';
 
 const config: IResponsiveConfig = {
   breakPoints: {

@@ -1,2 +1,9 @@
-<lib-controls (datasearch)="datagoods($event)" [data]="dataSource"></lib-controls>
-<tm-table [row]="GoodComponent" [data]="dataSource" [interface]="PeriodicElement" [displayedColumns]="displayedColumns"></tm-table>
+
+<div id="goods" class="mat-stepper-horizontal certiorder">
+ 
+        <lib-controls (datasearch)="datagoods($event)" [data]="dataSource" ></lib-controls>
+
+
+
+<tm-table  [row]="GoodComponent" [data]="dataSource" [interface]="PeriodicElement" [displayedColumns]="displayedColumns"></tm-table>
+</div>

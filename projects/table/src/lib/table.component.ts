@@ -3,9 +3,9 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 @Component({
   selector: 'tm-table',
-  template: `<table mat-table matSort matTableResponsive data-table="col-three" [dataSource]="data">
+  template: `<div class="step-content"><table mat-table matSort matTableResponsive data-table="col-three" [dataSource]="data">
   <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
-      <th mat-header-cell *matHeaderCellDef><div class="hr-div" *ngIf="column!= 'actions'">{{column}}</div></th>
+      <th mat-header-cell *matHeaderCellDef><div class="hr-div list-header" *ngIf="column!= 'actions'">{{column}}</div></th>
       <td mat-cell *matCellDef="let element">
  <ng-container
   *ngComponentOutlet="row; injector:getInjector([column,element])"
@@ -17,7 +17,7 @@ import { MatSort } from '@angular/material/sort';
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
 
-<mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true"> </mat-paginator>
+<mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true"> </mat-paginator></div>
 `,
   styleUrls: ['./table.component.scss']
 })

@@ -1,17 +1,17 @@
 
             <div class="div-name" *ngIf="column== 'name' ">
                   <img src="https://i.pinimg.com/474x/00/c3/fb/00c3fb3506ceb708715066f0a8e8e451.jpg" />
-                  <span class="span-h">{{element[column]}}</span>
+                  <span class="span-h pack-pricing-big">{{element[column]}}</span>
                   <span class="span-h2">{{element['info']}}</span>
               </div>
               <div *ngIf="column== 'user' ">
                   <img src="https://www.emmegi.co.uk/wp-content/uploads/2019/01/User-Icon.jpg" width="30px" height="30px" />
               </div>
               <div *ngIf="column== 'visite' ">
-                  <mat-icon style="color: #999;" [matBadge]="element[column]" matBadgeColor="warn">update</mat-icon>
+                  <mat-icon style="color: #999;" [matBadge]="element[column]" matBadgeColor="#fcb73d">restore</mat-icon>
               </div>
               <div *ngIf="column== 'notif' ">
-                  <mat-icon style="color: #999;" [matBadge]="element[column]" matBadgeColor="warn">today</mat-icon>
+                  <mat-icon style="color: #999;" [matBadge]="element[column]" matBadgeColor="#fcb73d">today</mat-icon>
               </div>
               <div *ngIf="column== 'deadline' ">
                   <div class="div-date">{{element[column]}}</div>
@@ -25,7 +25,7 @@
               
               <div class="mat-column-actions" *ngIf="column== 'actions'">
                   <button mat-icon-button>
-                      <mat-icon>edit</mat-icon>
+                      <mat-icon svgIcon="font-pencil"></mat-icon>
                  
 
                      

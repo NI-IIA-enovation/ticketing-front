@@ -1,4 +1,11 @@
 
+#goods{
+ @import './app/mat-table-responsive/mat-table-responsive.directive.scss';   
+}
+
+
+
+
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
@@ -12,44 +19,38 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$swiftimmo-primary: mat-palette($mat-indigo);
-$swiftimmo-accent: mat-palette($mat-pink, A200, A100, A400);
+$CertiDesignSystem-primary: mat-palette($mat-indigo);
+$CertiDesignSystem-accent: mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$swiftimmo-warn: mat-palette($mat-red);
+$CertiDesignSystem-warn: mat-palette($mat-red);
 
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$swiftimmo-theme: mat-light-theme((
-  color: (
-    primary: $swiftimmo-primary,
-    accent: $swiftimmo-accent,
-    warn: $swiftimmo-warn,
-  )
-));
+// Create the theme object (a Sass map containing all of the palettes).
+$CertiDesignSystem-theme: mat-light-theme($CertiDesignSystem-primary, $CertiDesignSystem-accent, $CertiDesignSystem-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($swiftimmo-theme);
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@include angular-material-theme($CertiDesignSystem-theme);
 
-body {
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  margin: 0;
+// Define fonts
+@font-face {
+    font-family: 'Fira Sans';
+    src: url(assets/font/fira-sans/FiraSans-Regular.otf) format("opentype");
 }
-.basic-container {
-  padding: 30px;
+@font-face {
+    font-family: 'Fira Sans Medium';
+    src: url(assets/font/fira-sans/FiraSans-Medium.otf) format("opentype");
 }
-.version-info {
-  font-size: 8pt;
-  float: right;
-  margin: 8px;
-}
+// Normaize everything
+@import "css/reset/_normalize.css";
 
-@import './app/mat-table-responsive/mat-table-responsive.directive.scss';
+// Theme angular
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-
+// @import "~bootstrap/scss/bootstrap-reboot";
+// @import "~bootstrap/scss/bootstrap-grid";
+// @import "~bootstrap/scss/utilities";
 
 // Utilities
 @import "css/utilities/variables";
@@ -57,131 +58,7 @@ body {
 @import "css/utilities/responsive";
 @import "css/utilities/tools";
 @import "css/utilities/animations";
-.mat-elevation-z8{
-  padding-top:10px !important;
-}
 
-:host {
-width: 100%;
-max-width: calculateRem(1400px);
-margin: 0 auto;
-padding: $spacing-m;
-}
-
-.ds-section:not(:last-child) {
-margin: 0 0 $spacing-m 0;
-padding: 0 0 $spacing-m 0;
-border-bottom: $basic-border;
-}
-
-.ds-example-container {
-border: $basic-border;
-padding: $spacing-r;
-& + .ds-example-container {
-  margin-top: $spacing-m;
-}
-}
-
-#colors-sections {
-.couleur {
-  padding: $spacing-r $spacing-m;
-  text-align: center;
-  &.primary-darken {
-    background: $primary-darken;
-    color: white;
-  }
-  &.primary {
-    background: $primary;
-    color: white;
-  }
-  &.accent-darken {
-    background: $accent-darken;
-  }
-  &.accent {
-    background: $accent;
-  }
-  &.danger {
-    background: $danger;
-  }
-  &.warning {
-    background: $warning;
-  }
-  &.warning-darken {
-    background: $warning-darken;
-  }
-  &.info {
-    background: $info;
-  }
-  &.info-darken {
-    background: $info-darken;
-  }
-  &.light-background {
-    background: $light-background;
-  }
-  &.text-color {
-    background: $text-color;
-    color: white;
-  }
-  &.extralight-gray {
-    background: $extralight-gray;
-  }
-  &.light-gray {
-    background: $light-gray;
-  }
-  &.mid-gray {
-    background: $mid-gray;
-  }
-  &.overlay {
-    background: $overlay;
-  }
-}
-}
-
-#organisation-sections {
-.grid-element {
-  padding: 0;
-  list-style-type: none;
-}
-}
-
-#buttons-sections {
-.ds-example {
-  @include flexbox($wrap: wrap);
-  margin: $neg-spacing-r;
-  button,
-  a {
-    margin: $spacing-s;
-  }
-}
-}
-
-#input-sections {
-#with-label {
-  .ds-example {
-    @include flexbox($direction: column, $align-items: flex-start);
-    label {
-      margin: 0 0 $spacing-xs 0;
-    }
-  }
-}
-}
-
-#advance-tooltip-sections {
-.ds-example {
-  @include flexbox();
-  app-tooltip:not(:last-child) {
-    margin-right: $spacing-m;
-  }
-}
-}
-
-#grid-disposition {
-.grid-element {
-  background: pink;
-  padding: $spacing-r $spacing-m;
-  text-align: center;
-}
-}
 // Global css
 @import "css/main";
 @import "css/elements/stepheader";
@@ -205,4 +82,4 @@ padding: $spacing-r;
 @import "css/angular-material/snackbar";
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #fff; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
