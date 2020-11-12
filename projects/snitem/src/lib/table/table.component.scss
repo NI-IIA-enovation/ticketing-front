@@ -13,9 +13,9 @@ table {
   font-family: system-ui;
 
 }
-@import "../../../../src/css/utilities/variables";
-@import "../../../../src/css/utilities/mixins";
-@import "../../../../src/css/utilities/responsive";
+@import "../../../../../src/css/utilities/variables";
+@import "../../../../../src/css/utilities/mixins";
+@import "../../../../../src/css/utilities/responsive";
 
 :host {
   flex-grow: 2;

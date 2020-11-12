@@ -15,8 +15,9 @@ import {MatBadgeModule} from '@angular/material/badge';
 import { GoodsComponent } from './goods/goods.component';
 import { IResponsiveConfig, ResponsiveModule } from 'ngx-responsive';
 import { MatButtonModule } from '@angular/material/button';
-import { TableModule } from 'projects/table/src/lib/table.module';
-import { ControlsModule } from 'projects/controls/src/lib/controls.module';
+import { SnitemModule } from 'projects/snitem/src/lib/snitem.module';
+
+
 
 const config: IResponsiveConfig = {
   breakPoints: {
@@ -36,8 +37,7 @@ const config: IResponsiveConfig = {
     GoodsComponent,
   ],
   imports: [
-    TableModule,
-    ControlsModule,
+    SnitemModule,
     BrowserModule,
     MatBadgeModule,
     AppRoutingModule,

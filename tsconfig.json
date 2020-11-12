@@ -23,6 +23,10 @@
       "controls": [
         "dist/controls/controls",
         "dist/controls"
+      ],
+      "snitem": [
+        "dist/snitem/snitem",
+        "dist/snitem"
       ]
     }
   }
