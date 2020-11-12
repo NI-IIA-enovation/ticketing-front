@@ -1,4 +1,4 @@
-import { Component, ViewChild, Input, TemplateRef, AfterViewInit, Injector, ReflectiveInjector } from '@angular/core';
+import { Component, ViewChild, Input, TemplateRef, AfterViewInit, Injector, ReflectiveInjector, NgModuleFactory, Compiler } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 @Component({
@@ -11,12 +11,17 @@ export class TableComponent implements  AfterViewInit {
   @Input() data: any;
   @Input() row: any;
   @Input() interface: any;
+  inputs = {
+    title: 'ui'
+  };
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   dataSource: any;
   inject: any;
   CellTemplate?: TemplateRef <any>;
-  constructor(private inj: Injector) {
+  MyModule: NgModuleFactory<any>;
+  constructor(private inj: Injector, compiler: Compiler) {
+
     }
 
   ngAfterViewInit(): void {
@@ -24,9 +29,10 @@ export class TableComponent implements  AfterViewInit {
   this.dataSource.paginator = this.paginator;
   this.dataSource.sort = this.sort;
   }
-  getInjector(element: any): any {
-    this.inject = ReflectiveInjector.resolveAndCreate( [{ provide: this.interface, useValue: element }], this.inj);
-    return this.inject;
+  getElement(elm, clm): any {
+
+ return { element: elm,
+          column : clm }
   }
 
 }

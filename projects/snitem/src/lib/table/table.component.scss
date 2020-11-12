@@ -158,3 +158,33 @@ header {
     }
   }
 }
+
+
+.mat-row {
+  background: white;
+  border-radius: $basic-radius;
+  
+  flex-wrap: wrap;
+  margin: calculateRem(12px);
+  @include bp-medium {
+    width: calc((100% - 48px) / 2);
+  }
+  @media only screen and (min-width: 1248px) {
+    width:auto;
+    margin: 0;
+    flex-wrap: nowrap;
+    align-items: center;
+    border-bottom: $basic-border;
+    border-radius: 0;
+    &:last-child {
+      border-radius: 0 0 $basic-radius $basic-radius;
+      border-bottom: none;
+    }
+    &:nth-child(even) {
+      background: #fbfbfb;
+    }
+    &:hover {
+      background: rgba($info, 0.07);
+    }
+  }
+}
