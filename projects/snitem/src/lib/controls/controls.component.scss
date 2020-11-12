@@ -1,7 +1,7 @@
 
-@import "../../../../src/css/utilities/variables";
-@import "../../../../src/css/utilities/mixins";
-@import "../../../../src/css/utilities/responsive";
+@import "../../../../../src/css/utilities/variables";
+@import "../../../../../src/css/utilities/mixins";
+@import "../../../../../src/css/utilities/responsive";
 :host {
   flex-grow: 2;
   width: 100%;
@@ -14,7 +14,7 @@
 }
 
 .mat-stroked-button{
-  color: #7892f6 !important;
+ 
     border-radius: 27px;
     border: 1px solid #7892f6 !important;
     

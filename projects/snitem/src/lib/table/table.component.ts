@@ -2,23 +2,8 @@ import { Component, ViewChild, Input, TemplateRef, AfterViewInit, Injector, Refl
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 @Component({
-  selector: 'tm-table',
-  template: `<div class="step-content"><table mat-table matSort matTableResponsive data-table="col-three" [dataSource]="data">
-  <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
-      <th mat-header-cell *matHeaderCellDef><div class="hr-div list-header" *ngIf="column!= 'actions'">{{column}}</div></th>
-      <td mat-cell *matCellDef="let element">
- <ng-container
-  *ngComponentOutlet="row; injector:getInjector([column,element])"
-></ng-container>
- </td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
-
-<mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true"> </mat-paginator></div>
-`,
+  selector: 'lib-table',
+  templateUrl: 'table.component.html',
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements  AfterViewInit {
