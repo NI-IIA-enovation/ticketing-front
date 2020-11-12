@@ -11,7 +11,20 @@ import {CdkTableModule} from '@angular/cdk/table';
 import {MatTableModule} from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { IResponsiveConfig, ResponsiveModule } from 'ngx-responsive';
+import { DynamicAttributesModule, DynamicModule } from 'ng-dynamic-component';
 
+
+const config: IResponsiveConfig = {
+  breakPoints: {
+    xs: { max: 50 },
+    sm: { min: 50, max: 859 },
+    md: { min: 860, max: 1279 },
+    lg: { min: 1280, max: 1919 },
+    xl: { min: 1920 }
+  },
+  debounceTime: 100
+};
 
 @NgModule({
   declarations: [SnitemComponent, ControlsComponent, TableComponent],
@@ -24,7 +37,10 @@ import { MatSortModule } from '@angular/material/sort';
     CdkTableModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    DynamicModule,
+    ResponsiveModule.forRoot(config),
+    DynamicAttributesModule,
   ],
   exports: [SnitemComponent, ControlsComponent, TableComponent]
 })

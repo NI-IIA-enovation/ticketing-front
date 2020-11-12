@@ -1,5 +1,4 @@
-import { Component, OnInit} from '@angular/core';
-import { PeriodicElement } from 'src/app/services/data';
+import { Component, Input, OnInit} from '@angular/core';
 import { faPencilAlt} from '@fortawesome/free-solid-svg-icons';
 import { icon } from '@fortawesome/fontawesome-svg-core';
 import { MatIconRegistry } from '@angular/material/icon';
@@ -10,12 +9,11 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./good.component.scss']
 })
 export class GoodComponent implements OnInit {
-  element: any;
-  column: any;
-
+  @Input() element: any;
+  @Input() column: any;
   Periodi: any;
-  constructor(Periodi: PeriodicElement,registry: MatIconRegistry, sanitizer: DomSanitizer) {
-   this.Periodi = Periodi;
+  constructor(registry: MatIconRegistry, sanitizer: DomSanitizer) {
+
    const svg = icon(faPencilAlt).html.join('');
 
    registry.addSvgIconLiteral(
@@ -25,8 +23,7 @@ export class GoodComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  this.column = this.Periodi[0];
-  this.element = this.Periodi[1];
+
   }
 
 }
