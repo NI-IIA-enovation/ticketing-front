@@ -148,15 +148,9 @@
     text-align: center;
   }
 }
-// #grid-disposition {
-//   .options-container {
-//     @extend .grid-container;
-//   }
-//   .option {
-//     @extend .grid-element;
-//     width: $grid-el-small__3;
-//     @include bp-medium {
-//       width: $grid-el-medium__4;
-//     }
-//   }
-// }
+lib-table{
+  display: contents;
+}
+lib-controle{
+  display: contents;
+}

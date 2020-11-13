@@ -137,15 +137,15 @@ header {
   }
 }
 
-#list-header {
+.mat-header-row{
   display: none;
-  @media only screen and (min-width: 1248px) {
-    display: flex;
+  @media only screen and (min-width:860px) {
+    display: table-row;
     flex-direction: row;
     background: white;
     border-radius: $basic-radius $basic-radius 0 0;
     border-bottom: $basic-border;
-    > div {
+    > th {
       padding: $spacing-r $spacing-s;
       font-size: calculateRem(12px);
       color: $mid-gray;
@@ -169,7 +169,7 @@ header {
   @include bp-medium {
     width: calc((100% - 48px) / 2);
   }
-  @media only screen and (min-width: 1248px) {
+  @media only screen and (min-width:860px) {
     width:auto;
     margin: 0;
     flex-wrap: nowrap;

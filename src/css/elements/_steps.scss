@@ -4,7 +4,7 @@
 .certiorder {
   .step-content {
     background: white;
-    padding: $spacing-r;
+    
     border-radius: $basic-radius;
     @include bp-medium {
       padding: $spacing-m;
