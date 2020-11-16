@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { SnitemComponent } from './snitem.component';
 import { ControlsComponent } from './controls/controls.component';
 import { TableComponent } from './table/table.component';
@@ -42,6 +42,7 @@ const config: IResponsiveConfig = {
     ResponsiveModule.forRoot(config),
     DynamicAttributesModule,
   ],
-  exports: [SnitemComponent, ControlsComponent, TableComponent]
+  exports: [SnitemComponent, ControlsComponent, TableComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class SnitemModule { }

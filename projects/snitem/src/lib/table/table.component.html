@@ -1,4 +1,4 @@
-<table mat-table matSort matTableResponsive data-table="col-three" [dataSource]="data" NgxResponsiveStackTable>
+<table mat-table matSort matTableResponsive data-table="col-three" [dataSource]="data" >
     <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
         <th mat-header-cell *matHeaderCellDef><div class="hr-div list-header" *ngIf="column!= 'actions'">{{column}}</div></th>
         

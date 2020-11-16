@@ -1,3 +1,112 @@
+@import "utilities/variables";
+@import "utilities/mixins";
+@import "utilities/responsive";
+
+
+.mat-stroked-button{
+ 
+  border-radius: 27px;
+  border: 1px solid #7892f6 !important;
+  
+}
+
+.control mat-icon{
+color: #AAA !important;
+} 
+.control button.mat-stroked-button mat-icon{
+color: #7892f6 !important;
+} 
+.ds-section{
+  margin-top:10px !important;
+}
+#filters-input {
+display: flex;
+justify-content: space-between;
+button {
+  height: 3em;
+  padding: 0 $spacing-r;
+  width: 100%; 
+  &:not(:first-child) {
+    margin-left: $spacing-xs;
+  }
+}
+@include bp-medium {
+  justify-content: flex-end;
+  button {
+    margin-left: $spacing-m;
+    width: auto;
+  }
+}
+}
+table {
+  width: 100%;
+}
+
+.mat-column-actions {
+  text-align: right;
+}
+.hr-div{
+max-width: 150px;
+font-size: 11px;
+text-transform: uppercase;
+font-weight: bold;
+font-family: system-ui;
+
+}
+
+
+.mat-header-row{
+  display: none;
+  @media only screen and (min-width:860px) {
+    display: table-row;
+    flex-direction: row;
+    background: white;
+    border-radius: $basic-radius $basic-radius 0 0;
+    border-bottom: $basic-border;
+    > th {
+      padding: $spacing-r $spacing-s;
+      font-size: calculateRem(12px);
+      color: $mid-gray;
+      &:first-child {
+        padding-left: $spacing-m;
+      }
+      &:last-child {
+        padding-right: $spacing-m;
+      }
+    }
+  }
+}
+
+
+.mat-row {
+  background: white;
+  border-radius: $basic-radius;
+  
+  flex-wrap: wrap;
+  margin: calculateRem(12px);
+  @include bp-medium {
+    width: calc((100% - 48px) / 2);
+  }
+  @media only screen and (min-width:860px) {
+    width:auto;
+    margin: 0;
+    flex-wrap: nowrap;
+    align-items: center;
+    border-bottom: $basic-border;
+    border-radius: 0;
+    &:last-child {
+      border-radius: 0 0 $basic-radius $basic-radius;
+      border-bottom: none;
+    }
+    &:nth-child(even) {
+      background: #fbfbfb;
+    }
+    &:hover {
+      background: rgba($info, 0.07);
+    }
+  }
+}
+
 
   @media (min-width: 890px) {
     .ds-example-container {
@@ -11,14 +120,19 @@
     width:30%;
     float: left;
     margin-right:10px;
+    max-height: 56px;
   }
   .control:nth-of-type(n+2){ 
     float: left;
     width:10%;
     margin-right:50px;
+    margin-top: 10px;
   }
   .mat-badge-content{
     background-color: #fcb73d !important;
+  }
+  .mat-cell{
+    padding-right:10px !important;
   }
   /* Clear floats after the columns */
   .controls{

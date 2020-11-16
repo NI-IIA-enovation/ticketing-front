@@ -1,7 +1,6 @@
 
-<div  class="mat-stepper-horizontal certiorder" id="goods">
+<div  class="container" id="goods">
  <lib-controls (datasearch)="datagoods($event)" [data]="dataSource" ></lib-controls>
- <div class="step-content">
- <lib-table  [row]="GoodComponent" [data]="dataSource" [interface]="PeriodicElement" [displayedColumns]="displayedColumns"></lib-table>
-</div>
+  <lib-table  [row]="GoodComponent" [data]="dataSource" [interface]="PeriodicElement" [displayedColumns]="displayedColumns"></lib-table>
+ 
 </div>
