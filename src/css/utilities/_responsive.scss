@@ -1,31 +1,31 @@
 @import 'variables';
 
 @mixin bp-extralarge {
-  @media screen and (min-width: map-get($grid-breakpoints, xl)) {
+  @media screen and (max-width: map-get($grid-breakpoints, xl)) {
     @content;
   }
 }
 
 @mixin bp-large {
-  @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+  @media screen and (max-width: map-get($grid-breakpoints, lg)) {
     @content;
   }
 }
 
 @mixin bp-medium {
-  @media screen and (min-width: map-get($grid-breakpoints, md)) {
+  @media screen and (max-width: map-get($grid-breakpoints, md)) {
     @content;
   }
 }
 
 @mixin bp-small {
-  @media screen and (min-width: map-get($grid-breakpoints, sm)) {
+  @media screen and (max-width: map-get($grid-breakpoints, sm)) {
     @content;
   }
 }
 
 @mixin bp-extrasmall {
-  @media screen and (min-width: map-get($grid-breakpoints, xs)) {
+  @media screen and (max-width: map-get($grid-breakpoints, xs)) {
     @content;
   }
 }
