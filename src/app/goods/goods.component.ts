@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {data, PeriodicElement} from './../services/data';
+import {data, PeriodicElement,styleResponsive,styleTable,ResponsiveControls,styleControls} from './../services/data';
 import {GoodComponent} from './good/good.component';
 import { MatTableDataSource } from '@angular/material/table';
 @Component({
@@ -9,6 +9,10 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class GoodsComponent implements OnInit {
   datagood = data;
+  Responsive = styleResponsive;
+  TableStyle = styleTable;
+  ResponsiveControls = ResponsiveControls;
+  styleControls = styleControls;
   PeriodicElement = PeriodicElement;
   GoodComponent = GoodComponent;
   displayedColumns: string[] = ['name',  'user', 'visite', 'notif', 'deadline', 'priority', 'status', 'actions'];

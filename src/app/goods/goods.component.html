@@ -1,6 +1,7 @@
 
-<div  class="container" id="goods">
- <lib-controls (datasearch)="datagoods($event)" [data]="dataSource" ></lib-controls>
-  <lib-table  [row]="GoodComponent" [data]="dataSource" [interface]="PeriodicElement" [displayedColumns]="displayedColumns"></lib-table>
- 
+<div  class="container" >
+ <lib-controls  (datasearch)="datagoods($event)" [styleclass]="styleControls" [data]="dataSource" *xl></lib-controls>
+ <lib-controls   (datasearch)="datagoods($event)" [styleclass]="ResponsiveControls" [data]="dataSource" *xs></lib-controls>
+  <lib-table  [styleclass]="TableStyle" [row]="GoodComponent" [data]="dataSource" [interface]="PeriodicElement" [displayedColumns]="displayedColumns" *xl></lib-table>
+  <lib-table   [styleclass]="Responsive" [row]="GoodComponent" [data]="dataSource" [interface]="PeriodicElement" [displayedColumns]="displayedColumns" *xs></lib-table>
 </div>

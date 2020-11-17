@@ -21,11 +21,11 @@ import { SnitemModule } from 'projects/snitem/src/lib/snitem.module';
 
 const config: IResponsiveConfig = {
   breakPoints: {
-    xs: { max: 600 },
+    xs: { max: 850 },
     sm: { min: 601, max: 859 },
     md: { min: 860, max: 1279 },
     lg: { min: 1280, max: 1919 },
-    xl: { min: 1920 }
+    xl: { min: 850 }
   },
   debounceTime: 100
 };

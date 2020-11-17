@@ -1,9 +1,4 @@
 
-#goods{
- @import './css/goods.scss';   
-}
-
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
@@ -80,4 +75,4 @@ $CertiDesignSystem-theme: mat-light-theme($CertiDesignSystem-primary, $CertiDesi
 @import "css/angular-material/snackbar";
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { font-family: Roboto, "Helvetica Neue", sans-serif; }
