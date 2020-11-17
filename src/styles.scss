@@ -45,34 +45,6 @@ $CertiDesignSystem-theme: mat-light-theme($CertiDesignSystem-primary, $CertiDesi
 // @import "~bootstrap/scss/bootstrap-grid";
 // @import "~bootstrap/scss/utilities";
 
-// Utilities
-@import "css/utilities/variables";
-@import "css/utilities/mixins";
-@import "css/utilities/responsive";
-@import "css/utilities/tools";
-@import "css/utilities/animations";
-
-// Global css
-@import "css/main";
-@import "css/elements/stepheader";
-@import "css/elements/steps";
-@import "css/elements/options";
-@import "css/elements/stepmoney";
-@import "css/elements/tooltip";
-@import "css/elements/info-box";
-@import "css/elements/service-page";
-
-// Angular personalisation
-@import "css/angular-material/dialog";
-@import "css/angular-material/button";
-@import "css/angular-material/expansionpanel";
-@import "css/angular-material/select";
-@import "css/angular-material/input";
-@import "css/angular-material/buttontoggle";
-@import "css/angular-material/menu";
-@import "css/angular-material/checkbox";
-@import "css/angular-material/radio";
-@import "css/angular-material/snackbar";
 
 html, body { height: 100%; }
 body { font-family: Roboto, "Helvetica Neue", sans-serif; }

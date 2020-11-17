@@ -1,2 +1,29 @@
 
+  table{
+      width: 100%;
+  }
+ 
+  .ds-example-container {
+    border: none !important;;
+  }
+   .grid-container {
+     margin: -0.01rem !important;
+   
+  }
+  
+  .mat-badge-content{
+   background-color: #fcb73d !important;
+  }
+  .mat-cell{
+   padding-right:10px !important;
+  }
+  /* Clear floats after the columns */
+  .controls{
+   display: table;
+   clear: both;
+   width: 100%;
+   margin:5px;
+  
+  }
+  
   
