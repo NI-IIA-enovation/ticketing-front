@@ -17,6 +17,11 @@
     @content;
   }
 }
+@mixin bp-medium-min {
+  @media screen and (min-width: map-get($grid-breakpoints, md)) {
+    @content;
+  }
+}
 
 @mixin bp-small {
   @media screen and (max-width: map-get($grid-breakpoints, sm)) {

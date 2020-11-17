@@ -1,4 +1,4 @@
-  
+ 
   <div class="div-name" *ngIf="column== 'name' ">
                   <img src="https://i.pinimg.com/474x/00/c3/fb/00c3fb3506ceb708715066f0a8e8e451.jpg" />
                   <span class="span-h pack-pricing-big">{{element[column]}}</span>
@@ -13,12 +13,15 @@
               <div *ngIf="column== 'notif' " >
                   <mat-icon style="color: #999;" [matBadge]="element[column]" matBadgeColor="#fcb73d">today</mat-icon>
               </div>
-              <div *ngIf="column== 'deadline' ">
+              <div *ngIf="column== 'deadline' " >
                   <div class="div-date" >{{element[column]}}</div>
               </div>
+           
+          
               <div *ngIf="column== 'priority' " >
                   <div class="div-status" >{{element[column]}}</div>
               </div>
+           
               <div *ngIf="column== 'status' ">
                   <div class="div-status2">{{element[column]}} <mat-icon>keyboard_arrow_down</mat-icon></div>
               </div>
