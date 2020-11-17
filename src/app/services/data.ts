@@ -9,6 +9,223 @@ export class PeriodicElement {
     status: string;
     actions: number;
   }
+export const styleControls = `
+.controls{
+  display: table;
+  clear: both;
+  width: 100%;
+  margin:5px;
+
+}
+.control:nth-of-type(n+1){
+  width:30%;
+  float: left;
+  margin-right:10px;
+  max-height: 56px;
+ }
+ .control:nth-of-type(n+2){ 
+  float: left;
+  width:10%;
+  margin-right:50px;
+  margin-top: 10px;
+ }
+.ds-example-container {
+  border: none !important;;
+}
+ .grid-container {
+   margin: -0.01rem !important;
+ 
+}
+.control:nth-of-type(n+1){
+ width:30%;
+ float: left;
+ margin-right:10px;
+ max-height: 56px;
+}
+.control:nth-of-type(n+2){ 
+ float: left;
+ width:10%;
+ margin-right:50px;
+ margin-top: 10px;
+}
+.mat-stroked-button{
+  border-radius: 27px;
+  border: 1px solid #7892f6 !important;
+}
+
+.control mat-icon{
+color: #AAA !important;
+}
+
+.control button.mat-stroked-button mat-icon{
+color: #7892f6 !important;
+}
+
+.ds-section{
+  margin-top:10px !important;
+}
+
+
+
+.mat-column-actions {
+  text-align: right;
+}
+.hr-div{
+max-width: 150px;
+font-size: 11px;
+text-transform: uppercase;
+font-weight: bold;
+font-family: system-ui;
+
+}
+.mat-stroked-button{
+  border-radius: 27px;
+  border: 1px solid #7892f6 !important;
+}
+`;
+export const ResponsiveControls = `
+.mat-stroked-button{
+  border-radius: 27px;
+  border: 1px solid #7892f6 !important;
+  padding-left: 6px;
+}
+.control:nth-of-type(n+1){
+  float: left;
+  width:100%;
+}
+.control:nth-of-type(n+2){
+  float: left;
+  width: 33.33%;
+  margin-top: 5px;
+}
+.control:nth-of-type(n+3){
+  display: none !important;
+
+}
+.control:nth-of-type(n+4){
+  display: inline-block !important;
+  width: 33.33%;
+  margin-top: 5px;
+}
+.control .mat-focus-indicator{
+  font-size: 10px !important;
+  width: 100% !important;
+
+  font-family: system-ui !important;
+}
+.mat-badge-content{
+  background-color: #fcb73d !important;
+}
+/* Clear floats after the columns */
+.controls{
+  display: table;
+  clear: both;
+  width: 100%;
+  margin-bottom: 20px;
+
+}`;
+export const styleTable = `.ds-example-container {
+  border: none !important;;
+}
+ .grid-container {
+   margin: -0.01rem !important;
+ 
+}
+
+.mat-badge-content{
+ background-color: #fcb73d !important;
+}
+.mat-cell{
+ padding-right:10px !important;
+}
+/* Clear floats after the columns */
+.controls{
+ display: table;
+ clear: both;
+ width: 100%;
+ margin:5px;
+
+}
+table{
+  width:100%;
+}
+`;
+export const styleResponsive = `
+.mat-header-row {
+    display: none;
+    flex-wrap: wrap;
+    height: auto;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+    th.mat-header-cell {
+      display: none;
+      flex: 1;
+      align-items: center;
+      padding: 1rem 0.5rem;
+      justify-content: space-around;
+
+    }
+
+
+  .mat-row {
+    height: auto;
+    border-top: 1px solid rgb(187, 184, 184);}
+    td.mat-cell:not(.mat-column-actions) {
+      display: grid;
+     // grid-template-columns: 50% 50%;
+      padding: 0.5rem;
+      text-align: left;
+      word-break: break-word;
+      border: none !important;
+    }
+    td:nth-of-type(n+1){
+      display: inline-block !important;
+      width:100%;
+    }
+    td:nth-of-type(n+2){
+    display: inline-block !important;
+      width: 20%;
+    }
+    td:nth-of-type(n+5){
+     display: none !important;
+    }
+    td:nth-of-type(n+6){
+      display: none !important;
+}
+    .div-status2{
+      font-size: 12px;
+      border: 1px solid #ccc !important;
+      line-height: 24px !important;
+      text-align: center !important;
+      border-radius: 5px !important;
+      padding-left: 7px;
+    }
+   .div-status2 mat-icon{
+      display: none !important;
+    }
+    td:nth-of-type(n+7){
+      display: inline-block !important;
+      width: 40% !important;
+    }
+    td.mat-column-actions {
+      display: none !important;
+      justify-content: center !important;
+      padding: 0 0.5rem;
+      width:100% !important;
+      border-bottom: 1px solid #777 !important;
+    }
+
+    &:last-of-type td:last-of-type {
+      border: none;
+    }
+
+    &:not(:last-of-type) td:last-of-type {
+      border-bottom: 0.5rem solid #fafafa;
+    }`;
+
+
 export const data = 
 [{name: 'Maison bleue - Overijse', info:'4 chambres -2 salles de bain - 75m',user :'Alex',notif: 5, visite:19, deadline: '20 SEPT-10 OCT.', priority: 'org', status: 'Visite en cours', actions: 4},
 {name: 'Maison bleue - Wavre', info: '2 chambres -2 salles de bain - 90m',user : 'Alex', notif: 11, visite:6, deadline: '01 OCT-11 NOV.', priority: 'info', status: 'Visite en cours', actions: 18},

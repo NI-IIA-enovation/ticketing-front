@@ -1,4 +1,6 @@
-<table mat-table matSort matTableResponsive data-table="col-three" [dataSource]="data" >
+
+<div class="test" >
+<table mat-table matSort matTableResponsive data-table="col-three" [dataSource]="data"  >
     <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
         <th mat-header-cell *matHeaderCellDef><div class="hr-div list-header" *ngIf="column!= 'actions'">{{column}}</div></th>
         
@@ -14,3 +16,4 @@
   </table>
   
   <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true"> </mat-paginator>
+</div>
