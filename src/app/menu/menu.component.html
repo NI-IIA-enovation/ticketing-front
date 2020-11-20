@@ -1,0 +1,7 @@
+<div *ngFor="let menu of menus" >
+  <div  *responsive="{ bootstrap:menu.responsive}">
+    <ndc-dynamic   [ndcDynamicComponent]="getcomponent(menu.name,menu.responsive)"
+                [ndcDynamicInputs]="getlist(menu.listmenu,menu.name)" >
+    </ndc-dynamic>
+  </div>
+</div>
