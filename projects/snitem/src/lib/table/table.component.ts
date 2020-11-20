@@ -1,5 +1,5 @@
-import { DOCUMENT } from '@angular/common';
-import { Component, ViewChild, Input, TemplateRef,AfterViewInit,OnInit, NgModuleFactory, Compiler, Renderer2, ElementRef, Inject } from '@angular/core';
+
+import { Component, ViewChild, Input, TemplateRef,AfterViewInit,OnInit, NgModuleFactory } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 @Component({
@@ -22,17 +22,11 @@ export class TableComponent implements OnInit ,  AfterViewInit {
   inject: any;
   CellTemplate?: TemplateRef <any>;
   MyModule: NgModuleFactory<any>;
-  constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: any) {
+  constructor() {
 
     }
     ngOnInit(): void{
-      // Dynamically create the CSS tags
-     
-      const styles = this.document.createElement('STYLE') as HTMLStyleElement;
-      styles.className = 'test';
-      styles.innerHTML = this.styleclass;
-      this.renderer.appendChild(this.document.head, styles);
-      this.styleclass = '';
+   
     }
   ngAfterViewInit(): void {
   this.dataSource = this.data;

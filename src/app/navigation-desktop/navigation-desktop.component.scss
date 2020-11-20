@@ -1,0 +1,17 @@
+::ng-deep .sidenav{
+    width: 200px;
+  }
+  
+  ::ng-deep .mat-toolbar.mat-primary {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    overflow: hide;
+    width: 100%;
+    height: 50px; // Note: iPhonePlus requires 80px, so will need to be variable, but not handling that in this demo.
+  }
+  ::ng-deep .container {
+    height: 100vh;
+    padding: 0px;
+    margin-top: 50px;
+  }

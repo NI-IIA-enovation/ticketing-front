@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { MatRippleModule } from '@angular/material/core';
 import { MatToolbarModule} from '@angular/material/toolbar';
 import {   MatStepperModule} from '@angular/material/stepper';
@@ -15,10 +15,16 @@ import {MatBadgeModule} from '@angular/material/badge';
 import { GoodsComponent } from './goods/goods.component';
 import { IResponsiveConfig, ResponsiveModule } from 'ngx-responsive';
 import { MatButtonModule } from '@angular/material/button';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatSidenavModule} from '@angular/material/sidenav';
 import { SnitemModule } from 'projects/snitem/src/lib/snitem.module';
-
-
-
+import { MenuComponent } from './menu/menu.component';
+import {MatListModule} from '@angular/material/list';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { DynamicAttributesModule, DynamicModule } from 'ng-dynamic-component';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+import { NavigationDesktopComponent } from './navigation-desktop/navigation-desktop.component';
+import { NavigationMobileComponent } from './navigation-mobile/navigation-mobile.component';
 const config: IResponsiveConfig = {
   breakPoints: {
     xs: { max: 850 },
@@ -35,8 +41,13 @@ const config: IResponsiveConfig = {
     AppComponent,
     GoodComponent,
     GoodsComponent,
+    MenuComponent,
+    NavigationDesktopComponent,
+    NavigationMobileComponent,
   ],
   imports: [
+    DynamicAttributesModule,
+    DynamicModule,
     SnitemModule,
     BrowserModule,
     MatBadgeModule,
@@ -50,10 +61,15 @@ const config: IResponsiveConfig = {
     MatExpansionModule,
     FlexLayoutModule,
     MatButtonModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatListModule,
+    MatGridListModule,ScrollingModule,
     ResponsiveModule.forRoot(config)
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [ ]
+  entryComponents: [ ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }

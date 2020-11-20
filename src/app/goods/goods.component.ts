@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {data, PeriodicElement,styleResponsive,styleTable,ResponsiveControls,styleControls} from './../services/data';
+import {data, PeriodicElement, styleResponsive,styleTable,ResponsiveControls,styleControls} from './../services/data';
 import {GoodComponent} from './good/good.component';
 import { MatTableDataSource } from '@angular/material/table';
 @Component({

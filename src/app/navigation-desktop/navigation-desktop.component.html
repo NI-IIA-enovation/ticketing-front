@@ -1,0 +1,14 @@
+<mat-sidenav 
+class="sidenav" 
+[position]="position"
+fixedInViewport="true"
+    [attr.role]="'navigation'"
+    [mode]="'side'"
+    [opened]="true"
+     >
+  <mat-toolbar>SwiftImmo</mat-toolbar>
+  <mat-nav-list *ngFor="let menu of list">
+    <button  mat-button  class="mat-btn"    ><mat-icon >{{menu.icon}}</mat-icon>{{menu.name}}</button>
+  
+</mat-nav-list>
+</mat-sidenav>
