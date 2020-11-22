@@ -17,24 +17,140 @@ export class Listmenu{
   }
 export const dataconfig =
 [{
-name: 'top',
+name: 'footer',
 responsive: 'xs',
-listmenu: [{
+          listmenu: [{
             position: 0,
-            icon: 'home',
+            icon: 'fa-home',
+            name: 'Dashboard',
+            target: 'work',
+            action: 'set',
+            component: '#'
+          }, {
+            position: 1,
+            icon: 'fa-building',
             name: 'Biens',
             target: 'work',
             action: 'set',
             component: 'GoodsCompoment'
-           }]}, 
+          }, {
+            position: 2,
+            icon: 'fa-card',
+            name: 'Contacts',
+            target: 'work',
+            action: 'set',
+            component: '#'
+          }, {
+          position: 3,
+          icon: 'fa-calendar',
+          name: 'Agenda',
+          target: 'work',
+          action: 'set',
+          component: '#'
+          }, {
+          position: 4,
+          icon: 'fa-shoppingbasket',
+          name: 'Marketplace',
+          target: 'work',
+          action: 'set',
+          component: '#'
+          }, {
+          position: 5,
+          icon: 'fa-cog',
+          name: 'Settings',
+          target: 'work',
+          action: 'set',
+          component: '#'
+          }]},
+          {
+            name: 'header',
+            responsive: 'xs',
+                      listmenu: [{
+                        position: 0,
+                        icon: 'fa-home',
+                        name: 'Dashboard',
+                        target: 'work',
+                        action: 'set',
+                        component: '#'
+                      }, {
+                        position: 1,
+                        icon: 'fa-building',
+                        name: 'Biens',
+                        target: 'work',
+                        action: 'set',
+                        component: 'GoodsCompoment'
+                      }, {
+                        position: 2,
+                        icon: 'fa-card',
+                        name: 'Contacts',
+                        target: 'work',
+                        action: 'set',
+                        component: '#'
+                      }, {
+                      position: 3,
+                      icon: 'fa-calendar',
+                      name: 'Agenda',
+                      target: 'work',
+                      action: 'set',
+                      component: '#'
+                      }, {
+                      position: 4,
+                      icon: 'fa-shoppingbasket',
+                      name: 'Marketplace',
+                      target: 'work',
+                      action: 'set',
+                      component: '#'
+                      }, {
+                      position: 5,
+                      icon: 'fa-cog',
+                      name: 'Settings',
+                      target: 'work',
+                      action: 'set',
+                      component: '#'
+                      }]},
 {
 name: 'star',
 responsive: 'xl',
-listmenu: [{
-            position: 0,
-            icon: 'home',
-            name: 'Biens',
+            listmenu: [{
+              position: 0,
+              icon: 'fa-home',
+              name: 'Dashboard',
+              target: 'work',
+              action: 'set',
+              component: '#'
+            }, {
+              position: 1,
+              icon: 'fa-building',
+              name: 'Biens',
+              target: 'work',
+              action: 'set',
+              component: 'GoodsCompoment'
+            }, {
+              position: 2,
+              icon: 'fa-card',
+              name: 'Contacts',
+              target: 'work',
+              action: 'set',
+              component: '#'
+            }, {
+            position: 3,
+            icon: 'fa-calendar',
+            name: 'Agenda',
             target: 'work',
             action: 'set',
-            component: 'GoodsCompoment'
-        }]}]
+            component: '#'
+            }, {
+            position: 4,
+            icon: 'fa-shoppingbasket',
+            name: 'Marketplace',
+            target: 'work',
+            action: 'set',
+            component: '#'
+            }, {
+            position: 5,
+            icon: 'fa-cog',
+            name: 'Settings',
+            target: 'work',
+            action: 'set',
+            component: '#'
+            }]}]

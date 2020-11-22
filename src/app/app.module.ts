@@ -24,7 +24,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { DynamicAttributesModule, DynamicModule } from 'ng-dynamic-component';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { NavigationDesktopComponent } from './navigation-desktop/navigation-desktop.component';
-import { NavigationMobileComponent } from './navigation-mobile/navigation-mobile.component';
+import { NavigationMobileHeaderComponent } from './navigation-mobile-header/navigation-mobile-header.component';
+import { NavigationMobileFooterComponent } from './navigation-mobile-footer/navigation-mobile-footer.component';
 const config: IResponsiveConfig = {
   breakPoints: {
     xs: { max: 850 },
@@ -43,7 +44,8 @@ const config: IResponsiveConfig = {
     GoodsComponent,
     MenuComponent,
     NavigationDesktopComponent,
-    NavigationMobileComponent,
+    NavigationMobileHeaderComponent,
+    NavigationMobileFooterComponent,
   ],
   imports: [
     DynamicAttributesModule,

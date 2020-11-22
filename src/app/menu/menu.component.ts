@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { NavigationDesktopComponent } from '../navigation-desktop/navigation-desktop.component';
-import { NavigationMobileComponent } from '../navigation-mobile/navigation-mobile.component';
+import { MenuService } from '../services/menu.service';
 
 @Component({
   selector: 'app-menu',
@@ -8,29 +7,22 @@ import { NavigationMobileComponent } from '../navigation-mobile/navigation-mobil
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  @Input() menus: any;
   @Input() name: any;
-  @Input() responsive: any;
-
-  navigationMobileComponent = NavigationMobileComponent;
-  navigationDesktopComponent = NavigationDesktopComponent;
-  type: any;
-  constructor() { }
+  @Input() type: any;
+  menu: any;
+  constructor(private menuservice: MenuService )
+  {
+  }
 
   ngOnInit(): void {
+    console.log(this.name);
+    this.menu = this.menuservice.getmenu(this.name);
+  }
 
-  }
-  getcomponent(type: string , responsive): any{
-    switch (responsive) {
-      case 'xs':
-        return this.navigationMobileComponent;
-      case 'xl':
-        return this.navigationDesktopComponent;
-    }
-  }
-  getlist(lst,ps): any{
+  getlist(lst, ps): any{
     return  {list: lst,
             position : ps};
   }
+
 
 }

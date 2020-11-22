@@ -1,0 +1,17 @@
+
+    <mat-toolbar  class="menu_mobile" color="primary">
+        <div *ngFor="let menu of list"  fxFlex fxLayout="row" fxLayoutAlign="space-between center">
+    
+          <button mat-button routerLink="/home" routerLinkActive="active-menu-item">
+            <div class="toolbar-icon">
+              <mat-icon  [svgIcon]="menu.icon"></mat-icon>
+            </div>
+          
+          </button>
+          
+    
+        </div>
+      </mat-toolbar>
+  
+  
+  

@@ -3,13 +3,16 @@
 
 
    
-    <mat-sidenav-content >
+    <mat-sidenav-content   fxFlexFill>
 
-         <app-menu  [menus]="config"  ></app-menu>
+          <header class="header" ><app-menu  [name]="'header'" [type]="navigationMobileHeaderComponent" ></app-menu></header>
+         <app-menu  [name]="'star'" [type]="navigationDesktopComponent" ></app-menu>
 
-
+         
+        
+   
        <app-goods></app-goods>
-      
+         <footer class="footer"> <app-menu  [name]="'footer'" [type]="navigationMobileFooterComponent" ></app-menu></footer>
     </mat-sidenav-content>
   
   </mat-sidenav-container>  
