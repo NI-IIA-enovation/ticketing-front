@@ -6,9 +6,9 @@ fixedInViewport="true"
     [mode]="'side'"
     [opened]="true"
      >
-  <mat-toolbar>SwiftImmo</mat-toolbar>
+  <mat-toolbar class="mat-toolbar-desk"><img src="https://i.pinimg.com/280x280_RS/cd/2d/99/cd2d99cb7a56908d5b71630ff3f8e2fb.jpg"></mat-toolbar>
   <mat-nav-list *ngFor="let menu of list">
-    <button  mat-button  class="mat-btn"    ><mat-icon >{{menu.icon}}</mat-icon>{{menu.name}}</button>
+    <button  mat-button  class="mat-btn"    ><mat-icon [svgIcon]="menu.icon"></mat-icon>{{menu.name}}</button>
   
 </mat-nav-list>
 </mat-sidenav>
