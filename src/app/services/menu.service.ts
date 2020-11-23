@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
-import { dataconfig } from './configmenu';
+import { dataconfig,Configmenu } from './configmenu';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MenuService {
   config = dataconfig;
+  Menus: Configmenu;
   constructor() { }
-  getmenu(name): any{
+  getmenu(name): Configmenu{
+
     return this.config.find(item => item.name === name);
   }
 }

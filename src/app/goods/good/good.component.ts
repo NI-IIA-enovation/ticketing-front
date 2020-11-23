@@ -9,9 +9,8 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./good.component.scss']
 })
 export class GoodComponent implements OnInit {
-  @Input() element: any;
-  @Input() column: any;
-  Periodi: any;
+  @Input() element: string;
+  @Input() column: string;
   constructor(registry: MatIconRegistry, sanitizer: DomSanitizer) {
 
    const svg = icon(faPencilAlt).html.join('');

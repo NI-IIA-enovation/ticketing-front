@@ -10,8 +10,8 @@ import { faBuilding, faCalendarAlt, faCog, faHome, faIdCard, faShoppingBasket } 
   styleUrls: ['./navigation-mobile-footer.component.scss']
 })
 export class NavigationMobileFooterComponent implements OnInit {
-  @Input() list: any;
-  @Input() position: any;
+  @Input() list: Array<any>;
+  @Input() position: string;
     constructor(private registry: MatIconRegistry,private  sanitizer: DomSanitizer) {
     registry.addSvgIconLiteral('fa-home', sanitizer.bypassSecurityTrustHtml(icon(faHome).html.join('')));
     registry.addSvgIconLiteral('fa-building', sanitizer.bypassSecurityTrustHtml(icon(faBuilding).html.join('')));
