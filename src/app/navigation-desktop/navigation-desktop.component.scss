@@ -1,8 +1,12 @@
 
 ::ng-deep .sidenav{
-    width: 200px;
-    background-color: #505df7;
-    color: #fff;
+  width: 200px;
+  background-color: #505df7;
+  color: #fff;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  z-index: -1;
     .mat-toolbar-desk{
       background-color: #505df7;
       color: #fff;
@@ -30,8 +34,8 @@
     
   }
   ::ng-deep.container{
-    height: 100vh;
-    padding: 0px;
-    margin-top: 50px;
+    height: 100%;
+    padding: 10px;
+    overflow: hidden;
  
   }

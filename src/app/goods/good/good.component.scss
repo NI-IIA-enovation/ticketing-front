@@ -10,7 +10,7 @@
       position: sticky;
       top: 0;
       z-index: 2;
-
+     
       th.mat-header-cell {
         display: none;
         flex: 1;
@@ -223,6 +223,9 @@
       }
       ::ng-deep .mat-stroked-button{
         border-radius: 27px;
+        width: 100%;
+
+        font-size:0.7em;
         border: 1px solid #7892f6 !important;
       }
       
