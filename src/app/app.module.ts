@@ -28,11 +28,11 @@ import { NavigationMobileHeaderComponent } from './navigation-mobile-header/navi
 import { NavigationMobileFooterComponent } from './navigation-mobile-footer/navigation-mobile-footer.component';
 const config: IResponsiveConfig = {
   breakPoints: {
-    xs: { max: 850 },
+    xs: { max: 1000 },
     sm: { min: 601, max: 859 },
-    md: { min: 860, max: 1279 },
-    lg: { min: 1280, max: 1919 },
-    xl: { min: 850 }
+    md: { min: 860, max: 1200 },
+    lg: { min: 1201, max: 1919 },
+    xl: { min: 1000 }
   },
   debounceTime: 100
 };

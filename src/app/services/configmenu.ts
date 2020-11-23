@@ -1,6 +1,6 @@
 export class Configmenu{
     name: string;
-    responsive: string;
+    responsive: Array<string>;
     listmenu: Listmenu[];
   }
 export class Listmenu{
@@ -15,7 +15,7 @@ export class Listmenu{
 export const dataconfig: Configmenu[] =
 [{
 name: 'footer',
-responsive: 'xs',
+responsive: ['xs', 'sm' ,'md'],
           listmenu: [{
             position: 0,
             icon: 'fa-home',
@@ -61,7 +61,7 @@ responsive: 'xs',
           }]},
           {
             name: 'header',
-            responsive: 'xs',
+            responsive:  ['xs', 'sm','md'],
                       listmenu: [{
                         position: 0,
                         icon: 'fa-home',
@@ -107,7 +107,7 @@ responsive: 'xs',
                       }]},
 {
 name: 'star',
-responsive: 'xl',
+responsive:  ['lg','xl'],
             listmenu: [{
               position: 0,
               icon: 'fa-home',

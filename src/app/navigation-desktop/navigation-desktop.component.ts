@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { icon } from '@fortawesome/fontawesome-svg-core';
-import { faHome, faBuilding ,faIdCard,faCalendarAlt,faShoppingBasket,faCog} from '@fortawesome/free-solid-svg-icons';
+import { faHome, faBuilding , faIdCard, faCalendarAlt, faShoppingBasket, faCog} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navigation-desktop',
@@ -12,7 +12,7 @@ import { faHome, faBuilding ,faIdCard,faCalendarAlt,faShoppingBasket,faCog} from
 export class NavigationDesktopComponent implements OnInit {
   @Input() list: Array<any>;
   @Input() position: string;
-  constructor(private registry: MatIconRegistry,private  sanitizer: DomSanitizer) {
+  constructor(private registry: MatIconRegistry, private  sanitizer: DomSanitizer) {
 
     registry.addSvgIconLiteral('fa-home', sanitizer.bypassSecurityTrustHtml(icon(faHome).html.join('')));
     registry.addSvgIconLiteral('fa-building', sanitizer.bypassSecurityTrustHtml(icon(faBuilding).html.join('')));

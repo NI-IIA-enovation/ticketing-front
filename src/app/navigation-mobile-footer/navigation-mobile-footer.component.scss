@@ -25,10 +25,6 @@
     height: 100%;
     padding: 10px;
     margin-top:52px;
-    margin-bottom: 52px;
-    overflow: auto;
+     overflow: hidden;
   }
-  ::ng-deep.mat-drawer-content{
-overflow: hidden;
-
-  }
+ 
