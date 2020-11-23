@@ -1,10 +1,7 @@
 export class Configmenu{
     name: string;
     responsive: string;
-    listmenu: Listmenu;
-constructor(){
-this.listmenu = new Listmenu();
-}
+    listmenu: Listmenu[];
   }
 export class Listmenu{
     position: number;
@@ -15,7 +12,7 @@ export class Listmenu{
     component: string;
 
   }
-export const dataconfig =
+export const dataconfig: Configmenu[] =
 [{
 name: 'footer',
 responsive: 'xs',

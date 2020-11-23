@@ -10,8 +10,8 @@ import { faHome, faBuilding ,faIdCard,faCalendarAlt,faShoppingBasket,faCog} from
   styleUrls: ['./navigation-desktop.component.scss']
 })
 export class NavigationDesktopComponent implements OnInit {
-  @Input() list: any;
-  @Input() position: any;
+  @Input() list: Array<any>;
+  @Input() position: string;
   constructor(private registry: MatIconRegistry,private  sanitizer: DomSanitizer) {
 
     registry.addSvgIconLiteral('fa-home', sanitizer.bypassSecurityTrustHtml(icon(faHome).html.join('')));
