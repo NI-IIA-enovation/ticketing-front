@@ -31,14 +31,14 @@
     }}
     ::ng-deep   .mat-row {
         height: auto;
-        border-top: 1px solid rgb(187, 184, 184);
+        border-top: 1px solid  $light-gray;
         td.mat-cell:not(.mat-column-actions) {
           display: grid;
          // grid-template-columns: 50% 50%;
           padding: 0.5rem;
           text-align: left;
           word-break: break-word;
-          border: none !important;
+          border: none ;
           & > * {
             grid-column: 2;
           }
@@ -68,13 +68,13 @@
         }
         .div-status2{
           font-size: 12px;
-          border: 1px solid #ccc !important;
+          border: 1px solid $light-gray !important;
           line-height: 24px !important;
           text-align: center !important;
           border-radius: 5px !important;
           padding-left: 7px;
         }
-      
+       
         .div-status2 mat-icon{
           display: none !important;
         }
@@ -88,7 +88,7 @@
           justify-content: center !important;
           padding: 0 0.5rem;
           width:100% !important;
-          border-bottom: 1px solid #777 !important;
+          border-bottom: 1px solid $light-gray ;
           & > button {
             margin: 0.5rem 0;
           }
@@ -140,7 +140,7 @@
     font-family: system-ui !important;
   }
    .control.mat-badge-content{
-    background-color: #fcb73d !important;
+    background-color: $notification-badge!important;
   }
 
      }
@@ -180,11 +180,11 @@
         margin-top: 10px;
        }
        .control mat-icon{
-        color: #AAA !important;
+        color: $mid-gray !important;
         }
         
          .control button.mat-stroked-button mat-icon{
-        color: #7892f6 !important;
+        color: $text-color!important;
         }
      
     }
@@ -228,14 +228,14 @@
       
 }
 ::ng-deep.mat-badge-content{
-    background-color: #fcb73d !important;
+    background-color: $notification-badge !important;
   }
 .span-h{
-    display: block;display: block;font-size: 18px;color: cornflowerblue;
+    display: block;display: block;font-size: 18px;color:$text-color;
     
 }
 .span-h2{
-    font-size: 11px;color: #777;
+    font-size: 11px;color:$mid-gray;
     
 }
 
@@ -252,11 +252,11 @@
 .div-status{
     max-width: 126px;
     max-height: 50px;
-    border: 1px solid #ef7c2a;
+    border: 1px solid $colortext-priority;
     text-align: center;
     line-height: 27px;
     border-radius: 5px;
-    font-weight: bold;color: #ef7c2a;
+    font-weight: bold;color: $colortext-priority;
     background-color: rgb(253 63 20 / 20%);
 }
 .div-status2{
@@ -267,14 +267,19 @@
              text-align: center;
 }
 .div-status2 mat-icon{
-color:cornflowerblue;
+color:$text-color;
 position: absolute;
     font-size: 23px;
 }
-.div-name{
+.ng-star-inserted{
     line-height: 27px;
+   mat-icon{
+      color:$mid-gray;
+    }
 }
-.div-name img{
+.div-name{
+  line-height: 27px;
+  img{
     max-width: 50PX;
     max-height: 50px;
     float: left;
@@ -282,13 +287,14 @@ position: absolute;
     border-radius: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
-    border: 1px solid #ccc
+    border: 1px solid $mid-gray;
+}
 }
 .mat-badge-content{
-    background-color: #fcb73d !important;
+    background-color: $notification-badge!important;
   }
 .mat-column-actions mat-icon{
-    color:cornflowerblue;
+    color:$text-color;
     font-size: 17px;
 }
 .mat-icon-button {
