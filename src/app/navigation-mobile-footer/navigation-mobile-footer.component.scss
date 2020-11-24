@@ -1,4 +1,4 @@
-
+@import "../../css/utilities/responsive";
 ::ng-deep .menu_mobile {
     position: fixed;
     overflow: hide;
@@ -20,11 +20,19 @@
   }
   
   
-  
+  @include bp-small {
   ::ng-deep .container {
     height: 100%;
     padding: 10px;
     margin-top:52px;
      overflow: hidden;
   }
- 
+}
+@include bp-medium {
+    ::ng-deep .container {
+        height: 100%;
+        padding: 10px;
+        margin-top:52px;
+        overflow: hidden;
+      }
+    }
