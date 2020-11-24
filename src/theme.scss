@@ -83,7 +83,14 @@ $overlay: rgba(0, 0, 0, 0.32);
 $custom-typography: mat-typography-config(
   $font-family: "Fira Sans"
 );
-
+@font-face {
+  font-family: 'Fira Sans';
+  src: url(assets/font/fira-sans/FiraSans-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: 'Fira Sans Medium';
+  src: url(assets/font/fira-sans/FiraSans-Medium.otf) format("opentype");
+}
 // BORDER RADIUS
 $basic-radius: calculateRem(5px);
 
@@ -102,3 +109,16 @@ $danger: mat-color($my-app-warn);
 
 $link-color: $accent; // set link color based on the used material theme
 $link-hover-color: currentColor;
+$CertiDesignSystem-primary: mat-palette($mat-indigo);
+$CertiDesignSystem-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$CertiDesignSystem-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$CertiDesignSystem-theme: mat-light-theme($CertiDesignSystem-primary, $CertiDesignSystem-accent, $CertiDesignSystem-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($CertiDesignSystem-theme);

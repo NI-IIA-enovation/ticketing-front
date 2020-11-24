@@ -1,4 +1,4 @@
-
+@import "../../css/utilities/responsive";
 ::ng-deep .sidenav{
   width: 200px;
   background-color: #505df7;
@@ -33,9 +33,10 @@
     height: 50px; // Note: iPhonePlus requires 80px, so will need to be variable, but not handling that in this demo.
     
   }
+  @include bp-medium-min {
   ::ng-deep.container{
     height: 100%;
     padding: 10px;
     overflow: hidden;
  
-  }
+  }}
