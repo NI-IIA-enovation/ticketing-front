@@ -1,0 +1,102 @@
+@import "../../../theme.scss";
+.mat-list-item{
+    margin-bottom: 12px;
+.hour{
+    padding-right:10px;
+    border-right:3px solid #000;
+    font-weight: bold;
+   
+    display: block;
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;height: 40px;
+        line-height: 40px;
+        li{
+            line-height: 20px;
+            height: 20px;
+        }
+    }
+}}
+.text-line{
+    padding-left:10px;
+.heading{
+    padding: 0;
+    margin: 0;
+    line-height: 19px;
+    width: 113px;
+    margin-top: 2px;
+    font-size: 14px;
+    color: $mid-gray;
+}
+.heading-name{
+    font-size: 13px;
+    color:$mid-gray;
+    margin-bottom: 5px;
+    line-height: 15px;
+}
+.line{
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 12px;
+}}
+.mat-card {
+    display: block;
+    border-radius: 5px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    mat-card-header{
+        margin-top: 10px;
+    display: block;
+    .mat-card-title{
+        display: inline-block;
+        width: 100%;
+        color: $text-color;
+        font-size: 19px;
+        font-weight: bold;
+        mat-icon{
+            float: right;
+            font-size: 18px;
+            color: $text-color;
+            background-color: aliceblue;
+            padding: 5px;
+            width: 30px;
+            height: 30px;
+        }
+        a{
+            float: right;
+            font-size: 10px;
+        }
+     }
+     mat-card-subtitle{
+        font-size: 12px !important;
+        color: #646464 !important;
+     }
+    }
+    }
+.letter-name{
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    padding: 10px;
+    display: block;
+    background-color:$text-color;
+    color: #fff;
+}
+.mat-icon-news{
+    font-size: 18px;
+    color: #505df7;
+    background-color: aliceblue;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+}
+.news-item{
+    margin-top: 20px;
+}

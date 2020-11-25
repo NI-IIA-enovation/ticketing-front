@@ -1,0 +1,14 @@
+<div fxLayout="column">
+    <div fxLayout="row">
+        <!--Zone Work > Header-->
+        <div style="width: 100%; height: 70px; border-bottom: 1px solid #ccc;"></div>
+    </div>
+    <div fxLayout="row">
+        <!--Zone Work > Content-->
+        <div fxLayout="row" fxFlex="65"><app-goods class="goods"></app-goods></div>
+        <div fxLayout="column" fxFlex="30" fxFlexOffset="5" *responsive="{ bootstrap:['xl','lg']}">
+            <app-side-panel [name]="'appointment'" [type]="appointment"></app-side-panel>
+            <app-side-panel [name]="'activity-log'" [type]="activitylog"></app-side-panel>
+        </div>
+    </div>
+</div>

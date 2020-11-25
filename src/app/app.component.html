@@ -1,11 +1,19 @@
-
-<header class="header" fxLayout="column"><app-menu  [name]="'header'" [type]="navigationMobileHeaderComponent" ></app-menu></header>
-
-<div fxLayout="row" fxFlex="100" class="content position" >
- <div fxLayout="column" fxFlex="200px" *xl><app-menu  [name]="'star'" [type]="navigationDesktopComponent" ></app-menu></div>
- <div class="content" fxLayout="column" fxFlex>
-  <app-goods></app-goods>
- </div>
+<div fxLayout="row" fxFlex="100" class="content position" *responsive="{ bootstrap:['xl','lg']}">
+  <div fxLayout="row" fxFlex="15" class="nav"><app-menu [name]="'star'" [type]="navigationDesktopComponent"></app-menu></div>
+  <div fxLayout="column" fxFlex="79" fxFlexOffset="3">
+      <div fxLayout="column">
+          <!--Zone Header-->
+          <div style="width: 100%; height: 70px; border-bottom: 1px solid #ccc;"></div>
+      </div>
+      <div fxLayout="column">
+          <!--Zone Work-->
+          <app-work></app-work>
+      </div>
+  </div>
 </div>
-
-<footer  class="footer" fxLayout="column" *responsive="{ bootstrap:['xs', 'sm','md']}"><app-menu  [name]="'footer'" [type]="navigationMobileFooterComponent" ></app-menu></footer>
+<!--Mobile-->
+<div *responsive="{ bootstrap:['xs', 'sm','md']}">
+  <header class="header" fxLayout="column"><app-menu [name]="'header'" [type]="navigationMobileHeaderComponent"></app-menu></header>
+  <app-goods></app-goods>
+  <footer class="footer" fxLayout="column"><app-menu [name]="'footer'" [type]="navigationMobileFooterComponent"></app-menu></footer>
+</div>
