@@ -30,6 +30,9 @@ import { SidePanelComponent } from './work/side-panel/side-panel.component';
 import { WorkComponent } from './work/work.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { ActivityLogComponent } from './activity-log/activity-log.component';
+import { NavigationUserComponent } from './navigation-user/navigation-user.component';
+import { NavigationLanguageComponent } from './navigation-language/navigation-language.component';
+import { HeaderComponent } from './header/header.component';
 const config: IResponsiveConfig = {
   breakPoints: {
     xs: {max: 600},
@@ -54,6 +57,9 @@ const config: IResponsiveConfig = {
     WorkComponent,
     AppointmentComponent,
     ActivityLogComponent,
+    NavigationUserComponent,
+    NavigationLanguageComponent,
+    HeaderComponent
   ],
   imports: [
     DynamicAttributesModule,
