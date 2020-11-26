@@ -26,14 +26,18 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
 import { NavigationDesktopComponent } from './navigation-desktop/navigation-desktop.component';
 import { NavigationMobileHeaderComponent } from './navigation-mobile-header/navigation-mobile-header.component';
 import { NavigationMobileFooterComponent } from './navigation-mobile-footer/navigation-mobile-footer.component';
+import { SidePanelComponent } from './work/side-panel/side-panel.component';
+import { WorkComponent } from './work/work.component';
+import { AppointmentComponent } from './appointment/appointment.component';
+import { ActivityLogComponent } from './activity-log/activity-log.component';
 const config: IResponsiveConfig = {
   breakPoints: {
-    xs: { max: 1000 },
-    sm: { min: 601, max: 859 },
-    md: { min: 860, max: 1200 },
-    lg: { min: 1201, max: 1919 },
-    xl: { min: 1000 }
-  },
+    xs: {max: 600},
+    sm: {min: 601, max: 959},
+    md: {min: 960, max: 1279},
+    lg: {min: 1280, max: 1919},
+    xl: {min: 1920}
+},
   debounceTime: 100
 };
 
@@ -46,6 +50,10 @@ const config: IResponsiveConfig = {
     NavigationDesktopComponent,
     NavigationMobileHeaderComponent,
     NavigationMobileFooterComponent,
+    SidePanelComponent,
+    WorkComponent,
+    AppointmentComponent,
+    ActivityLogComponent,
   ],
   imports: [
     DynamicAttributesModule,

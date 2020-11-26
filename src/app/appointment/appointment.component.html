@@ -1,0 +1,20 @@
+<mat-card class="mat-elevation-z1 mat-card">
+    <mat-card-header>
+        <mat-card-title class="mat-card-title">{{title}} <mat-icon [svgIcon]="'fa-calendar'"></mat-icon></mat-card-title>
+        <mat-card-subtitle class="mat-card-title">{{description}} </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-list *ngFor="let pnl of list">
+            <mat-list-item>
+                <div class="hour" [style]="getcolor(pnl.color)">
+                    {{pnl.date}}
+                </div>
+                <div class="text-line">
+                    <h3 class="heading heading-name">{{pnl.name}}</h3>
+                    <p class="line">{{pnl.description}}</p>
+                </div>
+            </mat-list-item>
+        </mat-list>
+    </mat-card-content>
+    <mat-card-actions> </mat-card-actions>
+</mat-card>
