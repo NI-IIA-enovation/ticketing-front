@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { MatRippleModule } from '@angular/material/core';
+import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 import { MatToolbarModule} from '@angular/material/toolbar';
 import {   MatStepperModule} from '@angular/material/stepper';
 import {   MatTabsModule} from '@angular/material/tabs';
@@ -33,6 +33,14 @@ import { ActivityLogComponent } from './activity-log/activity-log.component';
 import { NavigationUserComponent } from './navigation-user/navigation-user.component';
 import { NavigationLanguageComponent } from './navigation-language/navigation-language.component';
 import { HeaderComponent } from './header/header.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule } from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { SlidePanelComponent } from './slide-panel/slide-panel.component';
+import { AddNoteComponent } from './add-note/add-note.component';
 const config: IResponsiveConfig = {
   breakPoints: {
     xs: {max: 600},
@@ -59,7 +67,9 @@ const config: IResponsiveConfig = {
     ActivityLogComponent,
     NavigationUserComponent,
     NavigationLanguageComponent,
-    HeaderComponent
+    HeaderComponent,
+    SlidePanelComponent,
+    AddNoteComponent
   ],
   imports: [
     DynamicAttributesModule,
@@ -80,7 +90,15 @@ const config: IResponsiveConfig = {
     MatMenuModule,
     MatSidenavModule,
     MatListModule,
-    MatGridListModule,ScrollingModule,
+    MatDialogModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatGridListModule,
+    MatNativeDateModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    ScrollingModule,
+    MatDatepickerModule,
     ResponsiveModule.forRoot(config)
   ],
   providers: [],

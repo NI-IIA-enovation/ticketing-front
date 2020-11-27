@@ -1,0 +1,96 @@
+
+
+<h1 mat-dialog-title>Maison bleue - Overjise</h1> 
+<div mat-dialog-content>
+  <p>4 chambres 2 salles de bain - 75m</p>
+  <mat-tab-group>
+    <mat-tab label="Journal d'activité">
+        <mat-card class="mat-elevation-z1 mat-card" >
+            <mat-card-header>
+                <h2 >Journal d'activité </h2>
+            </mat-card-header>
+            <mat-card-content >
+                <mat-list>
+                    <mat-list-item class="news-item">
+                        <div class="letter-name">
+                            AC
+                        </div>
+                        <div class="text-line">
+                            <h5 class="line">15 AOUT 2019</h5>
+                            <h4 class="heading">a envoyé un mail à <a href="#">Mr Dupond</a></h4>
+                        </div>
+                        <mat-icon class="mat-icon-news" [svgIcon]="'fa-envelope'"></mat-icon>
+                    </mat-list-item>
+                    <mat-list-item class="news-item">
+                        <div class="letter-name">
+                            AB
+                        </div>
+                        <div class="text-line">
+                            <h5  class="line">15 AOUT 2019</h5>
+                            <h4 class="heading">a envoyé un mail à <a href="#">Mr Dupond</a></h4>
+                        </div>
+                        <mat-icon class="mat-icon-news" [svgIcon]="'fa-envelope'"></mat-icon>
+                    </mat-list-item>
+                    <mat-list-item class="news-item">
+                        <div class="letter-name">
+                            AB
+                        </div>
+                        <div class="text-line">
+                            <h5  class="line">15 AOUT 2019</h5>
+                            <h4 class="heading">a envoyé un mail à <a href="#">Mr Dupond</a></h4>
+                        </div>
+                        <mat-icon class="mat-icon-news" [svgIcon]="'fa-envelope'"></mat-icon>
+                    </mat-list-item>
+                </mat-list>
+            </mat-card-content>
+           
+        </mat-card>
+    </mat-tab>
+    <mat-tab label="Fiche du bien"> Content 2 </mat-tab>
+    <mat-tab label="Matching"> Content 3 </mat-tab>
+    </mat-tab-group>
+        <div fxLayout="column">
+            <h2 >Ajouter une note  </h2>
+           
+         <div fxFlex="100" fxLayout="row">
+              <label fxFlex="40" >Type de prise de contrat  </label>
+              <mat-icon fxFlex="20"  >email</mat-icon><mat-icon fxFlex="20" >phone</mat-icon>   <mat-icon fxFlex="20" >location_on</mat-icon>
+          
+            </div>
+        <label fxFlex="100" >Message</label>
+          <mat-form-field fxFlex="100">
+            <mat-label>Type your message</mat-label>
+            <textarea matInput ></textarea>
+          </mat-form-field>
+          <div fxFlex="100" fxLayout="row" >
+            
+            
+            <div fxFlex="45" fxLayout="column"  >
+                <label >Priorité</label>
+                <mat-form-field   >
+                <mat-label></mat-label>
+                <mat-select>
+                  <mat-option value="option" selected>Elévée</mat-option>
+                </mat-select>
+              </mat-form-field>
+              </div>
+              <div fxFlex="45" fxFlexOffset="5" fxLayout="column" > 
+                <label >Date d'échéance</label>
+              <mat-form-field > 
+                <mat-label>JJ/MM/AAAA</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+              </div>
+          </div>
+          <div fxFlex="100" fxLayout="row" fxLayoutAlign="end center" >
+            <button    mat-raised-button color="accent">Enregistrer</button>
+          </div>
+         </div>
+
+</div>
+
+
+ 
+ 
