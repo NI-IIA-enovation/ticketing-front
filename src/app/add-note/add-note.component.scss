@@ -1,0 +1,153 @@
+@import "../../css/utilities/responsive";
+::ng-deep   .mat-dialog-content { 
+    @include bp-extralargexxl {
+    font-size:1em !important; 
+    }
+    @include bp-extralargexxlmin{
+        font-size: 0.66em !important;  
+    }
+ }
+.mat-dialog-title{
+    color:$text-color;
+    font-weight: bold;
+}
+label{
+    font-weight: bold;
+}
+
+::ng-deep.mat-tab-label-active{
+   
+  
+    color:$text-color !important;
+  
+  }
+::ng-deep button:focus{
+    outline: none;background:none;}
+
+.mat-list-item{
+
+.hour{
+    padding-right:10px;
+    border-right:3px solid #000;
+    font-weight: bold;
+    display: block;
+    
+}}
+.text-line{
+    padding-left:10px;
+.heading{
+    padding: 0;
+    margin: 0;
+    line-height: 19px;
+   width: 100%;
+    margin-top: 2px;
+    color: $mid-gray;
+}
+.heading-name{
+    color:$mid-gray;
+    margin-bottom: 5px;
+    line-height: 15px;
+    
+}
+.line{
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    line-height: 12px;
+}}
+.mat-card {
+    display: block;
+    border-radius: 5px;
+    margin: 5px;
+    margin-right:20px;
+    padding: 10px;
+    @include bp-extralargexxl {
+    margin-bottom: 30px;
+    }
+    mat-card-header{
+        //margin-top: 10px;
+    display: block;
+    .mat-card-title{
+        display: inline-block;
+        width: 100%;
+        color: black;
+       
+        font-weight: bold;
+        mat-icon{
+            float: right;
+            font-size: 18px;
+            color: $text-color;
+            background-color: aliceblue;
+            padding: 5px;
+            width: 30px;
+            height: 30px;
+        }
+        a{
+            float: right;
+            font-size: 10px;
+        }
+     }
+     mat-card-subtitle{
+        font-size: 12px !important;
+        color: #646464 !important;
+     }
+    }
+    }
+.letter-name{
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    padding: 10px;
+    display: block;
+    background-color:$text-color;
+    color: #fff;
+}
+.mat-icon-news{
+    font-size: 18px;
+    color: #505df7;
+    background-color: aliceblue;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+}
+.news-item{
+    @include bp-extralargexxl {
+        margin-bottom:20px;
+    }
+    @include bp-extralargexxlmin{
+        margin-bottom: 10px;
+    }
+ 
+}
+.mat-dialog-content{
+    height: 100% !important;
+     max-height: 90% !important; 
+ 
+}
+.p-title{
+    font-size: 21px;
+    padding: 11px;
+}
+.mat-icon{
+    color:$text-color;
+}
+button{
+    color: #fff;
+}
+.btn-close{
+position: absolute;right: 5px;top: 5px;
+}
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    border: 2px solid #757575;
+    background: #68d0e5;
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+    padding: 30%;
+  }
+
+
+ 
+
+  

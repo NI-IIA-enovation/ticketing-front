@@ -58,7 +58,55 @@ responsive: ['xs', 'sm' ,'md'],
           target: 'work',
           action: 'set',
           component: '#'
-          }]},
+          }]}, {
+            name: 'user',
+            responsive: ['lg','xl'],
+                      listmenu: [{
+                        position: 0,
+                        icon: 'fa-user',
+                        name: 'Espace client',
+                        target: 'work',
+                        action: 'set',
+                        component: '#'
+                      }, {
+                        position: 1,
+                        icon: 'fa-cog',
+                        name: 'Mon profil',
+                        target: 'work',
+                        action: 'set',
+                        component: '#'
+                      }, {
+                        position: 2,
+                        icon: 'fa-off',
+                        name: 'Déconnecter',
+                        target: 'work',
+                        action: 'set',
+                        component: '#'
+                      }]}, {
+                        name: 'language',
+                        responsive: ['lg', 'xl'],
+                                  listmenu: [{
+                                    position: 0,
+                                    icon: '',
+                                    name: 'FR',
+                                    target: 'work',
+                                    action: 'set',
+                                    component: '#'
+                                  }, {
+                                    position: 1,
+                                    icon: '',
+                                    name: 'NL',
+                                    target: 'work',
+                                    action: 'set',
+                                    component: '#'
+                                  }, {
+                                    position: 2,
+                                    icon: '',
+                                    name: 'EN',
+                                    target: 'work',
+                                    action: 'set',
+                                    component: '#'
+                                  }]},
           {
             name: 'header',
             responsive:  ['xs', 'sm','md'],

@@ -1,0 +1,12 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" >
+    FR
+    <mat-icon  [svgIcon]="'fa-angledown'"></mat-icon>
+  </button>
+
+  <mat-menu #menu="matMenu"  >
+    <button mat-menu-item *ngFor="let mn of list">
+      <mat-icon [svgIcon]="mn.icon"></mat-icon>
+      <span>{{mn.name}}</span>
+    </button>
+  </mat-menu>
+

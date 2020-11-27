@@ -5,7 +5,16 @@
     @content;
   }
 }
-
+@mixin bp-extralargexxl {
+  @media screen and (min-width: map-get($grid-breakpoints, xxl)) {
+    @content;
+  }
+}
+@mixin bp-extralargexxlmin {
+  @media screen and (max-width: map-get($grid-breakpoints, xxl)) {
+    @content;
+  }
+}
 @mixin bp-large {
   @media screen and (max-width: map-get($grid-breakpoints, lg)) {
     @content;
