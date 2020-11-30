@@ -24,15 +24,7 @@ label{
 ::ng-deep button:focus{
     outline: none;background:none;}
 
-.mat-list-item{
 
-.hour{
-    padding-right:10px;
-    border-right:3px solid #000;
-    font-weight: bold;
-    display: block;
-    
-}}
 .text-line{
     padding-left:10px;
 .heading{
@@ -43,12 +35,7 @@ label{
     margin-top: 2px;
     color: $mid-gray;
 }
-.heading-name{
-    color:$mid-gray;
-    margin-bottom: 5px;
-    line-height: 15px;
-    
-}
+
 .line{
     padding: 0;
     margin: 0;
@@ -122,30 +109,10 @@ label{
     }
  
 }
-.mat-dialog-content{
-    height: 100% !important;
-     max-height: 90% !important; 
- 
-}
-.p-title{
-    font-size: 21px;
-    padding: 11px;
-}
+
 .mat-icon{
     color:$text-color;
 }
-button{
-    color: #fff;
-}
-.btn-close{
-position: absolute;right: 5px;top: 5px;
-}
-.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
-    border: 2px solid #757575;
-    background: #68d0e5;
-    clip-path: polygon(0 0, 0% 100%, 100% 0);
-    padding: 30%;
-  }
 
 
  

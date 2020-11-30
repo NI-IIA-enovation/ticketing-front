@@ -2,8 +2,8 @@
   
   <div class="div-name" *ngIf="column== 'name' ">
                   <img src="https://i.pinimg.com/474x/00/c3/fb/00c3fb3506ceb708715066f0a8e8e451.jpg" />
-                  <span class="span-h pack-pricing-big" color="accent">{{element[column]}}</span>
-                  <span class="span-h2">{{element['info']}}</span>
+                  <h3 color="accent">{{element[column]}}</h3>
+                  <p >{{element['info']}}</p>
               </div>
               <div *ngIf="column== 'user' ">
                   <img src="https://www.emmegi.co.uk/wp-content/uploads/2019/01/User-Icon.jpg" width="30px" height="30px" />
@@ -15,7 +15,7 @@
                   <mat-icon  [matBadge]="element[column]" >today</mat-icon>
               </div>
               <div *ngIf="column== 'deadline' " >
-                  <div class="div-date" >{{element[column]}}</div>
+                  <div class="div-date" ><h5 >{{element[column]}}</h5></div>
               </div>
            
           
@@ -24,7 +24,7 @@
               </div>
            
               <div *ngIf="column== 'status' ">
-                  <div class="div-status2">{{element[column]}} <mat-icon>keyboard_arrow_down</mat-icon></div>
+                  <div class="div-status2"><h5 >{{element[column]}}</h5><mat-icon>keyboard_arrow_down</mat-icon></div>
               </div>
               
               <div class="mat-column-actions" *ngIf="column== 'actions'">

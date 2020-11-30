@@ -67,7 +67,7 @@
          
         }
         .div-status2{
-          font-size: 12px;
+         // font-size: 12px;
           border: 1px solid $light-gray !important;
           line-height: 24px !important;
           text-align: center !important;
@@ -134,7 +134,7 @@
     margin-top: 5px;
 }
 .control .mat-focus-indicator{
-    font-size: 10px !important;
+    //font-size: 10px !important;
     width: 96% !important;
     
     font-family: system-ui !important;
@@ -215,7 +215,8 @@
       }
       ::ng-deep .hr-div{
       max-width: 150px;
-      font-size: 11px;
+      padding: 4px;
+     // font-size: 11px;
       text-transform: uppercase;
       font-weight: bold;
       font-family: system-ui;
@@ -231,23 +232,30 @@
     background-color: $notification-badge !important;
   }
 .span-h{
-    display: block;display: block;font-size: 18px;color:$text-color;
+    display: block;display: block;//font-size: 18px;
+    color:$text-color;
     
 }
 .span-h2{
-    font-size: 11px;color:$mid-gray;
+    //font-size: 11px;
+    color:$mid-gray;
     
 }
 
 .div-date{
     max-width: 126px;
-    max-height: 50px;
+    
     border: 1px solid;
-    text-align: center;
-    line-height: 27px;
+    display: block;
     border-radius: 5px;
-    font-weight: bold;
-    font-size: 11px;
+    
+    //font-size: 11px;
+    h5{
+      text-align: center;
+      font-weight: bold;
+      font-size: 0.7em;
+      margin: 0px;
+    }
 }
 .div-status{
     max-width: 126px;
@@ -263,13 +271,18 @@
     max-width:200px;
             margin:auto;
              font-weight: bold;text-transform: uppercase;
-             font-size: 11px;
+             //font-size: 11px;
              text-align: center;
+             h5{
+              text-align: center;
+              display: inline;
+              font-weight: bold;
+             }
 }
 .div-status2 mat-icon{
 color:$text-color;
 position: absolute;
-    font-size: 23px;
+   // font-size: 23px;
 }
 .ng-star-inserted{
     line-height: 27px;
@@ -279,15 +292,25 @@ position: absolute;
 }
 .div-name{
   line-height: 27px;
+  font-size: 1.1 em !important;
+  h3{
+    margin: 0px;
+    color:$text-color;
+    display: inline;
+  }
+  p{
+    margin: 0px;
+    color:$mid-gray;
+  }
   img{
     max-width: 50PX;
     max-height: 50px;
     float: left;
-    margin-right: 15px;
+    margin-right:5px;
     border-radius: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
-    border: 1px solid $mid-gray;
+    float: left;
 }
 }
 .mat-badge-content{
@@ -295,7 +318,7 @@ position: absolute;
   }
 .mat-column-actions mat-icon{
     color:$text-color;
-    font-size: 17px;
+   // font-size: 17px;
 }
 .mat-icon-button {
 
