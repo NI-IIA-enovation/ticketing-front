@@ -32,7 +32,6 @@ export class SlidePanelService {
   public show(): void {
     this.isPanelVisible = true;
     this.closePanelSource.next(this.isPanelVisible);
-    console.log('tst');
   }
 
   public close(): void {
