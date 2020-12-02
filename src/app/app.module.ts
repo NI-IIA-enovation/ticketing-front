@@ -41,6 +41,13 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { SlidePanelComponent } from './slide-panel/slide-panel.component';
 import { AddNoteComponent } from './add-note/add-note.component';
+import { ActionComponent } from './action/action.component';
+import { ActionUserComponent } from './action-user/action-user.component';
+import { ContactListComponent } from './contact-list/contact-list.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { ActionContactsComponent } from './action-contacts/action-contacts.component';
+import { ActionGoodsComponent } from './action-goods/action-goods.component';
+
 const config: IResponsiveConfig = {
   breakPoints: {
     xs: {max: 600},
@@ -69,7 +76,13 @@ const config: IResponsiveConfig = {
     NavigationLanguageComponent,
     HeaderComponent,
     SlidePanelComponent,
-    AddNoteComponent
+    AddNoteComponent,
+    ActionComponent,
+    ActionUserComponent,
+    ContactListComponent,
+    ContactsComponent,
+    ActionContactsComponent,
+    ActionGoodsComponent
   ],
   imports: [
     DynamicAttributesModule,
