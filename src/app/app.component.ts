@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { icon } from '@fortawesome/fontawesome-svg-core';
-import { faBuilding, faCalendarAlt, faCog, faHome, faIdCard, faShoppingBasket, faEnvelope, faAngleDown, faUser,faPowerOff } from '@fortawesome/free-solid-svg-icons';
+import { faBuilding, faCalendarAlt, faCog, faHome, faIdCard, faShoppingBasket, faEnvelope,faAngleDown, faUser, faPowerOff, faPencilAlt} from '@fortawesome/free-solid-svg-icons';
 import { NavigationDesktopComponent } from './navigation-desktop/navigation-desktop.component';
 import { NavigationMobileFooterComponent } from './navigation-mobile-footer/navigation-mobile-footer.component';
 import { NavigationMobileHeaderComponent } from './navigation-mobile-header/navigation-mobile-header.component';
@@ -31,6 +31,6 @@ constructor(private registry: MatIconRegistry, private  sanitizer: DomSanitizer)
   registry.addSvgIconLiteral('fa-angledown', sanitizer.bypassSecurityTrustHtml(icon(faAngleDown).html.join('')));
   registry.addSvgIconLiteral('fa-user', sanitizer.bypassSecurityTrustHtml(icon(faUser).html.join('')));
   registry.addSvgIconLiteral('fa-off', sanitizer.bypassSecurityTrustHtml(icon(faPowerOff).html.join('')));
-  
+  registry.addSvgIconLiteral('font-pencil', sanitizer.bypassSecurityTrustHtml(icon(faPencilAlt).html.join('')));
 }
 }

@@ -1,0 +1,327 @@
+@import "../../css/utilities/responsive";
+
+@include bp-small {
+
+::ng-deep  .mat-table[matTableResponsive] {
+    .mat-header-row {
+      display: flex;
+      flex-wrap: wrap;
+      height: auto;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+     
+      th.mat-header-cell {
+        display: none;
+        flex: 1;
+        align-items: center;
+        padding: 1rem 0.5rem;
+        justify-content: space-around;
+
+        & > .mat-sort-header-container {
+          padding-left: 15px; // padding is used to center the header table cells, due to the width of the sort icon
+        }
+
+        &:not([mat-sort-header]),
+        &.mat-sort-header-disabled,
+        &.mat-column-actions {
+          display: none;
+        }
+      }
+    }}
+    ::ng-deep   .mat-row {
+        height: auto;
+        border-top: 1px solid  $light-gray;
+        td.mat-cell:not(.mat-column-actions) {
+          display: grid;
+         // grid-template-columns: 50% 50%;
+          padding: 0.5rem;
+          text-align: left;
+          word-break: break-word;
+          border: none ;
+          & > * {
+            grid-column: 2;
+          }
+    
+          &:before {
+            //content: attr(data-column-name);
+            text-align: left;
+          }
+        }
+        td:nth-of-type(n+1){
+          
+          display: inline-block !important;
+          width:100%;
+        }
+        td:nth-of-type(n+2){
+          
+          display: inline-block !important;
+          width: 20%;
+        }
+        td:nth-of-type(n+5){
+       
+          display: none !important;
+        }
+        td:nth-of-type(n+6){
+          display: none !important;
+         
+        }
+        .div-status2{
+         // font-size: 12px;
+          border: 1px solid $light-gray !important;
+          line-height: 24px !important;
+          text-align: center !important;
+          border-radius: 5px !important;
+          padding-left: 7px;
+        }
+       
+        .div-status2 mat-icon{
+          display: none !important;
+        }
+        td:nth-of-type(n+7){
+          display: inline-block !important;
+          width: 40% !important;
+         
+        }
+        td.mat-column-actions {
+          display: none !important;
+          justify-content: center !important;
+          padding: 0 0.5rem;
+          width:100% !important;
+          border-bottom: 1px solid $light-gray ;
+          & > button {
+            margin: 0.5rem 0;
+          }
+        }
+    
+        &:last-of-type td:last-of-type {
+          border: none;
+        }
+    
+        &:not(:last-of-type) td:last-of-type {
+          border-bottom: 0.5rem solid #fafafa;
+        }
+      }
+}
+
+
+@include bp-medium {
+
+    ::ng-deep .controls{
+        display: table;
+        clear: both;
+        width: 100%;
+        margin-bottom: 20px;
+   
+ 
+ .control:nth-of-type(n+1){  
+    float: left;
+    width:100%;
+    
+  }
+.control:nth-of-type(n+2){
+    float: left;
+    width: 33.33%;
+    margin-top: 5px;
+  }
+ .control:nth-of-type(n+3){
+    display: none !important;
+ }
+ .control:nth-of-type(n+4){
+    display: inline-block !important;
+    
+    width: 33.33%;
+    margin-top: 5px;
+}
+.control .mat-focus-indicator{
+    //font-size: 10px !important;
+    width: 96% !important;
+    
+    font-family: system-ui !important;
+  }
+   .control.mat-badge-content{
+    background-color: $notification-badge!important;
+  }
+
+     }
+}
+
+
+@include bp-medium-min {
+    
+    ::ng-deep .controls{
+        display: table;
+        clear: both;
+        width: 100%;
+        margin:5px;
+     
+       .control:nth-of-type(n+1){
+        width:30%;
+        float: left;
+        margin-right:10px;
+        max-height: 56px;
+       }
+       .control:nth-of-type(n+2){ 
+        float: left;
+        width:10%;
+        margin-right:50px;
+        margin-top: 10px;
+       }
+       .control:nth-of-type(n+1){
+        width:30%;
+        float: left;
+        margin-right:10px;
+        max-height: 56px;
+       }
+       .control:nth-of-type(n+2){ 
+        float: left;
+        width:10%;
+        margin-right:50px;
+        margin-top: 10px;
+       }
+       .control mat-icon{
+        color: $mid-gray !important;
+        }
+        
+         .control button.mat-stroked-button mat-icon{
+        color: $text-color!important;
+        }
+     
+    }
+       ::ng-deep .ds-example-container {
+        border: none !important;;
+      }
+      ::ng-deep .grid-container {
+         margin: -0.01rem !important;
+       
+      }
+      
+      
+      ::ng-deep .mat-stroked-button{
+        border-radius: 27px;
+     
+      }
+      
+      
+      
+      ::ng-deep .ds-section{
+        margin-top:10px !important;
+      }
+      
+      
+      
+      ::ng-deep .mat-column-actions {
+        text-align: right;
+      }
+      ::ng-deep .hr-div{
+      max-width: 150px;
+      padding: 4px;
+     // font-size: 11px;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-family: system-ui;
+      
+      }
+      ::ng-deep .mat-stroked-button{
+        border-radius: 27px;
+      
+      }
+      
+}
+::ng-deep.mat-badge-content{
+    background-color: $notification-badge !important;
+  }
+.span-h{
+    display: block;display: block;//font-size: 18px;
+    color:$text-color;
+    
+}
+.span-h2{
+    //font-size: 11px;
+    color:$mid-gray;
+    
+}
+
+.div-date{
+    max-width: 126px;
+    
+    border: 1px solid;
+    display: block;
+    border-radius: 5px;
+    
+    //font-size: 11px;
+    h5{
+      text-align: center;
+      font-weight: bold;
+      font-size: 0.7em;
+      margin: 0px;
+    }
+}
+.div-status{
+    max-width: 126px;
+    max-height: 50px;
+    border: 1px solid $colortext-priority;
+    text-align: center;
+    line-height: 27px;
+    border-radius: 5px;
+    font-weight: bold;color: $colortext-priority;
+    background-color: rgb(253 63 20 / 20%);
+}
+.div-status2{
+    max-width:200px;
+            margin:auto;
+             font-weight: bold;text-transform: uppercase;
+             //font-size: 11px;
+             text-align: center;
+             h5{
+              text-align: center;
+              display: inline;
+              font-weight: bold;
+             }
+}
+.div-status2 mat-icon{
+color:$text-color;
+position: absolute;
+   // font-size: 23px;
+}
+.ng-star-inserted{
+    line-height: 27px;
+   mat-icon{
+      color:$mid-gray;
+    }
+}
+.div-name{
+  line-height: 27px;
+  font-size: 1.1 em !important;
+  h3{
+    margin: 0px;
+    color:$text-color;
+    display: inline;
+  }
+  p{
+    margin: 0px;
+    color:$mid-gray;
+  }
+  img{
+    max-width: 50PX;
+    max-height: 50px;
+    float: left;
+    margin-right:5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    float: left;
+}
+}
+.mat-badge-content{
+    background-color: $notification-badge!important;
+  }
+.mat-column-actions mat-icon{
+    color:$text-color;
+   // font-size: 17px;
+}
+.mat-icon-button {
+
+    float: left;
+}
+

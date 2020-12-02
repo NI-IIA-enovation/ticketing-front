@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {data, PeriodicElement, styleResponsive,styleTable,ResponsiveControls,styleControls} from './../services/data';
+import {data, PeriodicElement} from './../services/data';
 import {GoodComponent} from './good/good.component';
 import { MatTableDataSource } from '@angular/material/table';
+import { AppointmentComponent } from '../appointment/appointment.component';
+import { ActivityLogComponent } from '../activity-log/activity-log.component';
 @Component({
   selector: 'app-goods',
   templateUrl: './goods.component.html',
@@ -9,12 +11,10 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class GoodsComponent implements OnInit {
   datagood = data;
-  Responsive = styleResponsive;
-  TableStyle = styleTable;
-  ResponsiveControls = ResponsiveControls;
-  styleControls = styleControls;
   PeriodicElement = PeriodicElement;
   GoodComponent = GoodComponent;
+  appointment = AppointmentComponent;
+  activitylog = ActivityLogComponent;
   displayedColumns: string[] = ['name',  'user', 'visite', 'notif', 'deadline', 'priority', 'status', 'actions'];
   dataSource = new MatTableDataSource();
   constructor() {
