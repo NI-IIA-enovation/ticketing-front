@@ -5,6 +5,8 @@ import {MatDialog} from '@angular/material/dialog';
 import { SlidePanelService } from '../services/slide-panel.service';
 import { AddNoteComponent } from '../add-note/add-note.component';
 import { ActionUserComponent } from '../action-user/action-user.component';
+import {GoodEditComponent } from '../goods/good-edit/good-edit.component';
+
 @Component({
   selector: 'app-work',
   templateUrl: './work.component.html',
