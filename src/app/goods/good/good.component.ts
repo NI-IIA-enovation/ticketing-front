@@ -18,7 +18,7 @@ export class GoodComponent implements OnInit {
   ngOnInit(): void {
   }
   public EditShow(element): void {
-    this.service.setCurrentItem(element);
+    this.service.setform(element);
     this.slidepanelservice.setContent(GoodEditComponent);
     this.slidepanelservice.show();
   }
