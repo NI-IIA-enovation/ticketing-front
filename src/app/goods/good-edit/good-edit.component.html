@@ -1,80 +1,63 @@
-<h1 mat-dialog-title>Modifier - {{good.name}} - {{good.city}}</h1> 
+<h1 mat-dialog-title>Modifier </h1>
 <div mat-dialog-content>
-  <p>{{good.room}} - {{good.bathroom}}  - {{good.area}} </p>
-<div class="side-form">
-    <h1></h1>
-    <div class="form-container">
-        <form >
-           <div fxLayout="column"   >
-            <div class="form-group">
-                <label for="namegood">Nom</label>
-                <input type="text" [(ngModel)]="good.name" name="namegood"  class="form-control" required />
-            </div>
-            <div class="form-group">
-                <label for="citygood">Ville</label>
-                <input type="text" name="citygood" [(ngModel)]="good.city"  class="form-control" required />
-            </div>
-           </div>
-           <div fxLayout="row" fxLayoutAlign="space-between center"  >
-            <div class="form-group">
-                <label for="roomgood">Chambre</label>
-                <input type="text" name="roomgood" [(ngModel)]="good.room" class="form-control" required />
-            </div>
-            <div class="form-group">
-                <label for="bathroomgood">Salle de bain</label>
-                <input type="text" name="bathroomgood" [(ngModel)]="good.bathroom" class="form-control" required />
-            </div>
-            <div class="form-group">
-                <label for="areagood">surface</label>
-                <input type="text" name="areagood" [(ngModel)]="good.area" class="form-control" required />
-            </div>
-           </div>
-           <div fxLayout="column"   >
-            <div class="form-group">
-                <label for="deadlinegood">Date</label>
-                <input type="text" name="deadlinegood" [(ngModel)]="good.deadline"  class="form-control" required />
-            </div>
-            <div class="form-group">
-        
-                
-                    <label>Priorité </label>
-                    <select class="form-control" name="priority" #productId="ngModel" [(ngModel)]="good.priority" >
-                      <option [value]="'Elevée'" >
-                        Elevée
-                      </option>
-                      <option [value]="'Normal'"  >
-                        Normal
-                      </option>
-                    </select>
-              
-              
-            </div>
-            <div class="form-group">
-              
-                <label>Status </label>
-                <select class="form-control"  name="status" #productId="ngModel" [(ngModel)]="good.status" >
-                  <option [value]="'Visite en cours'" >
-                    Visite en cours
-                  </option>
-                  <option [value]="'Recherche'" >
-                    Recherche
-                  </option>
-                  <option [value]="'En vente'" >
-                    En vente
-                  </option>
-                </select>
-           
-              
-            </div>
-           </div>
-            <div class="form-group">
-              
-                <button  class="btn btn-primary">
-                    <span  class="spinner-border spinner-border-sm mr-1"></span>
-                    Enregistrer
-                </button>
-            </div>
-        </form>
+    <p></p>
+    <div class="side-form">
+        <h1></h1>
+        <div class="form-container">
+            <form [formGroup]="goodservice.form" fxLayout="column" fxLayoutAlign="space-between none" >
+                <div fxLayout="column">
+                    <mat-form-field>
+                        <input formControlName="name" matInput placeholder="Nom *" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="city" matInput placeholder="Ville *" />
+                    </mat-form-field>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="space-around center" >
+                    <mat-form-field fxFlex="30">
+                        <input formControlName="room" matInput placeholder="Chambre *" />
+                    </mat-form-field>
+                    <mat-form-field fxFlex="30">
+                        <input formControlName="bathroom" matInput placeholder="Salle de bain *" />
+                    </mat-form-field>
+                    <mat-form-field fxFlex="30">
+                        <input formControlName="area" matInput placeholder="Surface *" />
+                    </mat-form-field>
+                </div>
+                <div fxLayout="column">
+                    <mat-form-field>
+                        <input formControlName="deadline" matInput placeholder="Date *" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-select formControlName="priority" placeholder="Proprieté">
+                            <mat-option [value]="'Elevée'">
+                                Elevée
+                            </mat-option>
+                            <mat-option [value]="'Normal'">
+                                Normal
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-select formControlName="status" placeholder="Status">
+                            <mat-option [value]="'Visite en cours'">
+                                Visite en cours
+                            </mat-option>
+                            <mat-option [value]="'Recherche'">
+                                Recherche
+                            </mat-option>
+                            <mat-option [value]="'En vente'">
+                                En vente
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <button mat-stroked-button  color="primary">
+                        Enregistrer
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 </div>

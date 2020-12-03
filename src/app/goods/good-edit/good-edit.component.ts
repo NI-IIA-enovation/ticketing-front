@@ -9,16 +9,10 @@ import { GoodService } from 'src/app/services/good.service';
 })
 export class GoodEditComponent implements OnInit {
 
-  constructor(private goodservice: GoodService, private route: ActivatedRoute) { 
-   
+  constructor(public goodservice: GoodService, private route: ActivatedRoute) { 
 
   }
-  good: any = {};
   ngOnInit(): void {
-   const goodId = Number(this.route.snapshot.queryParams['id']);
-   if (goodId) {
-        this.goodservice.getById(goodId).subscribe(x => this.good = x);
-    }
 
   }
 

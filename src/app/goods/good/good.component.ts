@@ -1,5 +1,6 @@
 import { Component, Input, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
+import { GoodService } from 'src/app/services/good.service';
 
 import { SlidePanelService } from 'src/app/services/slide-panel.service';
 import { GoodEditComponent } from '../good-edit/good-edit.component';
@@ -11,13 +12,13 @@ import { GoodEditComponent } from '../good-edit/good-edit.component';
 export class GoodComponent implements OnInit {
   @Input() element: string;
   @Input() column: string;
-  constructor(private slidepanelservice: SlidePanelService , private router : Router ) {
+  constructor(private service: GoodService,private slidepanelservice: SlidePanelService , private router : Router ) {
   }
 
   ngOnInit(): void {
   }
-  public EditShow(id): void {
-    this.router.navigate(['list-good'], { queryParams: { id } });
+  public EditShow(element): void {
+    this.service.setCurrentItem(element);
     this.slidepanelservice.setContent(GoodEditComponent);
     this.slidepanelservice.show();
   }
