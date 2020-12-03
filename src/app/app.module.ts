@@ -48,7 +48,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { ActionContactsComponent } from './action-contacts/action-contacts.component';
 import { ActionGoodsComponent } from './action-goods/action-goods.component';
 import { GoodEditComponent } from './goods/good-edit/good-edit.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const config: IResponsiveConfig = {
   breakPoints: {
@@ -116,6 +116,7 @@ const config: IResponsiveConfig = {
     MatCheckboxModule,
     ScrollingModule,
     MatDatepickerModule,
+    ReactiveFormsModule,
     ResponsiveModule.forRoot(config)
   ],
   providers: [],
