@@ -1,0 +1,80 @@
+<h1 mat-dialog-title>Modifier - {{good.name}} - {{good.city}}</h1> 
+<div mat-dialog-content>
+  <p>{{good.room}} - {{good.bathroom}}  - {{good.area}} </p>
+<div class="side-form">
+    <h1></h1>
+    <div class="form-container">
+        <form >
+           <div fxLayout="column"   >
+            <div class="form-group">
+                <label for="namegood">Nom</label>
+                <input type="text" [(ngModel)]="good.name" name="namegood"  class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label for="citygood">Ville</label>
+                <input type="text" name="citygood" [(ngModel)]="good.city"  class="form-control" required />
+            </div>
+           </div>
+           <div fxLayout="row" fxLayoutAlign="space-between center"  >
+            <div class="form-group">
+                <label for="roomgood">Chambre</label>
+                <input type="text" name="roomgood" [(ngModel)]="good.room" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label for="bathroomgood">Salle de bain</label>
+                <input type="text" name="bathroomgood" [(ngModel)]="good.bathroom" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label for="areagood">surface</label>
+                <input type="text" name="areagood" [(ngModel)]="good.area" class="form-control" required />
+            </div>
+           </div>
+           <div fxLayout="column"   >
+            <div class="form-group">
+                <label for="deadlinegood">Date</label>
+                <input type="text" name="deadlinegood" [(ngModel)]="good.deadline"  class="form-control" required />
+            </div>
+            <div class="form-group">
+        
+                
+                    <label>Priorité </label>
+                    <select class="form-control" name="priority" #productId="ngModel" [(ngModel)]="good.priority" >
+                      <option [value]="'Elevée'" >
+                        Elevée
+                      </option>
+                      <option [value]="'Normal'"  >
+                        Normal
+                      </option>
+                    </select>
+              
+              
+            </div>
+            <div class="form-group">
+              
+                <label>Status </label>
+                <select class="form-control"  name="status" #productId="ngModel" [(ngModel)]="good.status" >
+                  <option [value]="'Visite en cours'" >
+                    Visite en cours
+                  </option>
+                  <option [value]="'Recherche'" >
+                    Recherche
+                  </option>
+                  <option [value]="'En vente'" >
+                    En vente
+                  </option>
+                </select>
+           
+              
+            </div>
+           </div>
+            <div class="form-group">
+              
+                <button  class="btn btn-primary">
+                    <span  class="spinner-border spinner-border-sm mr-1"></span>
+                    Enregistrer
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>

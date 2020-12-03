@@ -47,6 +47,8 @@ import { ContactListComponent } from './contact-list/contact-list.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ActionContactsComponent } from './action-contacts/action-contacts.component';
 import { ActionGoodsComponent } from './action-goods/action-goods.component';
+import { GoodEditComponent } from './goods/good-edit/good-edit.component';
+import { FormsModule } from '@angular/forms';
 
 const config: IResponsiveConfig = {
   breakPoints: {
@@ -82,10 +84,12 @@ const config: IResponsiveConfig = {
     ContactListComponent,
     ContactsComponent,
     ActionContactsComponent,
-    ActionGoodsComponent
+    ActionGoodsComponent,
+    GoodEditComponent
   ],
   imports: [
     DynamicAttributesModule,
+    FormsModule,
     DynamicModule,
     SnitemModule,
     BrowserModule,

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ActionContactsComponent } from './action-contacts/action-contacts.component';
 import { ActionGoodsComponent } from './action-goods/action-goods.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { GoodEditComponent } from './goods/good-edit/good-edit.component';
 import { GoodsComponent } from './goods/goods.component';
 
 const routes: Routes = [
@@ -31,6 +32,10 @@ const routes: Routes = [
     path: '',
     component: GoodsComponent,
     outlet: 'content'
+  },
+  {
+    path: 'list-good/:id',
+    component: GoodEditComponent,
   }
   ] }
 ];
