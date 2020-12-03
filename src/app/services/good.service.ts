@@ -29,7 +29,7 @@ PeriodicElement = PeriodicElement;
   getById(id: number): Observable<PeriodicElement>{
     return of(this.data.find(item => item.id === id));
 }
-setCurrentItem(form): void{
+setform(form): void{
   this.form.setValue(form);
 }
 }
