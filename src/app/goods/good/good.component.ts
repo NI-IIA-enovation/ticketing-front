@@ -1,5 +1,7 @@
-import { Component, Input, OnInit} from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
+
+import { ContextService } from 'src/app/services/context.service';
+import { PeriodicElement } from 'src/app/services/data';
 import { GoodService } from 'src/app/services/good.service';
 
 import { SlidePanelService } from 'src/app/services/slide-panel.service';
@@ -10,16 +12,23 @@ import { GoodEditComponent } from '../good-edit/good-edit.component';
   styleUrls: ['./good.component.scss']
 })
 export class GoodComponent implements OnInit {
-  @Input() element: string;
+  @Input() element: PeriodicElement;
   @Input() column: string;
-  constructor(private service: GoodService,private slidepanelservice: SlidePanelService , private router : Router ) {
+  constructor(
+  private service: GoodService,
+  private servicecontext: ContextService,
+  private slidepanelservice: SlidePanelService,
+  ) {
+  }
+  public context: CanvasRenderingContext2D;
+  ngOnInit(): void {
+
   }
 
-  ngOnInit(): void {
-  }
-  public EditShow(element): void {
+  public SlideShow(element, action): void {
+    const component = this.servicecontext.getComponent(this.service.getAction(element.action, action));
     this.service.setform(element);
-    this.slidepanelservice.setContent(GoodEditComponent);
+    this.slidepanelservice.setContent(component);
     this.slidepanelservice.show();
   }
 }

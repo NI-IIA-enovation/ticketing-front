@@ -1,5 +1,5 @@
  
-  
+  <div #myCanvas>
   <div class="div-name" *ngIf="column== 'name' ">
                   <img src="https://i.pinimg.com/474x/00/c3/fb/00c3fb3506ceb708715066f0a8e8e451.jpg" />
                   <h3 color="accent">{{element['name']}} - {{element['city']}}</h3>
@@ -28,7 +28,7 @@
               </div>
               
               <div class="mat-column-actions" *ngIf="column== 'actions'">
-                  <button mat-icon-button (click)="EditShow(element)">
+                  <button mat-icon-button (click)="SlideShow(element,'edit')">
                       <mat-icon svgIcon="font-pencil"></mat-icon>
                   </button>
                   <button mat-icon-button>
@@ -36,5 +36,5 @@
                   </button>
               </div>
    
-
+</div>
            
