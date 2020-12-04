@@ -21,15 +21,20 @@ form: FormGroup = new FormGroup({
   deadline: new FormControl(null),
   priority: new FormControl(null),
   status: new FormControl(null),
-  actions: new FormControl(null),
+  action: new FormControl(null),
 });
 
 PeriodicElement = PeriodicElement;
   constructor() { }
-  getById(id: number): Observable<PeriodicElement>{
+  getById(id: number){
     return of(this.data.find(item => item.id === id));
 }
 setform(form): void{
   this.form.setValue(form);
+}
+getAction(action , name): string {
+  const items: Array<any> = action;
+  const itm = items.find(item => item.name === name);
+  return itm.component;
 }
 }
