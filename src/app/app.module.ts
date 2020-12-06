@@ -43,12 +43,13 @@ import { SlidePanelComponent } from './slide-panel/slide-panel.component';
 import { AddNoteComponent } from './add-note/add-note.component';
 import { ActionComponent } from './action/action.component';
 import { ActionUserComponent } from './action-user/action-user.component';
-import { ContactListComponent } from './contact-list/contact-list.component';
+import { ContactListComponent } from './contacts/contact-list/contact-list.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ActionContactsComponent } from './action-contacts/action-contacts.component';
 import { ActionGoodsComponent } from './action-goods/action-goods.component';
 import { GoodEditComponent } from './goods/good-edit/good-edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GoodViewComponent } from './goods/good-view/good-view.component';
 
 const config: IResponsiveConfig = {
   breakPoints: {
@@ -85,7 +86,8 @@ const config: IResponsiveConfig = {
     ContactsComponent,
     ActionContactsComponent,
     ActionGoodsComponent,
-    GoodEditComponent
+    GoodEditComponent,
+    GoodViewComponent
   ],
   imports: [
     DynamicAttributesModule,
