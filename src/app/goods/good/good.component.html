@@ -27,14 +27,13 @@
                   <div class="div-status2"><h5 >{{element[column]}}</h5><mat-icon>keyboard_arrow_down</mat-icon></div>
               </div>
               
-              <div class="mat-column-actions" *ngIf="column== 'actions'">
-                  <button mat-icon-button (click)="SlideShow(element,'edit')">
-                      <mat-icon svgIcon="font-pencil"></mat-icon>
+              <div class="mat-column-actions" *ngIf="column== 'actions'"  >
+               
+                  <button *ngFor="let action of element['action']" mat-icon-button (click)="SlideShow(element,action.component)">
+                      <mat-icon [svgIcon]="action.icon"></mat-icon>
                   </button>
-                  <button mat-icon-button>
-                      <mat-icon>visibility</mat-icon>
-                  </button>
-              </div>
+                </div>
+              
    
 </div>
            

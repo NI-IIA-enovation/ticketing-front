@@ -1,11 +1,8 @@
 import { Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
-
 import { ContextService } from 'src/app/services/context.service';
 import { PeriodicElement } from 'src/app/services/data';
 import { GoodService } from 'src/app/services/good.service';
-
 import { SlidePanelService } from 'src/app/services/slide-panel.service';
-import { GoodEditComponent } from '../good-edit/good-edit.component';
 @Component({
   selector: 'app-good',
   templateUrl: './good.component.html',
@@ -26,9 +23,11 @@ export class GoodComponent implements OnInit {
   }
 
   public SlideShow(element, action): void {
-    const component = this.servicecontext.getComponent(this.service.getAction(element.action, action));
+    const component = this.servicecontext.getComponent(action);
+    if (component){
     this.service.setform(element);
     this.slidepanelservice.setContent(component);
     this.slidepanelservice.show();
+     }
   }
 }

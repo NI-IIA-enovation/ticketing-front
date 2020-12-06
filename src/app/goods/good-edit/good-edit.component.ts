@@ -9,7 +9,7 @@ import { GoodService } from 'src/app/services/good.service';
 })
 export class GoodEditComponent implements OnInit {
 
-  constructor(public goodservice: GoodService, private route: ActivatedRoute) { 
+  constructor(public goodservice: GoodService) {
 
   }
   ngOnInit(): void {

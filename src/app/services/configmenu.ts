@@ -15,7 +15,7 @@ export class Listmenu{
 export const dataconfig: Configmenu[] =
 [{
 name: 'footer',
-responsive: ['xs', 'sm' ,'md'],
+responsive: ['xs', 'sm' , 'md'],
           listmenu: [{
             position: 0,
             icon: 'fa-home',
@@ -60,7 +60,7 @@ responsive: ['xs', 'sm' ,'md'],
           component: '#'
           }]}, {
             name: 'user',
-            responsive: ['lg','xl'],
+            responsive: ['lg', 'xl'],
                       listmenu: [{
                         position: 0,
                         icon: 'fa-user',
@@ -109,7 +109,7 @@ responsive: ['xs', 'sm' ,'md'],
                                   }]},
           {
             name: 'header',
-            responsive:  ['xs', 'sm','md'],
+            responsive:  ['xs', 'sm', 'md'],
                       listmenu: [{
                         position: 0,
                         icon: 'fa-home',
@@ -155,7 +155,7 @@ responsive: ['xs', 'sm' ,'md'],
                       }]},
 {
 name: 'star',
-responsive:  ['lg','xl'],
+responsive:  ['lg', 'xl'],
             listmenu: [{
               position: 0,
               icon: 'fa-home',

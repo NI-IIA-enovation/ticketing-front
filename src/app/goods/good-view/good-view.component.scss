@@ -1,0 +1,23 @@
+@import "../../../css/utilities/responsive";
+::ng-deep   .mat-dialog-content { 
+    @include bp-extralargexxl {
+    font-size:1em !important; 
+    }
+    @include bp-extralargexxlmin{
+        font-size: 0.66em !important;  
+    }
+ }
+.mat-dialog-title{
+    color:$text-color;
+    font-weight: bold;
+}
+label{
+    font-weight: bold;
+}
+
+::ng-deep.mat-tab-label-active{
+   
+  
+    color:$text-color !important;
+  
+  }
