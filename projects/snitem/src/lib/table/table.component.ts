@@ -3,6 +3,8 @@ import { Component, ViewChild, Input, TemplateRef,AfterViewInit,OnInit, NgModule
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+
+
 @Component({
   selector: 'lib-table',
   templateUrl: 'table.component.html',
@@ -10,13 +12,13 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class TableComponent implements OnInit ,  AfterViewInit {
   @Input() displayedColumns: Array<any>;
-  @Input() data: MatTableDataSource<[]>;
-  @Input() row: Array<[]>;
+  @Input() data: MatTableDataSource<[any]>;
+  @Input() row: Array<[any]>;
 
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  dataSource: MatTableDataSource<[]>;
+  dataSource: MatTableDataSource<[any]>;
   CellTemplate?: TemplateRef <any>;
   MyModule: NgModuleFactory<any>;
   constructor() {

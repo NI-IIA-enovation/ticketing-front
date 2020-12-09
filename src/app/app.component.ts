@@ -6,7 +6,7 @@ import { faBuilding, faCalendarAlt, faCog, faHome, faIdCard, faShoppingBasket, f
 import { NavigationDesktopComponent } from './navigation-desktop/navigation-desktop.component';
 import { NavigationMobileFooterComponent } from './navigation-mobile-footer/navigation-mobile-footer.component';
 import { NavigationMobileHeaderComponent } from './navigation-mobile-header/navigation-mobile-header.component';
-import {dataconfig} from './services/configmenu';
+import {dataconfig} from './services/data/configmenu';
 
 
 @Component({

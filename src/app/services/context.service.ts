@@ -1,18 +1,21 @@
-import { Component, Injectable } from '@angular/core';
-import { components } from './components';
-
+import {  Injectable } from '@angular/core';
+import {  BehaviorSubject, Observable} from 'rxjs';
+import { components } from './data/components';
 @Injectable({
   providedIn: 'root'
 })
 export class ContextService {
-  itemscomponent = components;
+  private itemscomponent = components;
+  private component = new BehaviorSubject(null);
   constructor() { }
-  getComponent(name: string): any{
-    const component = this.itemscomponent.find(item => item.name === name);
-    if  (component){
-      return component.component;
-    }else{
-     return '';
-    }
+
+  setCurrentItem(target, elm, source): void{
+    const object: string = elm.constructor.name;
+    const src: string  =  source.constructor.name;
+    const component = this.itemscomponent.filter(item => item.name === target && item.objet === object && item.source === src);
+    this.component.next(component);
  }
+ getComponent(): Observable<any> {
+  return this.component.asObservable();
+}
 }

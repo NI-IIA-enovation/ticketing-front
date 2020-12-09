@@ -198,4 +198,5 @@ responsive:  ['lg', 'xl'],
             target: 'work',
             action: 'set',
             component: '#'
-            }]}]
+            // tslint:disable-next-line: eofline
+            }]}];

@@ -13,12 +13,11 @@ export class List{
     target: string;
     action: string;
     icon: string;
-    
 
   }
 export const dataconfig: Sidepanel[] =
 [{
-name: 'appointment',
+name: 'AppointmentComponent',
 title: 'Mes rendez-vous',
 description: '14 Novembre',
             List: [{
@@ -59,8 +58,8 @@ description: '14 Novembre',
             action: 'set',
           }]},
           {
-            name: 'activity-log',
-            title: "Journal d'activité",
+            name: 'ActivityLogComponent',
+            title: 'Journal d activité',
             description: '',
                         List: [{
                         date: '15 AOUT 2020',
@@ -98,4 +97,5 @@ description: '14 Novembre',
                         description: 'Visite programmé avec',
                         target: 'work',
                         action: 'set',
-                      }]} ]
+                      // tslint:disable-next-line: eofline
+                      }]}];

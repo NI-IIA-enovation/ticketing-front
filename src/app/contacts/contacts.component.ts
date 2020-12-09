@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { ContactListComponent } from './contact-list/contact-list.component';
-import { Contact, dataContact } from '../services/datacontact';
+import { Contact, dataContact } from '../services/data/datacontact';
 
 @Component({
   selector: 'app-contacts',

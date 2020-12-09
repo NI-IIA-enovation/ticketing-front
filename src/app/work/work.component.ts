@@ -5,7 +5,6 @@ import {MatDialog} from '@angular/material/dialog';
 import { SlidePanelService } from '../services/slide-panel.service';
 import { AddNoteComponent } from '../add-note/add-note.component';
 import { ActionUserComponent } from '../action-user/action-user.component';
-import {GoodEditComponent } from '../goods/good-edit/good-edit.component';
 
 @Component({
   selector: 'app-work',
@@ -13,7 +12,6 @@ import {GoodEditComponent } from '../goods/good-edit/good-edit.component';
   styleUrls: ['./work.component.scss']
 })
 export class WorkComponent implements OnInit {
- 
   actionuser = ActionUserComponent;
   listComponent: Array<Component>;
   constructor(public dialog: MatDialog, private slidepanelservice: SlidePanelService) { }

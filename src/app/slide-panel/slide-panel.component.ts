@@ -31,7 +31,6 @@ export class SlidePanelComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    console.log("test");
     this.sidePanelService.onPanelVibilityChange()
       .pipe(takeUntil(this.sidePanelServiceSubject$))
       .subscribe((visible: boolean) => {
