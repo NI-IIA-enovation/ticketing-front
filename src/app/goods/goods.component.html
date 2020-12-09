@@ -2,10 +2,9 @@
 <div  class="container"   >
  <lib-controls  (datasearch)="datagoods($event)"  [data]="dataSource" ></lib-controls>
 
-  <lib-table   [row]="GoodComponent" [data]="dataSource" [interface]="PeriodicElement" [displayedColumns]="displayedColumns" ></lib-table>
+  <lib-table   [row]="GoodComponent" [data]="dataSource"  [displayedColumns]="displayedColumns" ></lib-table>
   </div>
 <div fxLayout="column" fxFlex="30" fxFlexOffset="2" *responsive="{ bootstrap:['xl','lg']}">
-    <app-side-panel [name]="'appointment'" [type]="appointment"></app-side-panel>
-    <app-side-panel [name]="'activity-log'" [type]="activitylog"></app-side-panel>
+    <app-side-panel [source]="source" ></app-side-panel>
 </div>
 </div>

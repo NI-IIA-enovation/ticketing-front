@@ -1,4 +1,4 @@
-export class PeriodicElement {
+export class Good {
     id: number;
     name: string;
     city: string;
@@ -12,15 +12,28 @@ export class PeriodicElement {
     deadline: string;
     priority: string;
     status: string;
-    action: Action[];
+    public constructor(init?: Partial<Good>) {
+      Object.assign(this, init);
+  }
   }
 export class Action{
 name: string;
-component: string;
+target: string;
 icon: string;
 }
-
-export const data =
+export const actiondata: Array<Action> = [
+   {
+      name: 'edit',
+      target: 'Edit',
+      icon: 'fa-pencil'
+   },
+   {
+      name: 'view',
+      target: 'View',
+      icon: 'fa-eye'
+   }
+];
+export const data: Array<Good> =
 [{
   id: 1,
   name: 'Maison bleue 1',
@@ -35,18 +48,6 @@ export const data =
   deadline: '20 SEPT-10 OCT.',
   priority: 'Elevée',
   status: 'Visite en cours',
-  action: [
-     {
-        name: 'edit',
-        component: 'GoodEdit',
-        icon: 'fa-pencil'
-     },
-     {
-        name: 'view',
-        component: 'Goodview',
-        icon: 'fa-eye'
-     }
-  ]
 },
 {
   id: 2,
@@ -62,18 +63,6 @@ export const data =
   deadline: '01 OCT-11 NOV.',
   priority: 'Normal',
   status: 'Recherche',
-  action: [
-     {
-        name: 'edit',
-        component: 'GoodEdit',
-        icon: 'fa-pencil'
-     },
-     {
-        name: 'view',
-        component: 'Goodview',
-        icon: 'fa-eye'
-     }
-  ]
 },
 {
   id: 3,
@@ -89,18 +78,6 @@ export const data =
   deadline: '09 DEC-02 JAN.',
   priority: 'Elevée',
   status: 'En vente',
-  action: [
-     {
-        name: 'edit',
-        component: 'GoodEdit',
-        icon: 'fa-pencil'
-     },
-     {
-        name: 'view',
-        component: 'Goodview',
-        icon: 'fa-eye'
-     }
-  ]
 },
 {
   id: 4,
@@ -116,18 +93,6 @@ export const data =
   deadline: '10 DEC-07 JAN.',
   priority: 'Normal',
   status: 'Visite en cours',
-  action: [
-     {
-        name: 'edit',
-        component: 'GoodEdit',
-        icon: 'fa-pencil'
-     },
-     {
-        name: 'view',
-        component: 'Goodview',
-        icon: 'fa-eye'
-     }
-  ]
 },
 {
   id: 5,
@@ -143,18 +108,6 @@ export const data =
   deadline: '9/5/2020',
   priority: 'Elevée',
   status: 'Visite en cours',
-  action: [
-     {
-        name: 'edit',
-        component: 'GoodEdit',
-        icon: 'fa-pencil'
-     },
-     {
-        name: 'view',
-        component: 'Goodview',
-        icon: 'fa-eye'
-     }
-  ]
 },
 {
   id: 6,
@@ -170,18 +123,6 @@ export const data =
   deadline: '4/5/2020',
   priority: 'Elevée',
   status: 'Recherche',
-  action: [
-     {
-        name: 'edit',
-        component: 'GoodEdit',
-        icon: 'fa-pencil'
-     },
-     {
-        name: 'view',
-        component: 'Goodview',
-        icon: 'fa-eye'
-     }
-  ]
 },
 {
   id: 7,
@@ -197,18 +138,6 @@ export const data =
   deadline: '7/19/2020',
   priority: 'Elevée',
   status: 'Recherche',
-  action: [
-     {
-        name: 'edit',
-        component: 'GoodEdit',
-        icon: 'fa-pencil'
-     },
-     {
-        name: 'view',
-        component: 'Goodview',
-        icon: 'fa-eye'
-     }
-  ]
 },
 {
   id: 8,
@@ -224,18 +153,6 @@ export const data =
   deadline: '5/7/2020',
   priority: 'Elevée',
   status: 'Recherche',
-  action: [
-     {
-        name: 'edit',
-        component: 'GoodEdit',
-        icon: 'fa-pencil'
-     },
-     {
-        name: 'view',
-        component: 'Goodview',
-        icon: 'fa-eye'
-     }
-  ]
 },
 {
   id: 9,
@@ -251,18 +168,6 @@ export const data =
   deadline: '9/6/2020',
   priority: 'info',
   status: 'Missouri',
-  action: [
-     {
-        name: 'edit',
-        component: 'GoodEdit',
-        icon: 'fa-pencil'
-     },
-     {
-        name: 'view',
-        component: 'Goodview',
-        icon: 'fa-eye'
-     }
-  ]
 },
 {
   id: 10,
@@ -278,18 +183,6 @@ export const data =
   deadline: '3/28/2020',
   priority: 'gov',
   status: 'Texas',
-  action: [
-     {
-        name: 'edit',
-        component: 'GoodEdit',
-        icon: 'fa-pencil'
-     },
-     {
-        name: 'view',
-        component: 'Goodview',
-        icon: 'fa-eye'
-     }
-  ]
 },
 {
   id: 11,
@@ -305,18 +198,6 @@ export const data =
   deadline: '3/25/2020',
   priority: 'info',
   status: 'Kentucky',
-  action: [
-     {
-        name: 'edit',
-        component: 'GoodEdit',
-        icon: 'fa-pencil'
-     },
-     {
-        name: 'view',
-        component: 'Goodview',
-        icon: 'fa-eye'
-     }
-  ]
 },
 {
   id: 12,
@@ -332,18 +213,6 @@ export const data =
   deadline: '2/24/2020',
   priority: 'net',
   status: 'Texas',
-  action: [
-     {
-        name: 'edit',
-        component: 'GoodEdit',
-        icon: 'fa-pencil'
-     },
-     {
-        name: 'view',
-        component: 'Goodview',
-        icon: 'fa-eye'
-     }
-  ]
 },
 {
   id: 13,
@@ -359,18 +228,6 @@ export const data =
   deadline: '2/6/2020',
   priority: 'edu',
   status: 'North Carolina',
-  action: [
-     {
-        name: 'edit',
-        component: 'GoodEdit',
-        icon: 'fa-pencil'
-     },
-     {
-        name: 'view',
-        component: 'Goodview',
-        icon: 'fa-eye'
-     }
-  ]
 },
 {
   id: 14,
@@ -386,18 +243,6 @@ export const data =
   deadline: '5/21/2020',
   priority: 'info',
   status: 'District of Columbia',
-  action: [
-     {
-        name: 'edit',
-        component: 'GoodEdit',
-        icon: 'fa-pencil'
-     },
-     {
-        name: 'view',
-        component: 'Goodview',
-        icon: 'fa-eye'
-     }
-  ]
 },
 {
   id: 15,
@@ -413,17 +258,6 @@ export const data =
   deadline: '6/15/2020',
   priority: 'biz',
   status: 'Virginia',
-  action: [
-     {
-        name: 'edit',
-        component: 'GoodEdit',
-        icon: 'fa-pencil'
-     },
-     {
-        name: 'view',
-        component: 'Goodview',
-        icon: 'fa-eye'
-     }
-  ]
 }
-]
+// tslint:disable-next-line: eofline
+];

@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { List } from '../services/data/sidepanel';
+import { ListItemService } from '../services/list-item.service';
 
 @Component({
   selector: 'app-appointment',
@@ -6,13 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./appointment.component.scss']
 })
 export class AppointmentComponent implements OnInit {
-  @Input() list: Array<any>;
-  @Input() name: string;
-  @Input() description: string;
-  @Input() title: string;
-  constructor() { }
+  list: Array<List>;
+  constructor(private servicepanel: ListItemService ) { }
 
   ngOnInit(): void {
+  this.list = this.servicepanel.getpanel(this);
   }
   getcolor(color): string{
     return 'border-color:' + color;

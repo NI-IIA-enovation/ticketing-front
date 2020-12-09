@@ -1,14 +1,20 @@
 import { Injectable } from '@angular/core';
-import { dataconfig, Sidepanel } from './sidepanel';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { components } from './data/components';
 @Injectable({
   providedIn: 'root'
 })
 export class SidePanelService {
-  config = dataconfig;
-  Panel: Sidepanel;
+  private itemscomponent = components;
+  private component = new BehaviorSubject(null);
   constructor() { }
-  getpanel(name): Sidepanel{
 
-    return this.config.find(item => item.name === name);
-  }
+  setCurrentItem(target, source): void{
+    const src: string  =  source.constructor.name;
+    const component = this.itemscomponent.filter(item => item.name === target && item.source === src);
+    this.component.next(component);
+ }
+ getComponent(): Observable<any> {
+  return this.component.asObservable();
+}
 }

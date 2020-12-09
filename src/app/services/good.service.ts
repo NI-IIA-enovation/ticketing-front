@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { data, PeriodicElement } from './data';
+import { Observable, of, Subject } from 'rxjs';
+import { data, Good, actiondata , Action } from './data/data';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { filter } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
 export class GoodService {
 data =  data;
+actiongood = actiondata;
+private subject = new Subject<Good>();
+private goodlist: Good[] = [];
 form: FormGroup = new FormGroup({
   id: new FormControl(null),
   name: new FormControl(null),
@@ -23,17 +27,35 @@ form: FormGroup = new FormGroup({
   status: new FormControl(null),
 });
 
-PeriodicElement = PeriodicElement;
-  constructor() { }
-  getById(id: number){
+  constructor() {
+   this.data.forEach((item: Good) => {
+        item = new Good(item);
+        this.goodlist.push(item);
+        this.subject.next(item);
+      });
+  }
+
+  getById(id: number): Observable<Good>  {
     return of(this.data.find(item => item.id === id));
-}
-setform(form): void{
-  this.form.setValue(form);
-}
-getAction(action , name): string {
-  const items: Array<any> = action;
-  const itm = items.find(item => item.name === name);
-  return itm.component;
-}
+  }
+
+  setForm(element): any{
+  this.form.setValue(element);
+  }
+
+  getAction(): Action[]{
+  return this.actiongood;
+  }
+
+  getListGood(): Observable<Good[]>{
+    return of(this.goodlist);
+  }
+
+  getItem(id: number): Observable <Good> {
+  return this.subject
+    .pipe(
+      filter((item: Good) => item.id === id)
+    );
+  }
+
 }

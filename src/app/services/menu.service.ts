@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { dataconfig,Configmenu } from './configmenu';
+import { dataconfig, Configmenu } from './data/configmenu';
 
 @Injectable({
   providedIn: 'root'
@@ -7,9 +7,10 @@ import { dataconfig,Configmenu } from './configmenu';
 export class MenuService {
   config = dataconfig;
   Menus: Configmenu;
-  constructor() { }
-  getmenu(name): Configmenu{
 
+  constructor() { }
+
+  getmenu(name): Configmenu{
     return this.config.find(item => item.name === name);
   }
 }

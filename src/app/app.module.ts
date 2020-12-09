@@ -26,7 +26,7 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
 import { NavigationDesktopComponent } from './navigation-desktop/navigation-desktop.component';
 import { NavigationMobileHeaderComponent } from './navigation-mobile-header/navigation-mobile-header.component';
 import { NavigationMobileFooterComponent } from './navigation-mobile-footer/navigation-mobile-footer.component';
-import { SidePanelComponent } from './work/side-panel/side-panel.component';
+import { SidePanelComponent } from './side-panel/side-panel.component';
 import { WorkComponent } from './work/work.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { ActivityLogComponent } from './activity-log/activity-log.component';
@@ -50,6 +50,7 @@ import { ActionGoodsComponent } from './action-goods/action-goods.component';
 import { GoodEditComponent } from './goods/good-edit/good-edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GoodViewComponent } from './goods/good-view/good-view.component';
+import { SlideContentComponent } from './slide-content/slide-content.component';
 
 const config: IResponsiveConfig = {
   breakPoints: {
@@ -87,7 +88,8 @@ const config: IResponsiveConfig = {
     ActionContactsComponent,
     ActionGoodsComponent,
     GoodEditComponent,
-    GoodViewComponent
+    GoodViewComponent,
+    SlideContentComponent
   ],
   imports: [
     DynamicAttributesModule,
