@@ -21,7 +21,6 @@ form: FormGroup = new FormGroup({
   deadline: new FormControl(null),
   priority: new FormControl(null),
   status: new FormControl(null),
-  action: new FormControl(null),
 });
 
 PeriodicElement = PeriodicElement;
