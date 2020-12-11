@@ -39,7 +39,6 @@ import {MatFormFieldModule } from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { SlidePanelComponent } from './slide-panel/slide-panel.component';
 import { AddNoteComponent } from './add-note/add-note.component';
 import { ActionComponent } from './action/action.component';
 import { ActionUserComponent } from './action-user/action-user.component';
@@ -50,7 +49,7 @@ import { ActionGoodsComponent } from './action-goods/action-goods.component';
 import { GoodEditComponent } from './goods/good-edit/good-edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GoodViewComponent } from './goods/good-view/good-view.component';
-import { SlideContentComponent } from './slide-content/slide-content.component';
+import { ComponentsService } from './services/components.service';
 
 const config: IResponsiveConfig = {
   breakPoints: {
@@ -79,7 +78,6 @@ const config: IResponsiveConfig = {
     NavigationUserComponent,
     NavigationLanguageComponent,
     HeaderComponent,
-    SlidePanelComponent,
     AddNoteComponent,
     ActionComponent,
     ActionUserComponent,
@@ -89,7 +87,6 @@ const config: IResponsiveConfig = {
     ActionGoodsComponent,
     GoodEditComponent,
     GoodViewComponent,
-    SlideContentComponent
   ],
   imports: [
     DynamicAttributesModule,
@@ -123,7 +120,7 @@ const config: IResponsiveConfig = {
     ReactiveFormsModule,
     ResponsiveModule.forRoot(config)
   ],
-  providers: [],
+  providers: [ComponentsService],
   bootstrap: [AppComponent],
   entryComponents: [ ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

@@ -13,6 +13,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { IResponsiveConfig, ResponsiveModule } from 'ngx-responsive';
 import { DynamicAttributesModule, DynamicModule } from 'ng-dynamic-component';
+import { SlidePanelComponent } from './slide-panel/slide-panel.component';
+import { SlideContentComponent } from './slide-panel/slide-content/slide-content.component';
+import { SidePanelComponent } from './side-panel/side-panel.component';
 
 
 const config: IResponsiveConfig = {
@@ -27,7 +30,7 @@ const config: IResponsiveConfig = {
 };
 
 @NgModule({
-  declarations: [SnitemComponent, ControlsComponent, TableComponent],
+  declarations: [SnitemComponent, ControlsComponent, TableComponent, SlidePanelComponent, SlideContentComponent, SidePanelComponent],
   imports: [
     MatFormFieldModule,
     MatIconModule,
@@ -42,7 +45,7 @@ const config: IResponsiveConfig = {
     ResponsiveModule.forRoot(config),
     DynamicAttributesModule,
   ],
-  exports: [SnitemComponent, ControlsComponent, TableComponent],
+  exports: [SnitemComponent, ControlsComponent, TableComponent, SlidePanelComponent, SidePanelComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class SnitemModule { }

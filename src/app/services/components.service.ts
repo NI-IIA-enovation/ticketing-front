@@ -4,18 +4,18 @@ import { components } from './data/components';
 @Injectable({
   providedIn: 'root'
 })
-export class ContextService {
+export class ComponentsService {
   private itemscomponent = components;
-  private component = new BehaviorSubject(null);
+  private component:BehaviorSubject<any>;
   constructor() { }
 
-  setCurrentItem(target, elm, source): void{
+  getCurrentComponents(target, elm, source): Observable<any> {
+    this.component = new BehaviorSubject(null);
     const object: string = elm.constructor.name;
     const src: string  =  source.constructor.name;
     const component = this.itemscomponent.filter(item => item.name === target && item.objet === object && item.source === src);
     this.component.next(component);
+    return this.component.asObservable();
  }
- getComponent(): Observable<any> {
-  return this.component.asObservable();
-}
+
 }
