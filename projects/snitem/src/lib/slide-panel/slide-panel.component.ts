@@ -4,15 +4,15 @@ import {
 import { Subject, pipe } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { FADE_IN_OUT } from './fade-in-out.animation';
-import { SlidePanelService } from '../services/slide-panel.service';
+import { SlideService } from './services/slide.service';
 import { OverlaySidePanelStyle } from './slide-panel-style.enum';
 @Component({
-  selector: 'app-slide-panel',
+  selector: 'lib-slide-panel',
   templateUrl: './slide-panel.component.html',
   styleUrls: ['./slide-panel.component.scss'],
   animations: [FADE_IN_OUT]
 })
-export class SlidePanelComponent implements OnInit, OnDestroy {
+export class SlidePanelComponent implements OnInit, OnDestroy  {
   @ViewChild('content', { read: ViewContainerRef })
   public panelContentRef: ViewContainerRef;
 
@@ -24,13 +24,14 @@ export class SlidePanelComponent implements OnInit, OnDestroy {
   private sidePanelServiceSubject$: Subject<void>;
   constructor(
     private componentFactoryResolver: ComponentFactoryResolver,
-    private sidePanelService: SlidePanelService
+    private sidePanelService: SlideService
   ) {
     this.sidePanelServiceSubject$ = new Subject<void>();
     this.overlayStyle = OverlaySidePanelStyle.DIM_DARK;
   }
 
   ngOnInit(): void {
+   
     this.sidePanelService.onPanelVibilityChange()
       .pipe(takeUntil(this.sidePanelServiceSubject$))
       .subscribe((visible: boolean) => {

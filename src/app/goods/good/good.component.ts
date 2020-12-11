@@ -1,9 +1,8 @@
 import { Component, Input, OnInit} from '@angular/core';
-import { ContextService } from 'src/app/services/context.service';
 import { Good, Action } from 'src/app/services/data/data';
 import { GoodService } from 'src/app/services/good.service';
-import { SlidePanelService } from 'src/app/services/slide-panel.service';
-import { SlideContentComponent } from '../../slide-content/slide-content.component';
+import { SlideshowService } from 'projects/snitem/src/lib/slide-panel/services/slideshow.service';
+import { ComponentsService } from 'src/app/services/components.service';
 @Component({
   selector: 'app-good',
   templateUrl: './good.component.html',
@@ -15,8 +14,8 @@ export class GoodComponent implements OnInit {
   actions: Action[];
   constructor(
   private service: GoodService,
-  private slidepanelservice: SlidePanelService,
-  private servicecontext: ContextService,
+  private slidepanelservice: SlideshowService,
+  private componentservice: ComponentsService,
   ) {
   }
   public context: CanvasRenderingContext2D;
@@ -25,9 +24,9 @@ export class GoodComponent implements OnInit {
   }
 
   public SlideShow(element, target): void {
-    this.servicecontext.setCurrentItem(target, element, this);
+    const components = this.componentservice.getCurrentComponents(target, element, this);
     this.service.setForm(element);
-    this.slidepanelservice.setContent(SlideContentComponent);
+    this.slidepanelservice.setContentComponents(components);
     this.slidepanelservice.show();
      }
 }
