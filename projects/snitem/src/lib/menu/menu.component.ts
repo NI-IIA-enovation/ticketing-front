@@ -1,27 +1,26 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Configmenu } from '../services/data/configmenu';
-import { MenuService } from '../services/menu.service';
+
 @Component({
-  selector: 'app-menu',
+  selector: 'lib-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
   @Input() name: string;
   @Input() type: Component;
-  menu: Configmenu;
-  constructor(private menuservice: MenuService )
+  @Input() list: Array<any>;
+  menu : any;
+  constructor()
   {
   }
 
   ngOnInit(): void {
-    this.menu = this.menuservice.getmenu(this.name);
+    this.menu = this.list.find(item => item.name === this.name);
   }
 
   getlist(lst, ps): any{
     return  {list: lst,
             position : ps};
   }
-
 
 }

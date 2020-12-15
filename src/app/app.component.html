@@ -1,5 +1,5 @@
 <div fxLayout="row" fxFlex="100" class="content position" *responsive="{ bootstrap:['xl','lg']}">
-  <div fxLayout="row" fxFlex="15" class="nav"><app-menu [name]="'star'" [type]="navigationDesktopComponent"></app-menu></div>
+  <div fxLayout="row" fxFlex="15" class="nav"><lib-menu [list]="listmenu" [name]="'star'" [type]="navigationDesktopComponent"></lib-menu></div>
   <div fxLayout="column" fxFlex="79" fxFlexOffset="3">
       <div fxLayout="column">
           <!--Zone Header-->
@@ -13,7 +13,7 @@
 </div>
 <!--Mobile-->
 <div *responsive="{ bootstrap:['xs', 'sm','md']}">
-  <header class="header" fxLayout="column"><app-menu [name]="'header'" [type]="navigationMobileHeaderComponent"></app-menu></header>
+  <header class="header" fxLayout="column"><lib-menu [list]="listmenu" [name]="'header'" [type]="navigationMobileHeaderComponent"></lib-menu></header>
   <app-goods></app-goods>
-  <footer class="footer" fxLayout="column"><app-menu [name]="'footer'" [type]="navigationMobileFooterComponent"></app-menu></footer>
+  <footer class="footer" fxLayout="column"><lib-menu [list]="listmenu" [name]="'footer'" [type]="navigationMobileFooterComponent"></lib-menu></footer>
 </div>

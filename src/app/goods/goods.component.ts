@@ -4,6 +4,7 @@ import {GoodComponent} from './good/good.component';
 import { MatTableDataSource } from '@angular/material/table';
 import { GoodService } from '../services/good.service';
 import { ComponentsService } from '../services/components.service';
+import { GoodControlComponent } from './good-control/good-control.component';
 @Component({
   selector: 'app-goods',
   templateUrl: './goods.component.html',
@@ -13,8 +14,9 @@ export class GoodsComponent implements OnInit {
   datagood: Good[];
   source: GoodsComponent;
   GoodComponent = GoodComponent;
+  GoodControlComponent = GoodControlComponent;
+
   components: Array<any>;
-  displayedColumns: string[] = ['name',  'user', 'visite', 'notif', 'deadline', 'priority', 'status', 'actions'];
   dataSource = new MatTableDataSource<Good>();
   constructor(private service: GoodService,private componentservice: ComponentsService){
   
