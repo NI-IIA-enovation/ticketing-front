@@ -1,0 +1,40 @@
+{
+  "header": {
+      "goods": "Eigendom",
+      "contacts": "Contacten"
+  },
+  "panel": {
+      "appointment":"Mijn afspraken",
+      "activity-log":"Activiteiten logboek"
+  },
+  "href": {
+      "see-all": "Alles zien"
+  },
+  "input": {
+      "search": "Zoeken"
+  },
+  "button": {
+      "new": "Nieuw",
+      "table": "Schoolbord",
+      "filter": "Gefilterd",
+      "sort": "Soort"
+  },
+  "menu" : {
+      "start": {
+          "dashboard":"Dashboard",
+          "goods":"Goederen",
+          "contacts":"Contacten",
+          "agenda":"Agenda",
+          "marketplace":"Marktplaats",
+          "settings":"Instelling"
+      }
+
+  },
+  "table" : {
+      "header": {
+         "goods":["name",  "user", "visite", "notif", "deadline", "priority", "status", "actions"]
+      }
+
+  }
+
+}

@@ -3,10 +3,11 @@ import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { icon } from '@fortawesome/fontawesome-svg-core';
 import { faBuilding, faCalendarAlt, faCog, faHome, faIdCard, faShoppingBasket, faEnvelope,faAngleDown, faUser, faPowerOff, faPencilAlt,faEye} from '@fortawesome/free-solid-svg-icons';
-import { NavigationDesktopComponent } from './navigation-desktop/navigation-desktop.component';
-import { NavigationMobileFooterComponent } from './navigation-mobile-footer/navigation-mobile-footer.component';
-import { NavigationMobileHeaderComponent } from './navigation-mobile-header/navigation-mobile-header.component';
+import { NavigationDesktopComponent } from './navigation/navigation-desktop/navigation-desktop.component';
+import { NavigationMobileFooterComponent } from './navigation/navigation-mobile-footer/navigation-mobile-footer.component';
+import { NavigationMobileHeaderComponent } from './navigation/navigation-mobile-header/navigation-mobile-header.component';
 import {dataconfig} from './services/data/configmenu';
+import { MenuService } from './services/menu.service';
 
 
 @Component({
@@ -20,7 +21,8 @@ export class AppComponent {
   navigationDesktopComponent = NavigationDesktopComponent;
 
 config = dataconfig;
-constructor(private registry: MatIconRegistry, private  sanitizer: DomSanitizer){
+listmenu = [];
+constructor(private registry: MatIconRegistry, private  sanitizer: DomSanitizer ,private servicemenu:MenuService){
   registry.addSvgIconLiteral('fa-home', sanitizer.bypassSecurityTrustHtml(icon(faHome).html.join('')));
   registry.addSvgIconLiteral('fa-building', sanitizer.bypassSecurityTrustHtml(icon(faBuilding).html.join('')));
   registry.addSvgIconLiteral('fa-card', sanitizer.bypassSecurityTrustHtml(icon(faIdCard).html.join('')));
@@ -33,5 +35,6 @@ constructor(private registry: MatIconRegistry, private  sanitizer: DomSanitizer)
   registry.addSvgIconLiteral('fa-off', sanitizer.bypassSecurityTrustHtml(icon(faPowerOff).html.join('')));
   registry.addSvgIconLiteral('fa-pencil', sanitizer.bypassSecurityTrustHtml(icon(faPencilAlt).html.join('')));
   registry.addSvgIconLiteral('fa-eye', sanitizer.bypassSecurityTrustHtml(icon(faEye).html.join('')));
+  this.listmenu = this.servicemenu.getlistmenu();
 }
 }

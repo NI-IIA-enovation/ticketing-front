@@ -13,4 +13,7 @@ export class MenuService {
   getmenu(name): Configmenu{
     return this.config.find(item => item.name === name);
   }
+  getlistmenu(): Array<Configmenu>{
+    return this.config;
+  }
 }
