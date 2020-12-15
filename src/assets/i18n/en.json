@@ -1,0 +1,40 @@
+{
+  "header": {
+      "goods": "Goods",
+      "contacts": "Contacts"
+  },
+  "panel": {
+      "appointment":"My appointments",
+      "activity-log":"Activity log"
+  },
+  "href": {
+      "see-all": "See everything"
+  },
+  "input": {
+      "search": "Search"
+  },
+  "button": {
+      "new": "New",
+      "table": "Table",
+      "filter": "Filter",
+      "sort": "Trier"
+  },
+  "menu" : {
+      "start": {
+          "dashboard":"Dashbord",
+          "goods":"Goods",
+          "contacts":"Contacts",
+          "agenda":"Agenda",
+          "marketplace":"Marketplace",
+          "settings":"Settings"
+      }
+
+  },
+  "table" : {
+      "header": {
+         "goods":["name",  "user", "visite", "notif", "deadline", "priority", "status", "actions"]
+      }
+
+  }
+
+}

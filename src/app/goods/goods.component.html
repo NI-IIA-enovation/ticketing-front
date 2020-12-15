@@ -1,8 +1,8 @@
 <div fxLayout="row">
 <div  class="container"   >
- <lib-controls  (datasearch)="datagoods($event)"  [data]="dataSource" ></lib-controls>
+ <lib-controls [type]="GoodControlComponent"  (datasearch)="datagoods($event)"  [data]="dataSource" ></lib-controls>
 
-  <lib-table   [row]="GoodComponent" [data]="dataSource"  [displayedColumns]="displayedColumns" ></lib-table>
+  <lib-table *transloco="let t; read: 'table.header'"   [row]="GoodComponent" [data]="dataSource"  [displayedColumns]="t('goods')" ></lib-table>
   </div>
 <div fxLayout="column" fxFlex="30" fxFlexOffset="2" *responsive="{ bootstrap:['xl','lg']}">
     <lib-side-panel  [components]="components" ></lib-side-panel>

@@ -16,6 +16,7 @@ import { DynamicAttributesModule, DynamicModule } from 'ng-dynamic-component';
 import { SlidePanelComponent } from './slide-panel/slide-panel.component';
 import { SlideContentComponent } from './slide-panel/slide-content/slide-content.component';
 import { SidePanelComponent } from './side-panel/side-panel.component';
+import { MenuComponent } from './menu/menu.component';
 
 
 const config: IResponsiveConfig = {
@@ -30,7 +31,7 @@ const config: IResponsiveConfig = {
 };
 
 @NgModule({
-  declarations: [SnitemComponent, ControlsComponent, TableComponent, SlidePanelComponent, SlideContentComponent, SidePanelComponent],
+  declarations: [SnitemComponent, ControlsComponent, TableComponent, SlidePanelComponent, SlideContentComponent, SidePanelComponent, MenuComponent],
   imports: [
     MatFormFieldModule,
     MatIconModule,
@@ -45,7 +46,7 @@ const config: IResponsiveConfig = {
     ResponsiveModule.forRoot(config),
     DynamicAttributesModule,
   ],
-  exports: [SnitemComponent, ControlsComponent, TableComponent, SlidePanelComponent, SidePanelComponent],
+  exports: [SnitemComponent, ControlsComponent, TableComponent, SlidePanelComponent, SidePanelComponent, MenuComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class SnitemModule { }

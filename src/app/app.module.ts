@@ -18,20 +18,18 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { SnitemModule } from 'projects/snitem/src/lib/snitem.module';
-import { MenuComponent } from './menu/menu.component';
 import {MatListModule} from '@angular/material/list';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { DynamicAttributesModule, DynamicModule } from 'ng-dynamic-component';
 import {ScrollingModule} from '@angular/cdk/scrolling';
-import { NavigationDesktopComponent } from './navigation-desktop/navigation-desktop.component';
-import { NavigationMobileHeaderComponent } from './navigation-mobile-header/navigation-mobile-header.component';
-import { NavigationMobileFooterComponent } from './navigation-mobile-footer/navigation-mobile-footer.component';
-import { SidePanelComponent } from './side-panel/side-panel.component';
+import { NavigationDesktopComponent } from './navigation/navigation-desktop/navigation-desktop.component';
+import { NavigationMobileHeaderComponent } from './navigation/navigation-mobile-header/navigation-mobile-header.component';
+import { NavigationMobileFooterComponent } from './navigation/navigation-mobile-footer/navigation-mobile-footer.component';
 import { WorkComponent } from './work/work.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { ActivityLogComponent } from './activity-log/activity-log.component';
-import { NavigationUserComponent } from './navigation-user/navigation-user.component';
-import { NavigationLanguageComponent } from './navigation-language/navigation-language.component';
+import { NavigationUserComponent } from './navigation/navigation-user/navigation-user.component';
+import { NavigationLanguageComponent } from './navigation/navigation-language/navigation-language.component';
 import { HeaderComponent } from './header/header.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
@@ -50,6 +48,9 @@ import { GoodEditComponent } from './goods/good-edit/good-edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GoodViewComponent } from './goods/good-view/good-view.component';
 import { ComponentsService } from './services/components.service';
+import { HttpClientModule } from '@angular/common/http';
+import { TranslocoRootModule } from './transloco/transloco-root.module';
+import { GoodControlComponent } from './goods/good-control/good-control.component';
 
 const config: IResponsiveConfig = {
   breakPoints: {
@@ -67,11 +68,9 @@ const config: IResponsiveConfig = {
     AppComponent,
     GoodComponent,
     GoodsComponent,
-    MenuComponent,
     NavigationDesktopComponent,
     NavigationMobileHeaderComponent,
     NavigationMobileFooterComponent,
-    SidePanelComponent,
     WorkComponent,
     AppointmentComponent,
     ActivityLogComponent,
@@ -87,6 +86,7 @@ const config: IResponsiveConfig = {
     ActionGoodsComponent,
     GoodEditComponent,
     GoodViewComponent,
+    GoodControlComponent,
   ],
   imports: [
     DynamicAttributesModule,
@@ -118,7 +118,9 @@ const config: IResponsiveConfig = {
     ScrollingModule,
     MatDatepickerModule,
     ReactiveFormsModule,
-    ResponsiveModule.forRoot(config)
+    ResponsiveModule.forRoot(config),
+    HttpClientModule,
+    TranslocoRootModule
   ],
   providers: [ComponentsService],
   bootstrap: [AppComponent],

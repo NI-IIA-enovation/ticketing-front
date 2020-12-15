@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationLanguageComponent } from '../navigation-language/navigation-language.component';
-import { NavigationUserComponent } from '../navigation-user/navigation-user.component';
+import { NavigationLanguageComponent } from '../navigation/navigation-language/navigation-language.component';
+import { NavigationUserComponent } from '../navigation/navigation-user/navigation-user.component';
+import { MenuService } from '../services/menu.service';
 
 @Component({
   selector: 'app-header',
@@ -10,9 +11,11 @@ import { NavigationUserComponent } from '../navigation-user/navigation-user.comp
 export class HeaderComponent implements OnInit {
   navigationUserComponent  = NavigationUserComponent;
   navigationlanguageComponent  = NavigationLanguageComponent;
-  constructor() { }
-
+  listmenu = [];
+  constructor(private servicemenu:MenuService) { }
+  
   ngOnInit(): void {
+    this.listmenu = this.servicemenu.getlistmenu();
   }
 
 }

@@ -19,42 +19,42 @@ responsive: ['xs', 'sm' , 'md'],
           listmenu: [{
             position: 0,
             icon: 'fa-home',
-            name: 'Dashboard',
+            name: 'dashboard',
             target: 'work',
             action: 'set',
             component: '#'
           }, {
             position: 1,
             icon: 'fa-building',
-            name: 'Biens',
+            name: 'goods',
             target: 'work',
             action: 'set',
             component: '/list-good'
           }, {
             position: 2,
             icon: 'fa-card',
-            name: 'Contacts',
+            name: 'contacts',
             target: 'work',
             action: 'set',
             component: '/list-contact'
           }, {
           position: 3,
           icon: 'fa-calendar',
-          name: 'Agenda',
+          name: 'agenda',
           target: 'work',
           action: 'set',
           component: '#'
           }, {
           position: 4,
           icon: 'fa-shoppingbasket',
-          name: 'Marketplace',
+          name: 'marketplace',
           target: 'work',
           action: 'set',
           component: '#'
           }, {
           position: 5,
           icon: 'fa-cog',
-          name: 'Settings',
+          name: 'settings',
           target: 'work',
           action: 'set',
           component: '#'
@@ -89,21 +89,28 @@ responsive: ['xs', 'sm' , 'md'],
                                     position: 0,
                                     icon: '',
                                     name: 'FR',
-                                    target: 'work',
+                                    target: 'fr',
                                     action: 'set',
                                     component: '#'
                                   }, {
                                     position: 1,
                                     icon: '',
                                     name: 'NL',
-                                    target: 'work',
+                                    target: 'nl',
                                     action: 'set',
                                     component: '#'
                                   }, {
                                     position: 2,
                                     icon: '',
                                     name: 'EN',
-                                    target: 'work',
+                                    target: 'en',
+                                    action: 'set',
+                                    component: '#'
+                                  }, {
+                                    position: 3,
+                                    icon: '',
+                                    name: 'DE',
+                                    target: 'de',
                                     action: 'set',
                                     component: '#'
                                   }]},
@@ -159,42 +166,42 @@ responsive:  ['lg', 'xl'],
             listmenu: [{
               position: 0,
               icon: 'fa-home',
-              name: 'Dashboard',
+              name: 'dashboard',
               target: 'work',
               action: 'set',
               component: '#'
             }, {
               position: 1,
               icon: 'fa-building',
-              name: 'Biens',
+              name: 'goods',
               target: 'work',
               action: 'set',
               component: 'list-good'
             }, {
               position: 2,
               icon: 'fa-card',
-              name: 'Contacts',
+              name: 'contacts',
               target: 'work',
               action: 'set',
               component: 'list-contact'
             }, {
             position: 3,
             icon: 'fa-calendar',
-            name: 'Agenda',
+            name: 'agenda',
             target: 'work',
             action: 'set',
             component: '#'
             }, {
             position: 4,
             icon: 'fa-shoppingbasket',
-            name: 'Marketplace',
+            name: 'marketplace',
             target: 'work',
             action: 'set',
             component: '#'
             }, {
             position: 5,
             icon: 'fa-cog',
-            name: 'Settings',
+            name: 'settings',
             target: 'work',
             action: 'set',
             component: '#'
