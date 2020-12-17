@@ -11,20 +11,7 @@ const accountModule = () => import('./account/account.module').then(x => x.Accou
 
 const routes: Routes = [
   { path: 'account', loadChildren: accountModule },
-
-  { path: 'home',component:HomeComponent, children: [
-    { path: 'list-contact', component: ContactsComponent},
-    {
-    path: '',
-    component: ActionContactsComponent,
-    outlet: 'header'
-  },
-  {
-    path: '',
-    component: ContactsComponent,
-    outlet: 'content'
-  },
-  ] , canActivate: [AuthGuard]},
+  { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: 'home',component:HomeComponent, children: [
     { path: 'list-good', component: GoodsComponent},
     {
@@ -41,7 +28,20 @@ const routes: Routes = [
     path: 'list-good/:id',
     component: GoodEditComponent,
   }
-  ], canActivate: [AuthGuard]}
+  ], canActivate: [AuthGuard]},
+  { path: 'home',component:HomeComponent, children: [
+    { path: 'list-contact', component: ContactsComponent},
+    {
+    path: '',
+    component: ActionContactsComponent,
+    outlet: 'header'
+  },
+  {
+    path: '',
+    component: ContactsComponent,
+    outlet: 'content'
+  },
+  ] , canActivate: [AuthGuard]}
 ];
 
 @NgModule({
