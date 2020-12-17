@@ -1,0 +1,46 @@
+<div class="card">
+   
+   
+    <div class="card-body">
+    <div fxLayout="column" fxLayoutAlign="space-around stretch" class="info-connect" >
+        <h1><img src="https://i.pinimg.com/280x280_RS/cd/2d/99/cd2d99cb7a56908d5b71630ff3f8e2fb.jpg"> Connectez-vous !</h1>
+        <div>
+        <p>Le lorem ipsum est, en imprimerie, une suite de mots sans signification</p>
+        <p> Utilisée à titre provisoire pour calibrer une mise en page, </p>
+        <p>Le texte définitif venant remplacer le faux-texte . </p> 
+        </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center" >
+            <button   mat-stroked-button color="primary" >Connexion Facebook <mat-icon svgIcon='fa-facebook'></mat-icon></button> 
+            <button  mat-stroked-button color="primary" >Connexion Google <mat-icon svgIcon='fa-google'></mat-icon></button> 
+   </div>
+    </div>    
+
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="username">Email</label>
+                <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                    <div *ngIf="f.username.errors.required">Nom d'utilisateur est nécessaire</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Mot de passe est obligatoire</div>
+                </div>
+            </div>
+            <div fxLayoutAlign="end center" > <a routerLink="#" class="btn btn-link">Mot de passe oublie</a></div>
+            <mat-checkbox class="example-margin">Se souvenir de moi</mat-checkbox>
+            <div class="form-group" fxLayoutAlign="end center" >
+                <button [disabled]="loading" class="btn btn-primary">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                    Se connecter
+                </button>
+               
+            </div>
+            <div fxLayoutAlign="space-between center" class="register"><h4>Vous n'avez pas encore de compte ? </h4> <button  routerLink="../register"mat-stroked-button >Créer un compte</button></div>
+        </form>
+        
+    </div>
+</div>
