@@ -1,6 +1,6 @@
 <div fxLayout="row"  fxFlexFill class="layout-home" *responsive="{ bootstrap:['xl','lg']}">
     <div fxLayout="row" fxFlex="15" class="nav"><lib-menu [list]="listmenu" [name]="'star'" [type]="navigationDesktopComponent"></lib-menu></div>
-    <div fxLayout="column" fxFlex="79" fxFlexOffset="3">
+    <div fxLayout="column" fxFlex="auto" fxFlexOffset="1">
         <div fxLayout="column">
             <!--Zone Header-->
              <app-header></app-header>
@@ -12,9 +12,4 @@
     </div>
   </div>
   <!--Mobile-->
-  <div *responsive="{ bootstrap:['xs', 'sm','md']}">
-    <header class="header" fxLayout="column"><lib-menu [list]="listmenu" [name]="'header'" [type]="navigationMobileHeaderComponent"></lib-menu></header>
-    <app-goods></app-goods>
-    <footer class="footer" fxLayout="column"><lib-menu [list]="listmenu" [name]="'footer'" [type]="navigationMobileFooterComponent"></lib-menu></footer>
-  </div>
-  
+  <app-mobile [menu]="listmenu" *responsive="{ bootstrap:['xs', 'sm','md']}"></app-mobile>

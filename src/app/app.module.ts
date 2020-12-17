@@ -52,6 +52,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco/transloco-root.module';
 import { GoodControlComponent } from './goods/good-control/good-control.component';
 import { HomeComponent } from './home/home.component';
+import { MobileComponent } from './mobile/mobile.component';
 
 
 const config: IResponsiveConfig = {
@@ -90,6 +91,7 @@ const config: IResponsiveConfig = {
     GoodViewComponent,
     GoodControlComponent,
     HomeComponent,
+    MobileComponent,
 
   ],
   imports: [
