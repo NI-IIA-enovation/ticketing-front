@@ -1,0 +1,42 @@
+@import "../../../css/utilities/responsive"; 
+.card{
+.info-connect{
+    padding-bottom: 20px;
+    margin: 20px;
+    border-bottom: 1px solid #ccc;
+    
+    button{
+            border: 1px solid $accent;
+            color: $accent;
+            font-size: 0.86em;
+    }
+    mat-icon{
+        height: auto;
+    }
+    img{
+        width:50px;
+    }
+    h1{
+        color: $accent;
+    }
+}
+form{
+    
+    padding: 10px;
+    margin: 20px;
+    
+}
+.register{
+    border-top: 1px solid #ccc; 
+    padding-top: 20px;
+    button{
+        border: 1px solid $accent;
+        color: $accent;
+        font-size: 0.9em;}
+    
+    h4{
+        margin-bottom: 0px;
+    }
+    }
+    
+}

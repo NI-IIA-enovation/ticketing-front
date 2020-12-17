@@ -1,0 +1,20 @@
+<div fxLayout="row" fxFill="100" *responsive="{ bootstrap:['xl','lg']}">
+    <div fxLayout="row" fxFlex="15" class="nav"><lib-menu [list]="listmenu" [name]="'star'" [type]="navigationDesktopComponent"></lib-menu></div>
+    <div fxLayout="column" fxFlex="79" fxFlexOffset="3">
+        <div fxLayout="column">
+            <!--Zone Header-->
+             <app-header></app-header>
+        </div>
+        <div fxLayout="column">
+            <!--Zone Work-->
+            <app-work></app-work>
+        </div>
+    </div>
+  </div>
+  <!--Mobile-->
+  <div *responsive="{ bootstrap:['xs', 'sm','md']}">
+    <header class="header" fxLayout="column"><lib-menu [list]="listmenu" [name]="'header'" [type]="navigationMobileHeaderComponent"></lib-menu></header>
+    <app-goods></app-goods>
+    <footer class="footer" fxLayout="column"><lib-menu [list]="listmenu" [name]="'footer'" [type]="navigationMobileFooterComponent"></lib-menu></footer>
+  </div>
+  
