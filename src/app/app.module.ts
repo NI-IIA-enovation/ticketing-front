@@ -51,6 +51,8 @@ import { ComponentsService } from './services/components.service';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco/transloco-root.module';
 import { GoodControlComponent } from './goods/good-control/good-control.component';
+import { HomeComponent } from './home/home.component';
+
 
 const config: IResponsiveConfig = {
   breakPoints: {
@@ -87,6 +89,8 @@ const config: IResponsiveConfig = {
     GoodEditComponent,
     GoodViewComponent,
     GoodControlComponent,
+    HomeComponent,
+
   ],
   imports: [
     DynamicAttributesModule,

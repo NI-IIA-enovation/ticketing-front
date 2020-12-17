@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { AccountService } from 'src/app/services/account.service';
 
 @Component({
   selector: 'app-navigation-user',
@@ -8,9 +9,11 @@ import { Component, Input, OnInit } from '@angular/core';
 export class NavigationUserComponent implements OnInit {
   @Input() list: Array<any>;
   @Input() position: string;
-  constructor() { }
+  constructor(private accountService: AccountService) { }
 
   ngOnInit(): void {
   }
-
+  logout() {
+    this.accountService.logout();
+}
 }
