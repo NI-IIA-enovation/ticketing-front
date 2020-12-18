@@ -1,7 +1,7 @@
 
-<div fxLayout="row" fxFill="100"  >
-    <div fxLayout="row" fxFlex="15" class="nav" class="side"></div>
-    <div fxLayout="row" fxLayoutAlign="center center"  fxFlex="79" fxFlexOffset="3">
+<div fxLayout="row" fxFlexFill class="layout-log"  >
+    <div fxLayout="row" fxFlex="20" class="nav" class="side" *responsive="{ bootstrap:['xl','lg']}"></div>
+    <div fxLayout="row"  fxFlex="auto" fxLayoutAlign="center stretch" >
         <router-outlet></router-outlet>
     </div>
   </div>
