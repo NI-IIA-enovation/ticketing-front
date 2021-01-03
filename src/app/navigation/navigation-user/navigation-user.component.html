@@ -5,7 +5,7 @@
   </button>
 
   <mat-menu #menu="matMenu"  >
-    <button *ngFor="let mn of list" mat-menu-item  (click)="logout()">
+    <button *ngFor="let mn of list" mat-menu-item  (click)="logout(mn.target)">
       <mat-icon [svgIcon]="mn.icon"></mat-icon>
       <span>{{mn.name}}</span>
     </button>

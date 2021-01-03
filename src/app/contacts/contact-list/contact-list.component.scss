@@ -12,11 +12,7 @@
       z-index: 2;
      
       th.mat-header-cell {
-        display: none;
-        flex: 1;
-        align-items: center;
-        padding: 1rem 0.5rem;
-        justify-content: space-around;
+      
 
         & > .mat-sort-header-container {
           padding-left: 15px; // padding is used to center the header table cells, due to the width of the sort icon
@@ -51,19 +47,23 @@
         td:nth-of-type(n+1){
           
           display: inline-block !important;
-          width:100%;
+          width:50%;
         }
-        td:nth-of-type(n+2){
+      
+        td:nth-of-type(n+3){
           
           display: inline-block !important;
           width: 20%;
         }
         td:nth-of-type(n+5){
        
-          display: none !important;
+          display: inline-block !important;
+          width: 60%;
         }
+        
         td:nth-of-type(n+6){
           display: none !important;
+          width: 50%;
          
         }
         .div-status2{
@@ -80,7 +80,8 @@
         }
         td:nth-of-type(n+7){
           display: inline-block !important;
-          width: 40% !important;
+          width:50% !important;
+        
          
         }
         td.mat-column-actions {

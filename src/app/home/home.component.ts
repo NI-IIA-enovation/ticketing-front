@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationDesktopComponent } from '../navigation/navigation-desktop/navigation-desktop.component';
+import { AccountService } from '../services/account.service';
 import {dataconfig} from '../services/data/configmenu';
 import { MenuService } from '../services/menu.service';
 @Component({
@@ -13,7 +14,8 @@ export class HomeComponent implements OnInit {
 
 config = dataconfig;
 listmenu = [];
-  constructor(private servicemenu:MenuService) {
+  constructor(private servicemenu:MenuService,private serviceAccount:AccountService) {
+    this.serviceAccount.setconfig();
     this.listmenu = this.servicemenu.getlistmenu();
    }
 

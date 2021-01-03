@@ -79,7 +79,7 @@ responsive: ['xs', 'sm' , 'md'],
                         position: 2,
                         icon: 'fa-off',
                         name: 'Déconnecter',
-                        target: 'work',
+                        target: 'logout',
                         action: 'set',
                         component: '#'
                       }]}, {
