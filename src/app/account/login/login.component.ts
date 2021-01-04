@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewChecked, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
@@ -10,48 +10,27 @@ import { AccountService } from 'src/app/services/account.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements AfterViewChecked {
   
   form: FormGroup;
   loading = false;
   submitted = false;
 
-  constructor(
-      private formBuilder: FormBuilder,
-      private route: ActivatedRoute,
-      private router: Router,
+  constructor(private router: Router,
       private accountService: AccountService,
-  ) { }
+  ) { this.accountService.setconfig() }
 
-  ngOnInit() {
-      this.form = this.formBuilder.group({
-          username: ['', Validators.required],
-          password: ['', Validators.required]
-      });
+ 
+  ngAfterViewChecked(){
+      this.accountService.home();
+    
   }
 
 
-  get f() { return this.form.controls; }
-
-  onSubmit() {
-      this.submitted = true;
-
-      if (this.form.invalid) {
-          return;
-      }
-
+  signInWithGoogle() {
       this.loading = true;
-      this.accountService.login(this.f.username.value, this.f.password.value)
-          .pipe(first())
-          .subscribe({
-              next: () => {
-                  const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/home/list-good';
-                  this.router.navigateByUrl(returnUrl);
-              },
-              error: error => {
-                  this.loading = false;
-              }
-          });
+      this.accountService.login();
+         
   }
 
 }
