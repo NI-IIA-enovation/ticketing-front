@@ -1,29 +1,29 @@
  
 <div class="div-name" *ngIf="column== 'name'">
                   <img src="https://i.pinimg.com/474x/00/c3/fb/00c3fb3506ceb708715066f0a8e8e451.jpg" />
-                  <h3 color="accent">{{element['name']}} - {{element['city']}}</h3>
-                  <p >{{element['room']}} - {{element['bathroom']}}  - {{element['area']}}</p>
+                  <h3 color="accent">{{element['title']}} - {{element['city']}}</h3>
+                  <p >{{element['house_bednumber']}} - {{element['house_sdbnumber']}}  - {{element['house_suphabi']}}</p>
               </div>
               <div *ngIf="column== 'user'">
                   <img src="https://www.emmegi.co.uk/wp-content/uploads/2019/01/User-Icon.jpg" width="30px" height="30px" />
               </div>
               <div *ngIf="column== 'visite' " >
-                  <mat-icon  [matBadge]="element[column]" >restore</mat-icon>
+                  <mat-icon  [matBadge]="element['building_levels']" >restore</mat-icon>
               </div>
               <div *ngIf="column== 'notif' " >
-                  <mat-icon  [matBadge]="element[column]" >today</mat-icon>
+                  <mat-icon  [matBadge]="element['building_faces']" >today</mat-icon>
               </div>
               <div *ngIf="column== 'deadline' " >
-                  <div class="div-date" ><h5 >{{element[column]}}</h5></div>
+                  <div class="div-date" ><h5 >{{element['CreatedDate']}}</h5></div>
               </div>
            
           
               <div *ngIf="column== 'priority' " >
-                  <div class="div-status" >{{element[column]}}</div>
+                  <div class="div-status" >{{element['finance_price']}}</div>
               </div>
            
               <div *ngIf="column== 'status' ">
-                  <div class="div-status2"><h5 >{{element[column]}}</h5><mat-icon>keyboard_arrow_down</mat-icon></div>
+                  <div class="div-status2"><h5 >{{element['status']}}</h5><mat-icon>keyboard_arrow_down</mat-icon></div>
               </div>
               
               <div class="mat-column-actions" *ngIf="column== 'actions'"  >

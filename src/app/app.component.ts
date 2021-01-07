@@ -5,6 +5,7 @@ import { icon } from '@fortawesome/fontawesome-svg-core';
 import { faBuilding ,faCalendarAlt, faCog, faHome, faIdCard, faShoppingBasket, faEnvelope,faAngleDown, faUser, faPowerOff, faPencilAlt,faEye} from '@fortawesome/free-solid-svg-icons';
 import {faGoogle,faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import { AccountService } from './services/account.service';
+import { OfferService } from './services/offer.service';
 
 
 @Component({
@@ -14,10 +15,8 @@ import { AccountService } from './services/account.service';
 })
 export class AppComponent {
  
-constructor(private registry: MatIconRegistry, private  sanitizer: DomSanitizer,private serviceAccount:AccountService ){
-  if(this.serviceAccount.token){
-    console.log('test');
-  }
+constructor(private serviceOffer:OfferService,private registry: MatIconRegistry, private  sanitizer: DomSanitizer,private serviceAccount:AccountService ){
+  this.serviceOffer.getOffers();
   registry.addSvgIconLiteral('fa-home', sanitizer.bypassSecurityTrustHtml(icon(faHome).html.join('')));
   registry.addSvgIconLiteral('fa-building', sanitizer.bypassSecurityTrustHtml(icon(faBuilding).html.join('')));
   registry.addSvgIconLiteral('fa-card', sanitizer.bypassSecurityTrustHtml(icon(faIdCard).html.join('')));
