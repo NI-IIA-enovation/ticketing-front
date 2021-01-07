@@ -38,6 +38,7 @@ export class AccountService {
     logout() {
         this.authService.logOut();
         this.userSubject.next(null);
+        
         this.router.navigate(['/account/login/']);
     }
     setconfig(){
