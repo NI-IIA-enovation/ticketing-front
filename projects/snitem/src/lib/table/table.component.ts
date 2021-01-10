@@ -25,9 +25,11 @@ export class TableComponent implements OnInit ,  AfterViewInit {
 
     }
     ngOnInit(): void{
+
     }
   ngAfterViewInit(): void {
   this.dataSource = this.data;
+  
   this.dataSource.paginator = this.paginator;
   this.dataSource.sort = this.sort;
   }
