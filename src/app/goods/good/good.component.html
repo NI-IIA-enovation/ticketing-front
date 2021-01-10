@@ -1,5 +1,5 @@
  
-<div class="div-name" *ngIf="column== 'name'">
+<div class="div-name" *ngIf="column== 'title'">
                   <img src="https://i.pinimg.com/474x/00/c3/fb/00c3fb3506ceb708715066f0a8e8e451.jpg" />
                   <h3 color="accent">{{element['title']}} - {{element['city']}}</h3>
                   <p >{{element['house_bednumber']}} - {{element['house_sdbnumber']}}  - {{element['house_suphabi']}}</p>
@@ -13,12 +13,12 @@
               <div *ngIf="column== 'notif' " >
                   <mat-icon  [matBadge]="element['building_faces']" >today</mat-icon>
               </div>
-              <div *ngIf="column== 'deadline' " >
-                  <div class="div-date" ><h5 >{{element['CreatedDate']}}</h5></div>
+              <div *ngIf="column== 'house_category' " >
+                  <div class="div-date" ><h5 >{{element['house_category']}}</h5></div>
               </div>
            
           
-              <div *ngIf="column== 'priority' " >
+              <div *ngIf="column== 'finance_price' " >
                   <div class="div-status" >{{element['finance_price']}}</div>
               </div>
            

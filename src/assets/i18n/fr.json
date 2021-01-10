@@ -32,7 +32,7 @@
     },
     "table" : {
         "header": {
-           "goods":["name",  "user", "visite", "notif", "deadline", "priority", "status", "actions"]
+           "goods":["title",  "user", "visite", "notif", "house_category", "finance_price", "status", "actions"]
         }
 
     }
