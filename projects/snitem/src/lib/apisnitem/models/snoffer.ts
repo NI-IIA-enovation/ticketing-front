@@ -16,6 +16,7 @@ export class SNOffer extends SNItem {
     get address() {
         return this.getProperty('address');
     }
+   
 
     get country() {
         return this.getProperty('country');
@@ -83,9 +84,11 @@ export class SNOffer extends SNItem {
     get sticker() {
         return this.getProperty('sticker');
     }
-    get title() {
+    public get title() {
         return this.getProperty('title');
     }
+    
+    
     get type() {
         return this.getProperty('Vente');
     }

@@ -17,6 +17,7 @@ import { SlidePanelComponent } from './slide-panel/slide-panel.component';
 import { SlideContentComponent } from './slide-panel/slide-content/slide-content.component';
 import { SidePanelComponent } from './side-panel/side-panel.component';
 import { MenuComponent } from './menu/menu.component';
+import { ApisnitemComponent } from './apisnitem/apisnitem.component';
 
 
 const config: IResponsiveConfig = {
@@ -31,7 +32,7 @@ const config: IResponsiveConfig = {
 };
 
 @NgModule({
-  declarations: [SnitemComponent, ControlsComponent, TableComponent, SlidePanelComponent, SlideContentComponent, SidePanelComponent, MenuComponent],
+  declarations: [SnitemComponent, ControlsComponent, TableComponent, SlidePanelComponent, SlideContentComponent, SidePanelComponent, MenuComponent, ApisnitemComponent],
   imports: [
     MatFormFieldModule,
     MatIconModule,
