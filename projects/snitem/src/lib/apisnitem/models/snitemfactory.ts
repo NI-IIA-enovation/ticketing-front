@@ -74,7 +74,7 @@ export class SNItemFactory {
         itemts = SNITEM_REGISTERED_CLASSES.get(itemkey).clone();
 
         itemts.fromJson(json);
-        
+        console.log(json);
         return itemts;
       }
     }
@@ -105,7 +105,7 @@ export class SNItemFactory {
       }
     }
     if (json instanceof Array) {
-      
+     
       const items = [];
       json.forEach(ajson => {
         ajson.key="SNItem.SNOffer";
@@ -115,6 +115,7 @@ export class SNItemFactory {
           items.push(item);
         }
       });
+      console.log(items);
       return items;
     }
 //    console.log('Json is not an Array', json);

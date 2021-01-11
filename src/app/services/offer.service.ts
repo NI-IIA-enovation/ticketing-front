@@ -2,19 +2,16 @@ import { keyframes } from '@angular/animations';
 import { CdkCell } from '@angular/cdk/table';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { EventEmitter, Injectable, Output, Type } from '@angular/core';
+import { ODBService } from 'projects/snitem/src/lib/apisnitem/odb.service';
 import { Observable, Subject } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { environment } from 'src/environments/environment';
-import { SNItem } from './snitems/models/snitem';
-import { ODBService } from './snitems/odb.service';
-import { SNOffer } from './snitems/models/snoffer';
+
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class OfferService {
-  @Output() itemStored: EventEmitter<SNItem> = new EventEmitter();
+
  
   constructor(private serviceodb:ODBService,private http : HttpClient) {
     

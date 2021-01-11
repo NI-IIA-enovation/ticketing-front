@@ -12,8 +12,10 @@ export class GoodControlComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void{
+    
   }
  public doFilter = (value: string) => {
+   
     this.data.filter = value.trim().toLocaleLowerCase();
     this.datasearch.emit(this.data);
  }
