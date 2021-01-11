@@ -9,11 +9,12 @@ import { AccountService } from 'src/app/services/account.service';
 export class NavigationUserComponent implements OnInit {
   @Input() list: Array<any>;
   @Input() position: string;
-  constructor(private accountService: AccountService) { }
+  constructor(private serviceaccount:AccountService) { }
 
   ngOnInit(): void {
   }
-  logout() {
-    this.accountService.logout();
+  logout(menu : string) {
+    if(menu == 'logout')
+  this.serviceaccount.logout();
 }
 }

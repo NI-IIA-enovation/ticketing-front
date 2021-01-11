@@ -5,7 +5,7 @@ import { IResponsiveConfig, ResponsiveModule } from 'ngx-responsive';
 import { AccountRoutingModule } from './account-routing.module';
 import { LayoutComponent } from './layout/layout.component';
 import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {  MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -38,7 +38,7 @@ const config: IResponsiveConfig = {
     declarations: [
         LayoutComponent,
         LoginComponent,
-        RegisterComponent
+
     ]
 })
 export class AccountModule { }

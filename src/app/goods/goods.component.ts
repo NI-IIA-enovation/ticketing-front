@@ -5,30 +5,37 @@ import { MatTableDataSource } from '@angular/material/table';
 import { GoodService } from '../services/good.service';
 import { ComponentsService } from '../services/components.service';
 import { GoodControlComponent } from './good-control/good-control.component';
+import { OfferService } from '../services/offer.service';
 @Component({
   selector: 'app-goods',
   templateUrl: './goods.component.html',
   styleUrls: ['./goods.component.scss']
 })
 export class GoodsComponent implements OnInit {
-  datagood: Good[];
+  datagood:[];
   source: GoodsComponent;
   GoodComponent = GoodComponent;
   GoodControlComponent = GoodControlComponent;
 
   components: Array<any>;
   dataSource = new MatTableDataSource<Good>();
-  constructor(private service: GoodService,private componentservice: ComponentsService){
+  constructor(private serviceoffer:OfferService,private service: GoodService,private componentservice: ComponentsService){
   
    }
 
   ngOnInit(): void {
     this.source = this;
-    this.service.getListGood().subscribe(res => {this.dataSource.data = res; });
+    this.serviceoffer.getOffers().subscribe(item=>{
+      this.dataSource.data=item;
+      
+    })
+  
+    //this.service.getListGood().subscribe(res => {this.dataSource.data = res; });
     this.componentservice.getCurrentComponents('panel',this,this).subscribe(components =>this.components = components );
     
    }
   datagoods(event): void{
-   this.datagood = event;
+    console.log(event.data);
+    this.dataSource = event;
   }
 }

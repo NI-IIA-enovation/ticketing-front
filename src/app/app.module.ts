@@ -53,7 +53,7 @@ import { TranslocoRootModule } from './transloco/transloco-root.module';
 import { GoodControlComponent } from './goods/good-control/good-control.component';
 import { HomeComponent } from './home/home.component';
 import { MobileComponent } from './mobile/mobile.component';
-
+import { OAuthModule } from 'angular-oauth2-oidc';
 
 const config: IResponsiveConfig = {
   breakPoints: {
@@ -92,7 +92,10 @@ const config: IResponsiveConfig = {
     GoodControlComponent,
     HomeComponent,
     MobileComponent,
-
+   
+    
+    
+    
   ],
   imports: [
     DynamicAttributesModule,
@@ -126,7 +129,9 @@ const config: IResponsiveConfig = {
     ReactiveFormsModule,
     ResponsiveModule.forRoot(config),
     HttpClientModule,
-    TranslocoRootModule
+    TranslocoRootModule,
+    BrowserModule,
+    OAuthModule.forRoot()
   ],
   providers: [ComponentsService],
   bootstrap: [AppComponent],

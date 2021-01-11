@@ -7,7 +7,7 @@
             <form [formGroup]="goodservice.form" fxLayout="column" fxLayoutAlign="space-between none" >
                 <div fxLayout="column">
                     <mat-form-field>
-                        <input formControlName="name" matInput placeholder="Nom *" />
+                        <input formControlName="title" matInput placeholder="Titre *" />
                     </mat-form-field>
                     <mat-form-field>
                         <input formControlName="city" matInput placeholder="Ville *" />
@@ -15,21 +15,21 @@
                 </div>
                 <div fxLayout="row" fxLayoutAlign="space-around center" >
                     <mat-form-field fxFlex="30">
-                        <input formControlName="room" matInput placeholder="Chambre *" />
+                        <input formControlName="house_bednumber" matInput placeholder="Chambre *" />
                     </mat-form-field>
                     <mat-form-field fxFlex="30">
-                        <input formControlName="bathroom" matInput placeholder="Salle de bain *" />
+                        <input formControlName="house_sdbnumber" matInput placeholder="Salle de bain *" />
                     </mat-form-field>
                     <mat-form-field fxFlex="30">
-                        <input formControlName="area" matInput placeholder="Surface *" />
+                        <input formControlName="house_suphabi" matInput placeholder="Surface *" />
                     </mat-form-field>
                 </div>
                 <div fxLayout="column">
                     <mat-form-field>
-                        <input formControlName="deadline" matInput placeholder="Date *" />
+                        <input formControlName="type" matInput placeholder="Date *" />
                     </mat-form-field>
                     <mat-form-field>
-                        <mat-select formControlName="priority" placeholder="Proprieté">
+                        <mat-select formControlName="house_category" placeholder="Proprieté">
                             <mat-option [value]="'Elevée'">
                                 Elevée
                             </mat-option>
@@ -43,7 +43,7 @@
                             <mat-option [value]="'Visite en cours'">
                                 Visite en cours
                             </mat-option>
-                            <mat-option [value]="'Recherche'">
+                            <mat-option [value]="'VENDU'">
                                 Recherche
                             </mat-option>
                             <mat-option [value]="'En vente'">
