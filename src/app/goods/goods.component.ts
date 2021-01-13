@@ -12,7 +12,7 @@ import { OfferService } from '../services/offer.service';
   styleUrls: ['./goods.component.scss']
 })
 export class GoodsComponent implements OnInit {
-  datagood:[];
+  datagood: Good[];
   source: GoodsComponent;
   GoodComponent = GoodComponent;
   GoodControlComponent = GoodControlComponent;
@@ -25,17 +25,13 @@ export class GoodsComponent implements OnInit {
 
   ngOnInit(): void {
     this.source = this;
-    this.serviceoffer.getOffers().subscribe(item=>{
-      this.dataSource.data=item;
-      
-    })
-  
+    this.serviceoffer.getOffers().subscribe(item=>{this.dataSource.data = item;})
     //this.service.getListGood().subscribe(res => {this.dataSource.data = res; });
     this.componentservice.getCurrentComponents('panel',this,this).subscribe(components =>this.components = components );
     
    }
   datagoods(event): void{
-    console.log(event.data);
-    this.dataSource = event;
+    console.log(event);
+   this.datagood = event;
   }
 }

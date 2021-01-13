@@ -1,5 +1,5 @@
 import { Injectable, Output, EventEmitter } from '@angular/core';
-import { environment } from '../../../environments/environment';
+import { environment } from '../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { throwError, Observable, fromEvent, of } from 'rxjs';
 import { map } from 'rxjs/operators';
