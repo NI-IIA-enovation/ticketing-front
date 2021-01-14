@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,10 +10,14 @@ import { Component, Input, OnInit } from '@angular/core';
 export class NavigationDesktopComponent implements OnInit {
   @Input() list: Array<any>;
   @Input() position: string;
-  constructor() {
+  constructor(private _router:Router) {
 }
 
   ngOnInit(): void {
   }
-
+  Navigate(parm) {
+    
+    this._router.navigate(['/home/'+parm]);
+    
+   }
 }
