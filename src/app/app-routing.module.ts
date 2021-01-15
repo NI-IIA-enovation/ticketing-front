@@ -11,37 +11,21 @@ const accountModule = () => import('./account/account.module').then(x => x.Accou
 
 const routes: Routes = [
   { path: 'account', loadChildren: accountModule },
-  { path: '',   redirectTo: '/home/list-good', pathMatch: 'full' },
-  { path: 'home', children: [
+  { path: '',   redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent, children: [
+    { path: '', redirectTo: 'list-good', pathMatch: 'full' },
     { path: 'list-good', component: GoodsComponent},
-    {
-    path: '',
-    component: ActionGoodsComponent,
-    outlet: 'header'
-  },
-  {
-    path: '',
-    component: GoodsComponent,
-    outlet: 'content'
-  },
-  {
-    path: 'list-good/:id',
-    component: GoodEditComponent,
-  }
-  ], canActivate: [AuthGuard]},
-  { path: 'home', children: [
     { path: 'list-contact', component: ContactsComponent},
     {
-    path: '',
-    component: ActionContactsComponent,
-    outlet: 'header'
-  },
-  {
-    path: '',
-    component: ContactsComponent,
-    outlet: 'content'
-  },
-  ] , canActivate: [AuthGuard]}
+      path: 'list-good',
+      outlet: 'header',
+      component: ActionGoodsComponent,
+    }, {
+      path: 'list-contact',
+      component: ActionContactsComponent,
+      outlet: 'header'
+    }
+  ], canActivate: [AuthGuard]}
 ];
 
 

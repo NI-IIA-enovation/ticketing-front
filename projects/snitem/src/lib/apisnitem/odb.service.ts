@@ -98,7 +98,7 @@ export class ODBService {
     return ODBService.instance;
   }
 
-  auth() {
+  auth(): boolean {
     // Try to authenticate with sharedkey and/or user/password
     return false;
   }

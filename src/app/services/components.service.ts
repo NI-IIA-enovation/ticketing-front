@@ -6,7 +6,7 @@ import { components } from './data/components';
 })
 export class ComponentsService {
   private itemscomponent = components;
-  private component:BehaviorSubject<any>;
+  private component: BehaviorSubject<any>;
   constructor() { }
 
   getCurrentComponents(target, elm, source): Observable<any> {

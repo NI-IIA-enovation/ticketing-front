@@ -1,5 +1,7 @@
-import { RegisterItem } from '../decorators/snitem-factory-decorator';
-import { SNItem } from './snitem';
+import { RegisterItem } from 'projects/snitem/src/lib/apisnitem/decorators/snitem-factory-decorator';
+import { SNItem } from 'projects/snitem/src/lib/apisnitem/models/snitem';
+
+
 
 @RegisterItem()
 export class SNOffer extends SNItem {
