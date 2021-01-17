@@ -24,32 +24,28 @@ export class AccountService {
         return this.userSubject.value;
     }
 
-    login() {
+    login(): void {
         this.setconfig();
         this.authService.initImplicitFlow();
-       
     }
-    home(){
-      if(this.token){
+    home(): void{
+      if (this.token){
       this.userSubject.next(this.authService.getIdentityClaims());
       this.router.navigate(['/home/']);
     }
     }
-    logout() {
+    logout(): void {
         this.authService.logOut();
         this.userSubject.next(null);
-        
         this.router.navigate(['/account/login/']);
     }
-    setconfig(){
+    setconfig(): void{
         this.authService.configure(authConfig);
         this.authService.tokenValidationHandler = new JwksValidationHandler();
         this.authService.loadDiscoveryDocumentAndTryLogin();
       }
-      get token(){
-        let claims:any = this.authService.getIdentityClaims();
-       
+      get token(): any{
+        const claims: any = this.authService.getIdentityClaims();
         return claims ? claims : null;
       }
-   
 }

@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { icon } from '@fortawesome/fontawesome-svg-core';
-import { faBuilding ,faCalendarAlt, faCog, faHome, faIdCard, faShoppingBasket, faEnvelope,faAngleDown, faUser, faPowerOff, faPencilAlt,faEye} from '@fortawesome/free-solid-svg-icons';
-import {faGoogle,faFacebookF } from '@fortawesome/free-brands-svg-icons';
+import {faBuilding, faCalendarAlt, faCog, faHome, faIdCard, faShoppingBasket} from '@fortawesome/free-solid-svg-icons';
+import {faEnvelope, faAngleDown, faUser, faPowerOff, faPencilAlt, faEye} from '@fortawesome/free-solid-svg-icons';
+import {faGoogle, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import { AccountService } from './services/account.service';
 import { OfferService } from './services/offer.service';
 
@@ -14,8 +15,7 @@ import { OfferService } from './services/offer.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
- 
-constructor(private serviceOffer:OfferService,private registry: MatIconRegistry, private  sanitizer: DomSanitizer,private serviceAccount:AccountService ){
+constructor(private serviceOffer: OfferService, private registry: MatIconRegistry, private  sanitizer: DomSanitizer){
   this.serviceOffer.getOffers();
   registry.addSvgIconLiteral('fa-home', sanitizer.bypassSecurityTrustHtml(icon(faHome).html.join('')));
   registry.addSvgIconLiteral('fa-building', sanitizer.bypassSecurityTrustHtml(icon(faBuilding).html.join('')));
