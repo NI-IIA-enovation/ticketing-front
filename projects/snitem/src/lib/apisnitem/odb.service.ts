@@ -76,8 +76,6 @@ export class ODBService {
     this.sharedkey = environment.odbsharedkey;
     this.url = environment.odburl;
     this.callurl = this.url + '/api/v1';
-    factory.addItem('SNItem', new SNItem());
-    factory.addItem('SNItem.SNOffer', new SNOffer());
     this.onlineStatus = fromEvent(window, 'online');
     this.offlineStatus = fromEvent(window, 'offline');
     this.status = (navigator.onLine) ? ODBConnectionStatus.online : ODBConnectionStatus.offline;
@@ -98,7 +96,7 @@ export class ODBService {
     return ODBService.instance;
   }
 
-  auth() {
+  auth(): boolean {
     // Try to authenticate with sharedkey and/or user/password
     return false;
   }
@@ -441,19 +439,15 @@ export class ODBService {
    */
 
   call(rest: string, queryvalues: [string, string][] = [], body: string = '',
-       method: string = 'get', resultkey: string = ''): Observable<any> {
-        
+       method: string = 'get', resultkey: string = '', autho: string = ''): Observable<any> {
     return new Observable(observer => {
-      
       let urltocall = this.callurl + rest;
       if (queryvalues.length !== 0) {
         const urlparams = [];
         queryvalues.forEach(valuepair => {
           urlparams.push(valuepair.join('='));
         });
-       
         urltocall += '?' + urlparams;
-        
       }
       let headers = new HttpHeaders();
       if (this.debugMode) {
@@ -483,39 +477,30 @@ export class ODBService {
         case 'get':
           {
             try {
-//              console.log('Calling http get');
-headers = headers.append('Authorization', 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImp0aSI6ImZrNWxmNTRicG81NTlwczQ2cHZzMjMwMjI2In0.eyJpc3MiOiJodHRwOlwvXC9zd2lmdGltbW8uZXUiLCJhdWQiOiJodHRwOlwvXC93d3cucGVyaXNvZnQuYmVcL3N3aWZ0aW1tbyIsInN1YiI6IndlYnNpdGUiLCJqdGkiOiJmazVsZjU0YnBvNTU5cHM0NnB2czIzMDIyNiIsImlhdCI6MTYwOTkyNzE1OSwibmJmIjoxNjA5OTI3MTU5LCJleHAiOjE2MDk5MjkzOTIsInJvbGVzIjoiW3tcIm5hbWVcIjpcIndlYnNpdGVcIn1dIiwiZG9tYWluaWQiOjkzODMsInVzZXJpZCI6IjkyNjgxNCJ9.A1Pl19zvgGZg3AD87kF5n-HTV3tV6PS8prn9-Hr_TCk');
-         
-        
-
-         this.http.get(urltocall, {headers}).subscribe(results => {
-         
+headers = headers.append('Authorization', 'Bearer ' + autho);
+this.http.get(urltocall, {headers}).subscribe(results => {
            //                console.log('http get called');
                 try {
                   if (resultkey.length !== 0) {
-                    if (typeof results=== 'undefined') {
+                    if (typeof results === 'undefined') {
                       // No result key found
                       console.log('No result key found ', results);
                       observer.error('No result key found');
                     } else {
                       results = results;
-                      
                       if (results === false) {
                         observer.next([]);
                       } else {
                         if (results instanceof Array) {
  //             console.log('Build items from json');
- 
                           const buildItems = this.factory.itemsFromJson(results);
                           buildItems.forEach(buildItem => {
                             this.itemsById.set(buildItem.ID, buildItem);
                             this.itemStored.emit(buildItem);
                           });
-                          
                           observer.next(buildItems);
                         } else {
   //                        console.log('Build item from json');
-                          
                           const buildItem = this.factory.itemFromJson(results);
                           this.itemsById.set(buildItem.ID, buildItem);
                           this.itemStored.emit(buildItem);

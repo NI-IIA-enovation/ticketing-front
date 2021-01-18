@@ -1,4 +1,3 @@
-
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Output, EventEmitter } from '@angular/core';
@@ -15,9 +14,6 @@ export class SNItem {
     private itemchilds: SNItem[] = [];
     private itemparentsbykey: Map<string, SNItem[]> = new Map();
     private itemparents: SNItem[] = [];
-
-  
-
     @Output() created: EventEmitter<SNItem> = new EventEmitter();
     @Output() updated: EventEmitter<SNItem> = new EventEmitter();
     @Output() loaded: EventEmitter<SNItem> = new EventEmitter();
@@ -25,11 +21,10 @@ export class SNItem {
     @Output() parentAdded: EventEmitter<SNItem> = new EventEmitter();
 
     constructor(itemid: number = 0,) {
-        
         this.setId(itemid);
     }
 
-    public setId(itemid: number = 0) {
+    public setId(itemid: number = 0): void {
         // TODO: Really build this item
         this.ID = itemid;
         if (this.ID !== 0) {
@@ -37,11 +32,11 @@ export class SNItem {
         }
     }
 
-    public setValue(value: string) {
+    public setValue(value: string): void {
         this.value = value;
     }
 
-    public setProperty(key: string, value: string) {
+    public setProperty(key: string, value: string): void {
         this.properties[key] = value;
     }
 
@@ -57,7 +52,6 @@ export class SNItem {
             if (this.itemchildsbykey.has(childskey)) {
                 observer.next(this.itemchildsbykey.get(childskey));
             } else {
-             
             }
         });
     }
@@ -96,7 +90,6 @@ export class SNItem {
     public addChild(child: SNItem, now = true): Observable<SNItem> {
         if (now) {
             return new Observable(observer => {
-              
             });
         }
         this.updateChildsCache(child);
@@ -127,7 +120,6 @@ export class SNItem {
 
     public addParent(parent: SNItem, now = true): Observable<SNItem> {
         if (now) {
-            
         }
         this.updateParentsCache(parent);
         parent.updateChildsCache(this);
@@ -144,7 +136,7 @@ export class SNItem {
         return ;
     }
 
-    private updateChildsCache(child: SNItem) {
+    private updateChildsCache(child: SNItem): void {
         if (this.itemchildsbykey.has(child.key)) {
             // Append
             const keyArray = this.itemchildsbykey.get(child.key);
@@ -159,7 +151,7 @@ export class SNItem {
         }
     }
 
-    private updateParentsCache(parent: SNItem) {
+    private updateParentsCache(parent: SNItem): void{
         if (this.itemparentsbykey.has(parent.key)) {
             // Append
             const keyArray = this.itemparentsbykey.get(parent.key);
@@ -183,7 +175,7 @@ export class SNItem {
         return new SNItem();
     }
 
-    public copy(withid = false, deep = false) {
+    public copy(withid = false, deep = false): void {
         const itemcopy = this.clone();
         itemcopy.id = withid ? this.ID : 0;
         itemcopy.key = this.key;
@@ -198,23 +190,19 @@ export class SNItem {
         return itemcopy;
     }
 
-    public fromJson(json, emitLoaded = true) {
-        
+    public fromJson(json, emitLoaded = true): void {
         if (typeof json.Key === 'undefined') {
             if (typeof json.key === 'undefined') {
-             
                 return;
             } else {
-               
                 // item from snitem.ts
                 if (this.key !== 'SNItem' && this.key !== json.key) {
                     // Only for snitem subclasses
                     console.log('Wrong key');
                 } else {
-                    
                     this.ID = parseInt(json.ID, 10);
                     this.key = json.key;
-                    this.value=json.value;
+                    this.value = json.value;
                     this.version = parseInt(json.version, 10);
                     this.properties = json.properties;
                     if (emitLoaded) {
@@ -239,7 +227,7 @@ export class SNItem {
         }
     }
 
-    public toObj(deep = false) {
+    public toObj(deep = false): object {
         const itemObj = {
             id: this.ID,
             version: this.version,
@@ -250,7 +238,7 @@ export class SNItem {
         return itemObj;
     }
 
-    public toJson() {
+    public toJson(): any {
         return JSON.stringify(this.toObj());
     }
 }
