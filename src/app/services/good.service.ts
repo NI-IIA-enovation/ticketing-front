@@ -40,7 +40,22 @@ form: FormGroup = new FormGroup({
   }
 
   setForm(element): any{
-  this.form.setValue(element);
+  this.form.setValue({
+    id: element.ID,
+    name: element.title,
+    city: element.city,
+    room: element.house_sdbnumber,
+    bathroom: element.house_sdbnumber,
+    area: null,
+    info: null,
+    user: null,
+    notif: null,
+    visite: null,
+    deadline: null,
+    priority: null,
+    status: element.status,
+  });
+
   }
 
   getAction(): Action[]{
