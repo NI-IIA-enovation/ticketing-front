@@ -7,29 +7,30 @@
             <form [formGroup]="goodservice.form" fxLayout="column" fxLayoutAlign="space-between none" >
                 <div fxLayout="column">
                     <mat-form-field>
-                        <input formControlName="title" matInput placeholder="Titre *" />
+                        <input formControlName="name" matInput placeholder="Titre *" />
                     </mat-form-field>
                     <mat-form-field>
                         <input formControlName="city" matInput placeholder="Ville *" />
                     </mat-form-field>
                 </div>
+               
                 <div fxLayout="row" fxLayoutAlign="space-around center" >
                     <mat-form-field fxFlex="30">
-                        <input formControlName="house_bednumber" matInput placeholder="Chambre *" />
+                        <input formControlName="room" matInput placeholder="Chambre *" />
                     </mat-form-field>
                     <mat-form-field fxFlex="30">
-                        <input formControlName="house_sdbnumber" matInput placeholder="Salle de bain *" />
+                        <input formControlName="bathroom" matInput placeholder="Salle de bain *" />
                     </mat-form-field>
                     <mat-form-field fxFlex="30">
-                        <input formControlName="house_suphabi" matInput placeholder="Surface *" />
+                        <input formControlName="area" matInput placeholder="Surface *" />
                     </mat-form-field>
                 </div>
                 <div fxLayout="column">
                     <mat-form-field>
-                        <input formControlName="type" matInput placeholder="Date *" />
+                        <input formControlName="deadline" matInput placeholder="Date *" />
                     </mat-form-field>
                     <mat-form-field>
-                        <mat-select formControlName="house_category" placeholder="Proprieté">
+                        <mat-select formControlName="priority" placeholder="Proprieté">
                             <mat-option [value]="'Elevée'">
                                 Elevée
                             </mat-option>
