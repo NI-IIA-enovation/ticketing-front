@@ -13,7 +13,7 @@ export const components: Itemcomonent[] = [
   {
     name: 'Edit',
     source: 'GoodComponent',
-    objet: 'Good',
+    objet: 'SNOffer',
     component: GoodEditComponent,
   },
   {
