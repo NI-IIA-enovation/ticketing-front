@@ -20,7 +20,9 @@ export class GoodComponent implements OnInit {
   }
   public context: CanvasRenderingContext2D;
   ngOnInit(): void {
+    console.log(this.element)
     this.actions = this.service.getAction();
+    // console.log(this.actions)
   }
 
   public SlideShow(element, target): void {
