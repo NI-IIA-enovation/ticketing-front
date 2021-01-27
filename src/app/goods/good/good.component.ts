@@ -23,7 +23,7 @@ export class GoodComponent implements OnInit {
     this.actions = this.service.getAction();
   }
 
-  public SlideShow(element, target): void {
+  public EditGood(element, target): void {
     const components = this.componentservice.getCurrentComponents(target, element, this);
     this.service.setForm(element);
     this.slidepanelservice.setContentComponents(components);
