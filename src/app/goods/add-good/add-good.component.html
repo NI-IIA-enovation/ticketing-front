@@ -1,1 +1,159 @@
-<p>add-good component works!</p>
+<div class="content">
+    <h1>Ajouter un bien</h1>
+    <mat-accordion class="example-headers-align">
+        <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" (closed)="unsetStep(0)" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title [ngClass]="(step===0)?'active':''">
+              Informations générales
+            </mat-panel-title>
+            <mat-panel-description>
+              <mat-icon *ngIf="step !== 0">add</mat-icon>
+              <mat-icon *ngIf="step === 0">remove</mat-icon>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <span class="infoSub">Disponibilité</span>
+          <mat-form-field class="formField" appearance="outline">
+            <input matInput placeholder="Field instruction..">
+          </mat-form-field>
+      
+          <mat-form-field appearance="outline">
+            <mat-label>But</mat-label>
+            <input matInput placeholder="Field instruction..">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Référence</mat-label>
+            <input matInput placeholder="FKXXXXXXX">
+          </mat-form-field>
+        </mat-expansion-panel>
+       
+        <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" (closed)="unsetStep(1)"  hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                Détails du bien
+              </mat-panel-title>
+              <mat-panel-description>
+                <mat-icon *ngIf="step !== 1">add</mat-icon>
+                <mat-icon *ngIf="step === 1">remove</mat-icon>
+              </mat-panel-description>
+          </mat-expansion-panel-header>
+          <mat-form-field>
+            <mat-label>Country</mat-label>
+            <input matInput>
+          </mat-form-field>
+        </mat-expansion-panel>
+      
+        <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" (closed)="unsetStep(2)" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                Annonce
+              </mat-panel-title>
+              <mat-panel-description>
+                <mat-icon *ngIf="step !== 2">add</mat-icon>
+                <mat-icon *ngIf="step === 2">remove</mat-icon>
+              </mat-panel-description>
+          </mat-expansion-panel-header>
+      
+          <mat-form-field>
+            <mat-label>Date</mat-label>
+            <input matInput [matDatepicker]="picker" (focus)="picker.open()" readonly>
+          </mat-form-field>
+          <mat-datepicker #picker></mat-datepicker>
+      
+        </mat-expansion-panel>
+        <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" (closed)="unsetStep(3)" hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                  Localisation
+                </mat-panel-title>
+                <mat-panel-description>
+                    <mat-icon *ngIf="step !== 3">add</mat-icon>
+                    <mat-icon *ngIf="step === 3">remove</mat-icon>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+        
+            <mat-form-field>
+              <mat-label>Date</mat-label>
+              <input matInput>
+            </mat-form-field>
+        
+          </mat-expansion-panel>
+          <mat-expansion-panel [expanded]="step === 4" (opened)="setStep(4)" (closed)="unsetStep(4)"  hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                  Energie
+                </mat-panel-title>
+                <mat-panel-description>
+                    <mat-icon *ngIf="step !== 4">add</mat-icon>
+                    <mat-icon *ngIf="step === 4">remove</mat-icon>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+        
+            <mat-form-field>
+              <mat-label>Date</mat-label>
+              <input matInput>
+            </mat-form-field>
+        
+          </mat-expansion-panel>
+          <mat-expansion-panel [expanded]="step === 5" (opened)="setStep(5)" (closed)="unsetStep(5)"  hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                  Contact
+                </mat-panel-title>
+                <mat-panel-description>
+                    <mat-icon *ngIf="step !== 5">add</mat-icon>
+                    <mat-icon *ngIf="step === 5">remove</mat-icon>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+        
+            <mat-form-field>
+              <mat-label>Date</mat-label>
+              <input matInput>
+            </mat-form-field>
+    
+          </mat-expansion-panel>
+          <mat-expansion-panel style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);" [expanded]="step === 6" (opened)="setStep(6)"  (closed)="unsetStep(6)"hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                  Télécharger mes documents
+                </mat-panel-title>
+                <mat-panel-description>
+                    <mat-icon *ngIf="step !== 6">add</mat-icon>
+                    <mat-icon *ngIf="step === 6">remove</mat-icon>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+        
+            <mat-form-field>
+              <mat-label>Date</mat-label>
+              <input matInput >
+            </mat-form-field>
+          </mat-expansion-panel>
+      
+      </mat-accordion>
+      <div class="wrapBtn">
+        <button mat-flat-button color="primary" class="saveBut">Enregistrer</button>
+      </div>
+      
+      
+      <mat-card >
+        <mat-card-content>
+            <div class="cardResume">
+                <span class="progressValue">Votre bien est complet a x%</span>
+                <mat-progress-bar
+                  class="example-margin"
+                  color="primary"
+                  [mode]="mode"
+                  [value]="value"
+                >
+                </mat-progress-bar>
+                <p><mat-icon>cloud_done</mat-icon> Prix</p>
+                <p><mat-icon>cloud_done</mat-icon> Localisation</p>
+                <p><mat-icon>cloud_done</mat-icon> <span>Annonce</span></p>
+                <p><mat-icon>cloud_done</mat-icon> <span>Informations supplémentaires</span></p>
+                <p><mat-icon>cloud_done</mat-icon> <span>Documents légaux</span></p>
+                <p><mat-icon>cloud_done</mat-icon> <span>Contact</span></p>
+                <p><mat-icon>cloud_done</mat-icon> <span>Photos</span></p>
+                <button mat-stroked-button color="primary" class="publishBut">Publier</button>
+            </div>
+        </mat-card-content>
+      </mat-card>
+</div>
