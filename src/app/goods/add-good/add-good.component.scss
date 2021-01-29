@@ -1,5 +1,5 @@
 .content {
-  padding: 2rem 1rem 0rem;
+  padding: 2rem 0rem;
   h1 {
     color: #505df3;
     font-weight: 600;
@@ -15,7 +15,7 @@
 }
 .mat-icon {
   color: #505df3;
-  font-weight: 600;
+  // font-weight: 600;
 }
 .mat-expansion-panel:not([class*="mat-elevation-z"]) {
   box-shadow: inherit !important;
@@ -62,9 +62,19 @@
   display: flex;
   align-items: center;
   margin: 0 0 10px;
+  color: #756d6d;
 }
 p > mat-icon {
   margin-right: 15px;
+}
+.publishButDisabled {
+  margin-top: 1rem;
+  border-radius: 17px;
+  width: 100%;
+  border-color: #505df3;
+  font-weight: 500;
+  opacity: 0.4;
+  cursor: auto;
 }
 .publishBut {
   margin-top: 1rem;
@@ -80,13 +90,16 @@ p > mat-icon {
   color: #505df3;
   font-weight: 400;
 }
+
 .infoSub {
   font-weight: 600;
   color: black;
 }
-.mat-form-field-appearance-outline .mat-form-field-outline {
-  background: #fbf8f8 !important;
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  background: #fbfbfb !important;
 }
-.formField {
-  background: #fbf8f8 !important;
-}
+
+// ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+//   background-color: white;
+//   border-radius: 5px;
+// }

@@ -19,10 +19,10 @@ export class AddGoodComponent implements OnInit {
       this.step = undefined
     }
   }
-
-
-
-
+  saveForm() {
+    this.step = 7;
+    this.value = 100;
+  }
   ngOnInit(): void {
   }
 
