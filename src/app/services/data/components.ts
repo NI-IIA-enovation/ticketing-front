@@ -18,9 +18,9 @@ export const components: Itemcomonent[] = [
     component: GoodEditComponent,
   },
   {
-    name: 'Edit',
+    name: 'View',
     source: 'GoodComponent',
-    objet: 'Good',
+    objet: 'SNOffer',
     component: GoodViewComponent,
   },
   {

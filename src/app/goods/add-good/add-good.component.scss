@@ -38,6 +38,10 @@
   font-weight: 600;
   letter-spacing: 1px;
 }
+
+:host ::ng-deep .mat-form-field-infix {
+  border-top: 0.554375em solid transparent !important;
+}
 .wrapBtn {
   display: flex;
   width: 100%;
@@ -95,7 +99,7 @@ p > mat-icon {
   font-weight: 600;
   color: black;
 }
-::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+:host ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
   background: #fbfbfb !important;
 }
 
