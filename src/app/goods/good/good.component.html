@@ -28,7 +28,7 @@
               
               <div class="mat-column-actions" *ngIf="column== 'actions'"  >
                
-                  <button *ngFor="let action of actions" mat-icon-button (click)="SlideShow(element,action.target)">
+                  <button *ngFor="let action of actions" mat-icon-button (click)="EditGood(element,action.target)">
                       <mat-icon [svgIcon]="action.icon"></mat-icon>
 
                   </button>

@@ -13,4 +13,8 @@
     </div>
   </div>
   <!--Mobile-->
-  <app-mobile [menu]="listmenu" *responsive="{ bootstrap:['xs', 'sm','md']}"></app-mobile>
+  <div fxLayout="row"  fxFlexFill class="layout-home" *responsive="{ bootstrap:['xs', 'sm','md']}">
+      <!--Zone Work-->
+      <app-work></app-work>
+  </div>
+<app-mobile [menu]="listmenu" *responsive="{ bootstrap:['xs', 'sm','md']}"></app-mobile>
