@@ -4,6 +4,7 @@ import { GoodViewComponent } from '../../goods/good-view/good-view.component';
 import { AppointmentComponent } from '../../appointment/appointment.component';
 import { ActivityLogComponent } from '../../activity-log/activity-log.component';
 import { AddGoodComponent } from '../../goods/add-good/add-good.component';
+import { AddContactComponent } from '../../contacts/add-contact/add-contact.component';
 export class Itemcomonent {
   name: string;
   source: string;
@@ -46,5 +47,11 @@ export const components: Itemcomonent[] = [
     source: 'ActionGoodsComponent',
     objet: 'Good',
     component: AddGoodComponent,
+  },
+  {
+    name: 'Add',
+    source: 'ActionContactsComponent',
+    objet: 'Good',
+    component: AddContactComponent,
   }
 ];

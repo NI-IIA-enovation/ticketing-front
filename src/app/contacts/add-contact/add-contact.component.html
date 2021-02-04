@@ -1,0 +1,114 @@
+<div class="content">
+    <h1 mat-dialog-title>Ajouter un contact</h1>
+    <div class="form">
+        <div class="rowContact">
+            <span class="infoSub">Type de contact</span>
+            <mat-form-field appearance="outline">
+                <mat-select value="Particulier">
+                    <mat-option>None</mat-option>
+                    <mat-option value="Particulier">Particulier </mat-option>
+                    <mat-option value="option2">Option 2</mat-option>
+                    <mat-option value="option3">Option 3</mat-option>
+                  </mat-select>
+              </mat-form-field>
+        </div>
+        <div class="rowContact">
+            <span class="infoSub">Nom</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="Dupont">
+              </mat-form-field>
+        </div>
+        <div class="rowContact">
+            <span class="infoSub">Prénom</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="David">
+              </mat-form-field>
+        </div>
+        <div class="rowContact">
+            <span class="infoSub">Téléphone</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="+32487225663">
+              </mat-form-field>
+        </div>
+        <div class="rowContact">
+            <span class="infoSub">Email</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="dupont@hello.be">
+              </mat-form-field>
+        </div>
+        <div class="rowContact">
+            <span class="infoSub">Langue</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="Francais">
+              </mat-form-field>
+        </div>
+        <hr>
+        <div class="rowContact">
+            <span class="infoSub">Adresse + n°</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="Rue grande 56">
+              </mat-form-field>
+        </div>
+        <div class="rowContact">
+            <span class="infoSub">Code postale</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="5501">
+              </mat-form-field>
+        </div>
+        <div class="rowContact">
+            <span class="infoSub">Commune</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="Dinant">
+              </mat-form-field>
+        </div>
+        <div class="rowContact">
+            <span class="infoSub">Pays</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="Belgique">
+              </mat-form-field>
+        </div>
+        <hr>
+        <div class="rowContact">
+            <span class="infoSub">Recherche</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="Ref : CGTR564856">
+              </mat-form-field>
+        </div>
+        <div style="display: flex;margin-bottom: 1rem;margin-top:0.5rem">
+            <div class="carre"></div>
+            <div style="padding-left: 10px;">
+             <p id="searchName">Maison bleue - Overijse</p>
+            <p id="searchInfo"> 4 Chambres - 2 Salles de bain - 75m²</p>
+            </div>
+
+        </div>
+        <span id="subTitle">Critères</span>
+        <div class="rowContact">
+            <span class="infoSub">Type de bien</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="Maison">
+              </mat-form-field>
+        </div>
+        <div class="rowContact">
+            <span class="infoSub">Superficie</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="190 m²">
+              </mat-form-field>
+        </div>
+        <div class="rowContact">
+            <span class="infoSub">Chambre</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="4">
+              </mat-form-field>
+        </div>
+        <div class="rowContact">
+            <span class="infoSub">Salle de bain</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="2">
+              </mat-form-field>
+        </div>
+        <div class="wrapBtn">
+            <button mat-flat-button color="primary"  class="saveBut">Enregistrer</button>
+          </div>
+    </div>
+</div>

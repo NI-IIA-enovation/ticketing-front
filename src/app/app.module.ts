@@ -55,7 +55,8 @@ import { HomeComponent } from './home/home.component';
 import { MobileComponent } from './mobile/mobile.component';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { AddGoodComponent } from './goods/add-good/add-good.component';
-import { MatProgressBarModule } from '@angular/material/progress-bar'
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { AddContactComponent } from './contacts/add-contact/add-contact.component'
 
 const config: IResponsiveConfig = {
   breakPoints: {
@@ -95,6 +96,7 @@ const config: IResponsiveConfig = {
     HomeComponent,
     MobileComponent,
     AddGoodComponent,
+    AddContactComponent,
 
 
 

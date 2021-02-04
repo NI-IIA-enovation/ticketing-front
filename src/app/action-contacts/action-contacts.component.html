@@ -1,10 +1,12 @@
+
+
 <div fxLayout="row">
     <!--Zone Work > Header-->
     <div class="div-header" fxLayoutAlign="space-between center" >
-         <div >
-            <h1 >Contacts</h1>
-         
+         <div class="align-title" >
+            <h1 >{{'header.contacts' | transloco }}</h1>
+            <button (click)="AddContact(element,'Add')" mat-raised-button color="primary">Ajouter un contact <mat-icon>add</mat-icon></button>
         </div>
-  
+        
     </div>
   </div>
