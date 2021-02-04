@@ -18,7 +18,7 @@
 }
 #searchInfo {
   color: gray;
-  font-weight: 500;
+  font-weight: 400;
 }
 .saveBut {
   margin-top: 1rem;
@@ -46,12 +46,34 @@ hr {
   text-align: left;
   min-width: 120px;
 }
+.white {
+  margin: 1rem 0rem;
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%),
+    0 1px 3px 0 rgb(0 0 0 / 12%);
+  background: #fff;
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  position: relative;
+  padding: 14px 8px;
+  border-radius: 4px;
+}
 :host ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
   background: #fbfbfb !important;
 }
 :host ::ng-deep .mat-form-field-infix {
   border-top: 0.554375em solid transparent !important;
   padding: 5px 0rem;
+}
+.whiteTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+}
+.mat-icon {
+  font-size: 20px;
+  color: gray;
 }
 .rowContact {
   display: flex;
@@ -61,4 +83,17 @@ hr {
 .mat-form-field {
   max-height: 38px;
   max-width: 150px;
+}
+.whiteBody {
+  padding-left: 2rem;
+  color: grey;
+}
+.cancelBtn {
+  background: #ece9e9;
+  color: grey;
+  margin-right: 1rem;
+  font-weight: 400;
+}
+.addBtn {
+  font-weight: 400;
 }
