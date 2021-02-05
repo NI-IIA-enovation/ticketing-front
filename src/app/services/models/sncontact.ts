@@ -1,19 +1,17 @@
+import { RegisterItem } from 'projects/snitem/src/lib/apisnitem/decorators/snitem-factory-decorator';
+import { SNItem } from 'projects/snitem/src/lib/apisnitem/models/snitem';
+@RegisterItem()
+export class SNContact extends SNItem {
 
-export class SNcontact {
-    private key: string;
-    private name: string;
-    private email: string;
-    private gsm: string;
-    private notif: number;
-    private visit: number;
-    private surface: number;
-    private room: number;
-    private bathroom: number;
-    private status: string;
-    private type: string;
-    constructor() {
+    constructor(itemid: number = 0) {
+        super(itemid)
         this.key = 'SNItem.SNContact';
     }
 
-
+    get editmode() {
+        return true;
+    }
+    public clone(): any {
+        return new SNContact();
+    }
 }
