@@ -13,7 +13,7 @@ export class SNItemFactory {
 
   private static instance: SNItemFactory = null;
 
-//  private itemClasses = [];
+  //  private itemClasses = [];
 
   constructor() {
     SNItemFactory.instance = this;
@@ -25,7 +25,7 @@ export class SNItemFactory {
 
   addItem(key: string, item): void {
     SNITEM_REGISTERED_CLASSES.set(key, item);
-//    this.itemClasses[key] = item;
+    //    this.itemClasses[key] = item;
   }
 
   itemSubClasses(): [] {
@@ -33,9 +33,12 @@ export class SNItemFactory {
   }
 
   itemByKey(itemkey: string): void {
+    console.log("enter")
     if (SNITEM_REGISTERED_CLASSES.has(itemkey)) {
+      console.log("key exist")
       return SNITEM_REGISTERED_CLASSES.get(itemkey).clone();
     }
+    console.log("key dont exist")
     return null;
   }
 
@@ -43,7 +46,7 @@ export class SNItemFactory {
     if (!json) {
       return null;
     }
-    if (typeof(json) === 'string') {
+    if (typeof (json) === 'string') {
       // clean up and decode
       json = json.replace(/\\\\/g, '\\');
       try {
@@ -85,8 +88,8 @@ export class SNItemFactory {
   }
 
   itemsFromJson(json): any {
- /*console.log('factory items from json');*/
-    if (typeof(json) === 'string') {
+    /*console.log('factory items from json');*/
+    if (typeof (json) === 'string') {
       // clean up and decode
       json = json.replace(/\\\\/g, '\\');
       try {
@@ -108,7 +111,7 @@ export class SNItemFactory {
       console.log(items);
       return items;
     }
-//    console.log('Json is not an Array', json);
+    //    console.log('Json is not an Array', json);
     return null;
   }
 }
