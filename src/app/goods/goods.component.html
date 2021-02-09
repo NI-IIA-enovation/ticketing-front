@@ -1,9 +1,9 @@
 
-<app-action-goods></app-action-goods>
-<div fxLayout="row">
-<div  class="container"   >
- <lib-controls [type]="GoodControlComponent"  (datasearch)="datagoods($event)"  [data]="dataSource" ></lib-controls>
 
+<div fxLayout="row">
+<div  class="container">
+  <app-action-goods></app-action-goods>
+ <lib-controls [type]="GoodControlComponent"  (datasearch)="datagoods($event)"  [data]="dataSource" ></lib-controls>
   <lib-table *transloco="let t; read: 'table.header'"   [row]="GoodComponent" [data]="dataSource"  [displayedColumns]="t('goods')" ></lib-table>
   </div>
 <div fxLayout="column" fxFlex="30" fxFlexOffset="2" *responsive="{ bootstrap:['xl','lg']}">

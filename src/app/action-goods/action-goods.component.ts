@@ -25,5 +25,4 @@ export class ActionGoodsComponent implements OnInit {
     this.slidepanelservice.setContentComponents(components);
     this.slidepanelservice.show();
   }
-
 }

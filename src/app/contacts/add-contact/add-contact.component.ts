@@ -33,7 +33,5 @@ export class AddContactComponent implements OnInit {
     console.log(obj)
     console.log(tor)
     console.log(SNItemFactory.getInstance())
-
   }
-
 }

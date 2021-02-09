@@ -12,6 +12,19 @@ h1 {
   height: 70px;
   border-bottom: 1px solid #ccc;
 }
+@media (max-width: 1278px) {
+  .div-header {
+    margin-top: 4rem;
+  }
+  .align-title {
+    padding: 0px !important;
+  }
+}
+@media (max-width: 1100px) {
+  .div-header {
+    margin-top: 1rem;
+  }
+}
 .align-title {
   display: flex;
   width: 100%;
