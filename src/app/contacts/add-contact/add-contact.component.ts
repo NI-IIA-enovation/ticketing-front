@@ -11,6 +11,9 @@ export class AddContactComponent implements OnInit {
 
   constructor(public factory: SNItemFactory) { }
   datacontact = dataContact;
+  step1 = false;
+  step2 = false;
+  step3 = false;
   ngOnInit(): void {
     console.log(this.datacontact)
     this.datacontact.push({

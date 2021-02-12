@@ -27,7 +27,7 @@
        
         <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" (closed)="unsetStep(1)"  hideToggle>
           <mat-expansion-panel-header>
-            <mat-panel-title>
+            <mat-panel-title [ngClass]="(step===1)?'active':''">
                 Détails du bien
               </mat-panel-title>
               <mat-panel-description>
@@ -51,7 +51,7 @@
       
         <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" (closed)="unsetStep(2)" hideToggle>
           <mat-expansion-panel-header>
-            <mat-panel-title>
+            <mat-panel-title [ngClass]="(step===2)?'active':''">
                 Annonce
               </mat-panel-title>
               <mat-panel-description>
@@ -69,7 +69,7 @@
         </mat-expansion-panel>
         <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" (closed)="unsetStep(3)" hideToggle>
             <mat-expansion-panel-header>
-              <mat-panel-title>
+              <mat-panel-title [ngClass]="(step===3)?'active':''">
                   Localisation
                 </mat-panel-title>
                 <mat-panel-description>
@@ -94,7 +94,7 @@
           </mat-expansion-panel>
           <mat-expansion-panel [expanded]="step === 4" (opened)="setStep(4)" (closed)="unsetStep(4)"  hideToggle>
             <mat-expansion-panel-header>
-              <mat-panel-title>
+              <mat-panel-title [ngClass]="(step===4)?'active':''">
                   Energie
                 </mat-panel-title>
                 <mat-panel-description>
@@ -111,7 +111,7 @@
           </mat-expansion-panel>
           <mat-expansion-panel [expanded]="step === 5" (opened)="setStep(5)" (closed)="unsetStep(5)"  hideToggle>
             <mat-expansion-panel-header>
-              <mat-panel-title>
+              <mat-panel-title [ngClass]="(step===5)?'active':''">
                   Contact
                 </mat-panel-title>
                 <mat-panel-description>
@@ -128,7 +128,7 @@
           </mat-expansion-panel>
           <mat-expansion-panel style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);" [expanded]="step === 6" (opened)="setStep(6)"  (closed)="unsetStep(6)"hideToggle>
             <mat-expansion-panel-header>
-              <mat-panel-title>
+              <mat-panel-title [ngClass]="(step===6)?'active':''">
                   Télécharger mes documents
                 </mat-panel-title>
                 <mat-panel-description>

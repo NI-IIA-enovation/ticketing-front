@@ -16,6 +16,9 @@
   font-weight: 500;
   font-size: 16px;
 }
+.mat-expansion-panel:not([class*="mat-elevation-z"]) {
+  box-shadow: inherit !important;
+}
 #searchInfo {
   color: gray;
   font-weight: 400;

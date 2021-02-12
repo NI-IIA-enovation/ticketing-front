@@ -12,9 +12,9 @@ h1 {
   height: 70px;
   border-bottom: 1px solid #ccc;
 }
-@media (max-width: 1278px) {
+@media (max-width: 1279px) {
   .div-header {
-    margin-top: 4rem;
+    margin-top: 5rem;
   }
   .align-title {
     padding: 0px !important;
@@ -32,10 +32,3 @@ h1 {
   padding: 0px 22px;
   align-items: baseline;
 }
-// .align-title > button {
-//   background: #4069f9;
-//   border: 0px;
-//   min-width: 150px;
-//   height: 42px;
-//   color: white;
-// }
