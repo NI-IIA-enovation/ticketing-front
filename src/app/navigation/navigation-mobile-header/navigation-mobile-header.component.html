@@ -2,9 +2,32 @@
       <mat-toolbar color="primary" class="menu-mobile-header">
         <img src="https://i.pinimg.com/280x280_RS/cd/2d/99/cd2d99cb7a56908d5b71630ff3f8e2fb.jpg">
         <span>Dashbord</span>
-        <button mat-icon-button class="menu-header" fxShow="true"  >
+        <!-- <mat-nav-list *ngFor="let menu of list">
+          <button  mat-button  class="mat-btn" (click)="Navigate(menu.component)"    *transloco="let t; read: 'menu.start'" ><mat-icon [svgIcon]="menu.icon"></mat-icon>{{t(menu.name) | transloco }}</button>
+        </mat-nav-list> -->
+        <!-- <button mat-icon-button class="menu-header" fxShow="true"  >
+            <mat-icon>menu</mat-icon>
+          </button> -->
+          <button mat-icon-button aria-label="Example icon-button with a menu">
+            <mat-icon>search</mat-icon>
+          </button>
+          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
             <mat-icon>menu</mat-icon>
           </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>dialpad</mat-icon>
+              <span>ACTIONS</span>
+            </button>
+            <button mat-menu-item disabled>
+              <mat-icon>voicemail</mat-icon>
+              <span>ACTIONS l</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>notifications_off</mat-icon>
+              <span>ACTIONS</span>
+            </button>
+          </mat-menu>
       </mat-toolbar>
       
 

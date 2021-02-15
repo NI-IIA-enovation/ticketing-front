@@ -33,7 +33,6 @@ export class SNItemFactory {
   }
 
   itemByKey(itemkey: string): void {
-    console.log("enter")
     if (SNITEM_REGISTERED_CLASSES.has(itemkey)) {
       console.log("key exist")
       return SNITEM_REGISTERED_CLASSES.get(itemkey).clone();
@@ -72,7 +71,6 @@ export class SNItemFactory {
         itemts = SNITEM_REGISTERED_CLASSES.get(itemkey).clone();
 
         itemts.fromJson(json);
-        console.log(json);
         return itemts;
       }
     }
@@ -108,7 +106,7 @@ export class SNItemFactory {
           items.push(item);
         }
       });
-      console.log(items);
+      // console.log(items);
       return items;
     }
     //    console.log('Json is not an Array', json);
