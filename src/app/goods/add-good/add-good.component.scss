@@ -1,13 +1,33 @@
 .content {
   padding: 2rem 0rem;
-  h1 {
+  h2 {
     color: #505df3;
     font-weight: 600;
     letter-spacing: 1px;
   }
 }
+.contentMobile {
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .mat-expansion-panel:not([class*="mat-elevation-z"]) {
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
+      0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+    margin: 5px;
+  }
+}
+.certiLogo {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
 .mat-expansion-panel-header-description {
   flex-grow: 0;
+}
+.mat-radio-group {
+  display: grid;
+  padding: 1rem 4rem;
 }
 .mat-expansion-panel-header-title,
 .mat-expansion-panel-header-description {
@@ -18,7 +38,7 @@
   // font-weight: 600;
 }
 .mat-expansion-panel:not([class*="mat-elevation-z"]) {
-  box-shadow: inherit !important;
+  box-shadow: inherit;
 }
 .mat-expansion-panel-header:not([aria-disabled="true"]) {
   cursor: pointer;
@@ -39,6 +59,21 @@
   font-weight: 600;
   letter-spacing: 1px;
 }
+.certiConfirm {
+}
+.cardTitle {
+  color: #505df3;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 1rem 0rem;
+}
+.formMobile {
+  .mat-expansion-panel-header-title,
+  .mat-expansion-panel-header-description {
+    font-weight: 500;
+    font-size: 16px;
+  }
+}
 
 :host ::ng-deep .mat-form-field-infix {
   border-top: 0.554375em solid transparent !important;
@@ -46,6 +81,7 @@
 .wrapBtn {
   display: flex;
   width: 100%;
+  padding-top: 1rem;
   justify-content: flex-end;
 }
 .cardResume {
@@ -58,6 +94,19 @@
   display: block;
   position: relative;
   padding: 16px;
+  border-radius: 4px;
+}
+.cardCerti {
+  margin: 1rem 0rem;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  background: #fff;
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  position: relative;
+  padding: 16px;
+  text-align: center;
   border-radius: 4px;
 }
 .mat-progress-bar {

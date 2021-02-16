@@ -58,6 +58,7 @@ import { OAuthModule } from 'angular-oauth2-oidc';
 import { AddGoodComponent } from './goods/add-good/add-good.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { AddContactComponent } from './contacts/add-contact/add-contact.component'
+import { MatRadioModule } from '@angular/material/radio';
 
 const config: IResponsiveConfig = {
   breakPoints: {
@@ -107,6 +108,7 @@ const config: IResponsiveConfig = {
     DynamicAttributesModule,
     FormsModule,
     DynamicModule,
+    MatRadioModule,
     SnitemModule,
     BrowserModule,
     MatBadgeModule,

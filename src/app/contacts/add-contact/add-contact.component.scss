@@ -1,6 +1,5 @@
 .content {
-  padding: 2rem 1rem;
-  h1 {
+  h2 {
     color: #505df3;
     font-weight: 600;
     letter-spacing: 1px;
@@ -10,6 +9,9 @@
     font-weight: 500;
     font-size: 16px;
   }
+}
+.form {
+  padding-left: 1rem;
 }
 .formMobile {
   .mat-expansion-panel-header-title,

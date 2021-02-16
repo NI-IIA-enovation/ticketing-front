@@ -58,11 +58,11 @@ $card-background: #fff;
 
     .close,
     .content {
-      padding: 2rem;
+      padding: 2rem 2rem 0rem 3rem;
     }
 
     .close {
-      background: $card-background;
+      background: transparent;
       position: sticky;
       top: 0;
       z-index: 2;
