@@ -6,6 +6,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -110,6 +111,7 @@ const config: IResponsiveConfig = {
     BrowserModule,
     MatBadgeModule,
     AppRoutingModule,
+    MatSlideToggleModule,
     BrowserAnimationsModule,
     MatRippleModule,
     MatToolbarModule,

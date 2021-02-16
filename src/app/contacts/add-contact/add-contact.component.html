@@ -131,7 +131,7 @@
     <mat-expansion-panel (opened)="step1 = true"
                        (closed)="step1 = false">
     <mat-expansion-panel-header>
-      <mat-panel-title>
+      <mat-panel-title [ngClass]="(step1)?'active':''">
         Contact
       </mat-panel-title>
     </mat-expansion-panel-header>
@@ -205,8 +205,8 @@
   <mat-expansion-panel (opened)="step2 = true"
   (closed)="step2 = false">
 <mat-expansion-panel-header>
-<mat-panel-title>
-Critères
+<mat-panel-title [ngClass]="(step2)?'active':''">
+  Les biens
 </mat-panel-title>
 </mat-expansion-panel-header>
 <div class="rowContact">
@@ -227,8 +227,8 @@ Critères
 <mat-expansion-panel (opened)="step3 = true"
 (closed)="step3 = false">
 <mat-expansion-panel-header>
-<mat-panel-title>
-Les biens
+<mat-panel-title [ngClass]="(step3)?'active':''">
+Critères
 </mat-panel-title>
 
 </mat-expansion-panel-header>
@@ -255,6 +255,14 @@ Les biens
   <mat-form-field appearance="outline">
       <input matInput placeholder="2">
     </mat-form-field>
+</div>
+<div class="rowContact">
+  <span class="infoSub">Terasse</span>
+  <mat-slide-toggle color="primary"></mat-slide-toggle>
+</div>
+<div class="rowContact">
+  <span class="infoSub">Jardin</span>
+  <mat-slide-toggle color="primary"></mat-slide-toggle>
 </div>
 
 </mat-expansion-panel>

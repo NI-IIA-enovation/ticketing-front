@@ -11,6 +11,7 @@ export class AddContactComponent implements OnInit {
 
   constructor(public factory: SNItemFactory) { }
   datacontact = dataContact;
+  step = 0;
   step1 = false;
   step2 = false;
   step3 = false;
