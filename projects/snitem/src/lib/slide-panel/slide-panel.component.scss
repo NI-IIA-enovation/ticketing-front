@@ -21,6 +21,12 @@ $danger: #d9534f;
 $border-radius: 4px;
 $card-background: #fff;
 
+@media (max-width: 450px) {
+  .content {
+    padding: 1rem !important;
+  }
+}
+
 .overlay-side-panel {
   .overlay {
     position: fixed;

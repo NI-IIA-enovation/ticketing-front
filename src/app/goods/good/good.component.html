@@ -1,4 +1,4 @@
- 
+<!-- <div *responsive="{bootstrap : ['lg','xl','md','sm']}">
 <div class="div-name" *ngIf="column== 'title'">
                   <img src="https://i.pinimg.com/474x/00/c3/fb/00c3fb3506ceb708715066f0a8e8e451.jpg" />
                   <h3 color="accent">{{element['title']}} - {{element['city']}}</h3>
@@ -30,6 +30,59 @@
                
                   <button *ngFor="let action of actions" mat-icon-button (click)="EditGood(element,action.target)">
                       <mat-icon [svgIcon]="action.icon"></mat-icon>
-
                   </button>
                 </div>
+                 </div> -->
+<div class="mobileWrap" *responsive="{bootstrap : ['xs']}">
+<div class="div-namee" >
+    <img src="https://www.emmegi.co.uk/wp-content/uploads/2019/01/User-Icon.jpg" width="30px" height="30px" />
+    <div class="div">
+        <div class="box green">
+            <span>{{element['status']}}</span>
+        </div>
+        <div class="box">
+            <span>IMM. RAPPORT</span> 
+         </div>
+
+    </div>
+<div class="rowMobile">
+    <div class="greyBox">
+        <mat-icon  [matBadge]="element['building_levels']" >restore</mat-icon>
+    </div>
+    <div class="greyBox">
+        <mat-icon  [matBadge]="element['building_faces']" >today</mat-icon>
+    </div>
+    <div class="greyBoxStatus">
+        <span >{{element['status']}}</span><mat-icon>keyboard_arrow_down</mat-icon>
+    </div>
+</div>
+</div>
+<div class="rowInfos">
+    <div class="infoMobile">
+        <span id="blueTitle">MAISON A VENDRE</span>
+        <p style="line-height: 10px;">Réf : {{element['reference']}}</p>
+        <span id="streetInfo">Rue de la sapinière 34, <br>1040 Bruxelles</span>
+    </div>
+    <div id="infoSpec">
+        <div class="greyBox">
+            <mat-icon  >restore</mat-icon><br>
+            985.000$
+        </div>
+        <div class="greyBox">
+            <mat-icon   >restore</mat-icon><br>
+            120m²
+        </div>
+        <div class="greyBox">
+            <mat-icon   >restore</mat-icon><br>
+            3ch
+        </div>
+    </div>
+</div>
+</div>
+<!-- <div class="mat-column-actions" *ngIf="column== 'actions'"  >
+ 
+    <button *ngFor="let action of actions" mat-icon-button (click)="EditGood(element,action.target)">
+        <mat-icon [svgIcon]="action.icon"></mat-icon>
+
+    </button>
+  </div> -->
