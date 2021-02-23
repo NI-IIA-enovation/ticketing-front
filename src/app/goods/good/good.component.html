@@ -1,4 +1,4 @@
-<!-- <div *responsive="{bootstrap : ['lg','xl','md','sm']}">
+<div *responsive="{bootstrap : ['lg','xl','md','sm']}">
 <div class="div-name" *ngIf="column== 'title'">
                   <img src="https://i.pinimg.com/474x/00/c3/fb/00c3fb3506ceb708715066f0a8e8e451.jpg" />
                   <h3 color="accent">{{element['title']}} - {{element['city']}}</h3>
@@ -16,8 +16,6 @@
               <div *ngIf="column== 'house_category' " >
                   <div class="div-date" ><h5 >{{element['house_category']}}</h5></div>
               </div>
-           
-          
               <div *ngIf="column== 'finance_price' " >
                   <div class="div-status" >{{element['finance_price']}}</div>
               </div>
@@ -26,13 +24,13 @@
                   <div class="div-status2"><h5 >{{element['status']}}</h5><mat-icon>keyboard_arrow_down</mat-icon></div>
               </div>
               
-              <div class="mat-column-actions" *ngIf="column== 'actions'"  >
+              <div class="mat-column-actions" *ngIf="column=='actions'">
                
                   <button *ngFor="let action of actions" mat-icon-button (click)="EditGood(element,action.target)">
                       <mat-icon [svgIcon]="action.icon"></mat-icon>
                   </button>
                 </div>
-                 </div> -->
+                 </div>
 <div class="mobileWrap" *responsive="{bootstrap : ['xs']}">
 <div class="div-namee" >
     <img src="https://www.emmegi.co.uk/wp-content/uploads/2019/01/User-Icon.jpg" width="30px" height="30px" />
@@ -61,7 +59,7 @@
     <div class="infoMobile">
         <span id="blueTitle">MAISON A VENDRE</span>
         <p style="line-height: 10px;">Réf : {{element['reference']}}</p>
-        <span id="streetInfo">Rue de la sapinière 34, <br>1040 Bruxelles</span>
+        <span id="streetInfo">Rue de la sapinière 34,1040 Bruxelles</span>
     </div>
     <div id="infoSpec">
         <div class="greyBox">

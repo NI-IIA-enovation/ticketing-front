@@ -9,18 +9,20 @@ export class MenuComponent implements OnInit {
   @Input() name: string;
   @Input() type: Component;
   @Input() list: Array<any>;
-  menu : any;
-  constructor()
-  {
+  menu: any;
+  constructor() {
   }
 
   ngOnInit(): void {
     this.menu = this.list.find(item => item.name === this.name);
   }
 
-  getlist(lst, ps): any{
-    return  {list: lst,
-            position : ps};
+  getlist(lst, ps): any {
+
+    return {
+      list: lst,
+      position: ps
+    };
   }
 
 }

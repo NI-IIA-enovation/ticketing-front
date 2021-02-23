@@ -12,15 +12,17 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class ControlsComponent implements OnInit {
   @Input() data: MatTableDataSource<any>;
   @Input() type: Component;
-  @Output() datasearch  = new EventEmitter();
+  @Output() datasearch = new EventEmitter();
   constructor() { }
 
-  ngOnInit(): void{
+  ngOnInit(): void {
   }
 
- getlist(dt, ds): any{
-  return  {data: dt,
-          datasearch : ds};
-}
+  getlist(dt, ds): any {
+    return {
+      data: dt,
+      datasearch: ds
+    };
+  }
 }
 

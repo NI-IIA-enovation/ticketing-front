@@ -126,21 +126,21 @@ export const dataconfig: Configmenu[] =
       name: 'Dashboard',
       target: 'work',
       action: 'set',
-      component: '#'
+      component: ''
     }, {
       position: 1,
       icon: 'fa-building',
       name: 'Biens',
       target: 'work',
       action: 'set',
-      component: 'GoodsCompoment'
+      component: 'list-good'
     }, {
       position: 2,
       icon: 'fa-card',
       name: 'Contacts',
       target: 'work',
       action: 'set',
-      component: '#'
+      component: 'list-contact'
     }, {
       position: 3,
       icon: 'fa-calendar',

@@ -153,9 +153,10 @@
   border-radius: 5px;
 }
 .infoMobile {
-  max-width: 150px;
   font-size: 12px;
+  line-height: 17px;
   color: grey;
+  max-width: 215px;
   #blueTitle {
     color: #505df3;
     font-weight: 600;
@@ -166,6 +167,8 @@
 }
 #infoSpec {
   display: flex;
+  width: 100%;
+  justify-content: flex-end;
   .greyBox {
     min-width: 42px;
     background: #f7f5f5;
