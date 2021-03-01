@@ -50,6 +50,18 @@ export const components: Itemcomonent[] = [
   },
   {
     name: 'Add',
+    source: 'NavigationMobileHeaderComponent',
+    objet: 'Good',
+    component: AddGoodComponent,
+  },
+  {
+    name: 'Add-contact',
+    source: 'NavigationMobileHeaderComponent',
+    objet: 'Good',
+    component: AddContactComponent,
+  },
+  {
+    name: 'Add',
     source: 'ActionContactsComponent',
     objet: 'Good',
     component: AddContactComponent,

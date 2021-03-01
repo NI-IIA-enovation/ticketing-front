@@ -16,6 +16,7 @@ export class ControlsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.data, this.type)
   }
 
   getlist(dt, ds): any {

@@ -22,8 +22,18 @@ table {
   width: 100%;
   margin: 5px;
 }
-@media (max-width: 600px) {
+@media (max-width: 960px) {
   tr {
     background-color: #f7f7f7 !important;
   }
+  // tr.mat-row,
+  // tr.mat-footer-row {
+  //   display: inline-grid;
+  //   width: 100%;
+  // }
 }
+// @media (max-width: 600px) {
+//   tr {
+//     background-color: #f7f7f7 !important;
+//   }
+// }
