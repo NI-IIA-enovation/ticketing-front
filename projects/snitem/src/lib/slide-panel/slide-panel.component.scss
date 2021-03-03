@@ -88,11 +88,11 @@ $card-background: #fff;
 
   &.collapsed {
     .side-panel {
-      margin-right: -450px;
+      margin-right: -4500px;
     }
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .overlay-side-panel {
     .side-panel {
       width: 100%;

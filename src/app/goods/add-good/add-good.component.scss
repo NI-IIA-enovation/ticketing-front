@@ -17,6 +17,11 @@
     margin: 5px;
   }
 }
+.rowContact {
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: baseline;
+}
 .certiLogo {
   width: 100px;
   display: block;
@@ -148,6 +153,9 @@ p > mat-icon {
 .infoSub {
   font-weight: 600;
   color: black;
+  font-size: 13px;
+  text-align: left;
+  min-width: 120px;
 }
 :host ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
   background: #fbfbfb !important;
