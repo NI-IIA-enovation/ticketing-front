@@ -104,13 +104,24 @@
     }
   }
 }
+@media (max-width: 475px) {
+}
 @media (max-width: 600px) {
   .greyBox {
     font-size: smaller;
     padding: 3px 9px !important;
   }
   .rowInfos {
-    padding: 5px !important;
+    padding: 10px 5px !important;
+  }
+  .rowMobile {
+    margin-top: 6rem !important;
+  }
+  .div-namee {
+    min-height: 178px !important;
+  }
+  .mobileWrap {
+    margin: 0px !important;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 959px) {
@@ -121,6 +132,7 @@
 .div-namee {
   background-image: url("https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F1026205392%2F0x0.jpg");
   padding: 0px;
+  font-weight: 600;
   background-size: cover;
   min-height: 200px;
   opacity: 0.7;
@@ -151,16 +163,17 @@
   .greyBox {
     min-width: 48px;
     height: 42px;
-    background: #f7f5f5;
+    background: #e4edfb;
     display: flex;
     margin: 3px;
     justify-content: center;
     border-radius: 5px;
+    font-weight: 500;
     padding: 3px 17px;
     align-items: center;
   }
   .greyBoxStatus {
-    background: #f7f5f5;
+    background: #e4edfb;
     height: 42px;
     display: flex;
     min-width: 100px;
@@ -174,7 +187,7 @@
 }
 .mobileWrap {
   margin: 0.5rem 0;
-  background: white;
+  background-color: #dde1ff;
   border-radius: 5px;
 }
 .infoMobile {
@@ -196,7 +209,7 @@
   justify-content: flex-end;
   .greyBox {
     min-width: 48px;
-    background: #f7f5f5;
+    background: #e4edfb;
     margin: 5px;
     padding: 3px 10px;
     border-radius: 5px;
@@ -210,6 +223,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  background: white;
 }
 
 @include bp-medium {
