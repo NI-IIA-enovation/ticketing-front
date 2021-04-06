@@ -1,0 +1,274 @@
+<div *responsive="{bootstrap : ['lg','xl','md']}" class="content">
+    <h2 mat-dialog-title>Ajouter un contact</h2>
+    <hr>
+    <div class="form">
+        <div class="rowContact">
+            <span class="infoSub">Type de contact</span>
+            <mat-form-field appearance="outline">
+                <mat-select value="Particulier">
+                    <mat-option>None</mat-option>
+                    <mat-option value="Particulier">Particulier </mat-option>
+                    <mat-option value="option2">Option 2</mat-option>
+                    <mat-option value="option3">Option 3</mat-option>
+                  </mat-select>
+              </mat-form-field>
+        </div>
+        <div class="rowContact">
+            <span class="infoSub">Nom</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="Dupont">
+              </mat-form-field>
+        </div>
+        <div class="rowContact">
+            <span class="infoSub">Prénom</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="David">
+              </mat-form-field>
+        </div>
+        <div class="rowContact">
+            <span class="infoSub">Téléphone</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="+32487225663">
+              </mat-form-field>
+        </div>
+        <div class="rowContact">
+            <span class="infoSub">Email</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="dupont@hello.be">
+              </mat-form-field>
+        </div>
+        <div class="rowContact">
+            <span class="infoSub">Langue</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="Francais">
+              </mat-form-field>
+        </div>
+        <hr>
+        <div class="rowContact">
+            <span class="infoSub">Adresse + n°</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="Rue grande 56">
+              </mat-form-field>
+        </div>
+        <div class="rowContact">
+            <span class="infoSub">Code postale</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="5501">
+              </mat-form-field>
+        </div>
+        <div class="rowContact">
+            <span class="infoSub">Commune</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="Dinant">
+              </mat-form-field>
+        </div>
+        <div class="rowContact">
+            <span class="infoSub">Pays</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="Belgique">
+              </mat-form-field>
+        </div>
+        <hr>
+        <div class="rowContact">
+            <span class="infoSub">Recherche</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="Ref : CGTR564856">
+              </mat-form-field>
+        </div>
+        <div style="display: flex;margin-bottom: 1rem;margin-top:0.5rem">
+            <div class="carre"></div>
+            <div style="padding-left: 10px;">
+             <p id="searchName">Maison bleue - Overijse</p>
+            <p id="searchInfo"> 4 chambres - 2 salles de bain - 75m²</p>
+            </div>
+
+        </div>
+        <span id="subTitle">Critères</span>
+        <div class="rowContact">
+            <span class="infoSub">Type de bien</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="Maison">
+              </mat-form-field>
+        </div>
+        <div class="rowContact">
+            <span class="infoSub">Superficie</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="190 m²">
+              </mat-form-field>
+        </div>
+        <div class="rowContact">
+            <span class="infoSub">Chambre</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="4">
+              </mat-form-field>
+        </div>
+        <div class="rowContact">
+            <span class="infoSub">Salle de bain</span>
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="2">
+              </mat-form-field>
+        </div>
+        <div class="wrapBtn">
+            <button mat-flat-button color="primary"  class="saveBut">Enregistrer</button>
+          </div>
+          <div class="white">
+              <p class="whiteTitle"><mat-icon>warning</mat-icon>Nous avons trouver un contact similaire 	<mat-icon>close</mat-icon></p>
+            <div class="whiteBody">
+                <span>Mr Dupond David</span> <br>
+                <span>+32 456 78 90</span> <br>
+                <span>dupont@hello.be</span> <br>
+                <span>Rue grande 56, 5501 Dinant</span> <br>
+                <div style="margin-top:1rem;">
+                    <button mat-flat-button color="secondary"  class="cancelBtn">Annuler</button>
+                    <button mat-flat-button color="primary"  class="addBtn">Nouveau contact</button>
+                </div>
+            </div>
+          </div>
+    </div>
+</div>
+<div *responsive="{bootstrap : ['sm','xs']}" class="contentMobile">
+    <h1 mat-dialog-title >Ajouter un contact</h1>
+    <div class="formMobile">
+    <mat-expansion-panel (opened)="step1 = true"
+                       (closed)="step1 = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title [ngClass]="(step1)?'active':''">
+        Contact
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="rowContact">
+      <span class="infoSub">Type de contact</span>
+      <mat-form-field appearance="outline">
+          <mat-select value="Particulier">
+              <mat-option>None</mat-option>
+              <mat-option value="Particulier">Particulier </mat-option>
+              <mat-option value="option2">Option 2</mat-option>
+              <mat-option value="option3">Option 3</mat-option>
+            </mat-select>
+        </mat-form-field>
+  </div>
+  <div class="rowContact">
+      <span class="infoSub">Nom</span>
+      <mat-form-field appearance="outline">
+          <input matInput placeholder="Dupont">
+        </mat-form-field>
+  </div>
+  <div class="rowContact">
+      <span class="infoSub">Prénom</span>
+      <mat-form-field appearance="outline">
+          <input matInput placeholder="David">
+        </mat-form-field>
+  </div>
+  <div class="rowContact">
+      <span class="infoSub">Téléphone</span>
+      <mat-form-field appearance="outline">
+          <input matInput placeholder="+32487225663">
+        </mat-form-field>
+  </div>
+  <div class="rowContact">
+      <span class="infoSub">Email</span>
+      <mat-form-field appearance="outline">
+          <input matInput placeholder="dupont@hello.be">
+        </mat-form-field>
+  </div>
+  <div class="rowContact">
+      <span class="infoSub">Langue</span>
+      <mat-form-field appearance="outline">
+          <input matInput placeholder="Francais">
+        </mat-form-field>
+  </div>
+  <hr>
+  <div class="rowContact">
+      <span class="infoSub">Adresse + n°</span>
+      <mat-form-field appearance="outline">
+          <input matInput placeholder="Rue grande 56">
+        </mat-form-field>
+  </div>
+  <div class="rowContact">
+      <span class="infoSub">Code postale</span>
+      <mat-form-field appearance="outline">
+          <input matInput placeholder="5501">
+        </mat-form-field>
+  </div>
+  <div class="rowContact">
+      <span class="infoSub">Commune</span>
+      <mat-form-field appearance="outline">
+          <input matInput placeholder="Dinant">
+        </mat-form-field>
+  </div>
+  <div class="rowContact">
+      <span class="infoSub">Pays</span>
+      <mat-form-field appearance="outline">
+          <input matInput placeholder="Belgique">
+        </mat-form-field>
+  </div>
+  </mat-expansion-panel>
+  <mat-expansion-panel (opened)="step2 = true"
+  (closed)="step2 = false">
+<mat-expansion-panel-header>
+<mat-panel-title [ngClass]="(step2)?'active':''">
+  Les biens
+</mat-panel-title>
+</mat-expansion-panel-header>
+<div class="rowContact">
+  <span class="infoSub">Recherche</span>
+  <mat-form-field appearance="outline">
+      <input matInput placeholder="Ref : CGTR564856">
+    </mat-form-field>
+</div>
+<div style="display: flex;margin-bottom: 1rem;margin-top:0.5rem">
+  <div class="carre"></div>
+  <div style="padding-left: 10px;">
+   <p id="searchName">Maison bleue - Overijse</p>
+  <p id="searchInfo"> 4 chambres - 2 salles de bain - 75m²</p>
+  </div>
+
+</div>
+</mat-expansion-panel>
+<mat-expansion-panel (opened)="step3 = true"
+(closed)="step3 = false">
+<mat-expansion-panel-header>
+<mat-panel-title [ngClass]="(step3)?'active':''">
+Critères
+</mat-panel-title>
+
+</mat-expansion-panel-header>
+<div class="rowContact">
+  <span class="infoSub">Type de bien</span>
+  <mat-form-field appearance="outline">
+      <input matInput placeholder="Maison">
+    </mat-form-field>
+</div>
+<div class="rowContact">
+  <span class="infoSub">Superficie</span>
+  <mat-form-field appearance="outline">
+      <input matInput placeholder="190 m²">
+    </mat-form-field>
+</div>
+<div class="rowContact">
+  <span class="infoSub">Chambre</span>
+  <mat-form-field appearance="outline">
+      <input matInput placeholder="4">
+    </mat-form-field>
+</div>
+<div class="rowContact">
+  <span class="infoSub">Salle de bain</span>
+  <mat-form-field appearance="outline">
+      <input matInput placeholder="2">
+    </mat-form-field>
+</div>
+<div class="rowContact">
+  <span class="infoSub">Terasse</span>
+  <mat-slide-toggle color="primary"></mat-slide-toggle>
+</div>
+<div class="rowContact">
+  <span class="infoSub">Jardin</span>
+  <mat-slide-toggle color="primary"></mat-slide-toggle>
+</div>
+
+</mat-expansion-panel>
+<div class="wrapBtn">
+  <button mat-flat-button color="primary"  class="saveBut">Enregistrer</button>
+</div>
+</div>
+</div>

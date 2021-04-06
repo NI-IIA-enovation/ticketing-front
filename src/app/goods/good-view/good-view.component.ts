@@ -11,6 +11,7 @@ export class GoodViewComponent implements OnInit {
   constructor(public goodservice: GoodService) { }
 
   ngOnInit(): void {
+    // console.log(this.goodservice.form)
   }
 
 }

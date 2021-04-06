@@ -1,18 +1,17 @@
-
 @mixin box-shadow {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    -moz-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  }
-  
-  @mixin backface-visibility($value) {
-    backface-visibility: $value;
-    -webkit-backface-visibility: $value;
-  }
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+@mixin backface-visibility($value) {
+  backface-visibility: $value;
+  -webkit-backface-visibility: $value;
+}
 // COLORS
-$default: #AAAAAC;
-$primary: #DF691A;
-$secondary: #3B4D63;
+$default: #aaaaac;
+$primary: #df691a;
+$secondary: #3b4d63;
 $success: #5cb85c;
 $info: #3bb4d8;
 $warning: #f0ad4e;
@@ -20,7 +19,13 @@ $danger: #d9534f;
 
 // CONTAINERS
 $border-radius: 4px;
-$card-background: #FFF;
+$card-background: #fff;
+
+@media (max-width: 450px) {
+  .content {
+    padding: 1rem !important;
+  }
+}
 
 .overlay-side-panel {
   .overlay {
@@ -40,10 +45,10 @@ $card-background: #FFF;
     }
 
     &.overlay-style-dim-light {
-      background: rgba(#FFF, 0.5);
+      background: rgba(#fff, 0.5);
     }
   }
-  
+
   .side-panel {
     position: fixed;
     top: 0;
@@ -59,21 +64,21 @@ $card-background: #FFF;
 
     .close,
     .content {
-      padding: 1.25rem;
-    }  
+      padding: 2rem 2rem 0rem 3rem;
+    }
 
     .close {
-      background: $card-background;
+      background: transparent;
       position: sticky;
       top: 0;
       z-index: 2;
       line-height: 1rem;
       font-size: 2rem;
       font-weight: bold;
-      
+
       span {
         cursor: pointer;
-        color: #888;
+        color: #505df3;
         &:hover {
           color: #292929;
         }
@@ -83,12 +88,11 @@ $card-background: #FFF;
 
   &.collapsed {
     .side-panel {
-      margin-right: -450px;
+      margin-right: -4500px;
     }
   }
 }
-
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .overlay-side-panel {
     .side-panel {
       width: 100%;

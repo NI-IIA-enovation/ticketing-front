@@ -1,4 +1,4 @@
-import { Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Good, Action } from 'src/app/services/data/data';
 import { GoodService } from 'src/app/services/good.service';
 import { SlideshowService } from 'projects/snitem/src/lib/slide-panel/services/slideshow.service';
@@ -13,14 +13,16 @@ export class GoodComponent implements OnInit {
   @Input() column: string;
   actions: Action[];
   constructor(
-  private service: GoodService,
-  private slidepanelservice: SlideshowService,
-  private componentservice: ComponentsService,
+    private service: GoodService,
+    private slidepanelservice: SlideshowService,
+    private componentservice: ComponentsService,
   ) {
   }
   public context: CanvasRenderingContext2D;
   ngOnInit(): void {
+    // console.log(this.element)
     this.actions = this.service.getAction();
+    // console.log(this.actions)
   }
 
   public EditGood(element, target): void {
@@ -28,5 +30,5 @@ export class GoodComponent implements OnInit {
     this.service.setForm(element);
     this.slidepanelservice.setContentComponents(components);
     this.slidepanelservice.show();
-     }
+  }
 }

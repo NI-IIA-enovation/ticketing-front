@@ -1,40 +1,46 @@
 {
-    "header": {
-        "goods": "Les biens",
-        "contacts": "Les contacts"
-    },
-    "panel": {
-        "appointment":"Mes rendez-vous",
-        "activity-log":"Journal d'activité"
-    },
-    "href": {
-        "see-all": "Tout voir"
-    },
-    "input": {
-        "search": "Rechercher"
-    },
-    "button": {
-        "new": "Nouveau",
-        "table": "Tableau",
-        "filter": "Filtre",
-        "sort": "Trier"
-    },
-    "menu" : {
-        "start": {
-            "dashboard":"Tableau de bord",
-            "goods":"Biens",
-            "contacts":"Contacts",
-            "agenda":"Agenda",
-            "marketplace":"Marketplace",
-            "settings":"Paramètre"
-        }
-
-    },
-    "table" : {
-        "header": {
-           "goods":["title",  "user", "visite", "notif", "house_category", "finance_price", "status", "actions"]
-        }
-
+  "header": {
+    "goods": "Tous les biens",
+    "contacts": "Les contacts"
+  },
+  "panel": {
+    "appointment": "Mes rendez-vous",
+    "activity-log": "Journal d'activité"
+  },
+  "href": {
+    "see-all": "Tout voir"
+  },
+  "input": {
+    "search": "Rechercher"
+  },
+  "button": {
+    "new": "Nouveau",
+    "table": "Tableau",
+    "filter": "Filtre",
+    "sort": "Trier"
+  },
+  "menu": {
+    "start": {
+      "dashboard": "Tableau de bord",
+      "goods": "Biens",
+      "contacts": "Contacts",
+      "agenda": "Agenda",
+      "marketplace": "Marketplace",
+      "settings": "Paramètre"
     }
-
+  },
+  "table": {
+    "header": {
+      "goods": [
+        "title",
+        "user",
+        "visite",
+        "notif",
+        "house_category",
+        "finance_price",
+        "status",
+        "actions"
+      ]
+    }
+  }
 }

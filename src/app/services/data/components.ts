@@ -3,6 +3,8 @@ import { AddNoteComponent } from '../../add-note/add-note.component';
 import { GoodViewComponent } from '../../goods/good-view/good-view.component';
 import { AppointmentComponent } from '../../appointment/appointment.component';
 import { ActivityLogComponent } from '../../activity-log/activity-log.component';
+import { AddGoodComponent } from '../../goods/add-good/add-good.component';
+import { AddContactComponent } from '../../contacts/add-contact/add-contact.component';
 export class Itemcomonent {
   name: string;
   source: string;
@@ -17,9 +19,9 @@ export const components: Itemcomonent[] = [
     component: GoodEditComponent,
   },
   {
-    name: 'Edit',
+    name: 'View',
     source: 'GoodComponent',
-    objet: 'Good',
+    objet: 'SNOffer',
     component: GoodViewComponent,
   },
   {
@@ -39,5 +41,29 @@ export const components: Itemcomonent[] = [
     source: 'GoodsComponent',
     objet: 'GoodsComponent',
     component: ActivityLogComponent,
+  },
+  {
+    name: 'Add',
+    source: 'ActionGoodsComponent',
+    objet: 'Good',
+    component: AddGoodComponent,
+  },
+  {
+    name: 'Add',
+    source: 'NavigationMobileHeaderComponent',
+    objet: 'Good',
+    component: AddGoodComponent,
+  },
+  {
+    name: 'Add-contact',
+    source: 'NavigationMobileHeaderComponent',
+    objet: 'Good',
+    component: AddContactComponent,
+  },
+  {
+    name: 'Add',
+    source: 'ActionContactsComponent',
+    objet: 'Good',
+    component: AddContactComponent,
   }
 ];

@@ -1,11 +1,50 @@
 
-      <mat-toolbar color="primary" class="menu-mobile-header">
+      <mat-toolbar *responsive="{bootstrap : ['sm']}" color="primary" class="menu-mobile-header">
         <img src="https://i.pinimg.com/280x280_RS/cd/2d/99/cd2d99cb7a56908d5b71630ff3f8e2fb.jpg">
-        <span>Dashbord</span>
-        <button mat-icon-button class="menu-header" fxShow="true"  >
-            <mat-icon>menu</mat-icon>
-          </button>
+        <span>Dashboard </span>
+        <!-- <mat-nav-list  *ngFor="let menu of list">
+          <button  mat-button  class="mat-btn" (click)="Navigate(menu.component)"    *transloco="let t; read: 'menu.start'" ><mat-icon [svgIcon]="menu.icon"></mat-icon>{{t(menu.name) | transloco }}</button>
+        </mat-nav-list> -->
+        <mat-menu #appMenu="matMenu">
+          <ng-template matMenuContent>
+            <div *ngFor="let menu of list">  <button  mat-menu-item  class="mat-btn" (click)="Navigate(menu.component,menu.name)"    *transloco="let t; read: 'menu.start'" ><mat-icon [svgIcon]="menu.icon"></mat-icon>{{t(menu.name) | transloco }}</button></div>
+          </ng-template>
+        </mat-menu>
+        <button mat-icon-button aria-label="Example icon-button with a menu">
+          <mat-icon>search</mat-icon>
+        </button>
+        <button mat-icon-button [matMenuTriggerFor]="appMenu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
       </mat-toolbar>
+      <div *responsive="{bootstrap : ['xs']}">
+      <mat-toolbar  color="primary" class="menu-mobile-header">
+        <img src="https://i.pinimg.com/280x280_RS/cd/2d/99/cd2d99cb7a56908d5b71630ff3f8e2fb.jpg">
+        <span>{{currentComp == 'list-good' ? 'Biens' : 'Contacts'}}</span>
+        <mat-menu #appMenu="matMenu">
+          <ng-template matMenuContent>
+            <div> 
+               <button *ngIf="currentComp == 'list-good'" (click)="AddGood(element,'Add')" mat-menu-item  class="mat-btn">Ajouter un bien </button>
+               <button *ngIf="currentComp != 'list-good'" (click)="AddContact(element,'Add-contact')" mat-menu-item  class="mat-btn">Ajouter un contact </button>
+               <button  mat-menu-item  class="mat-btn">Action 2</button>
+               <button  mat-menu-item  class="mat-btn">Action 3</button>
+              </div>
+          </ng-template>
+        </mat-menu>
+        <button mat-icon-button aria-label="Example icon-button with a menu">
+          <mat-icon>search</mat-icon>
+        </button>
+        <button mat-icon-button [matMenuTriggerFor]="appMenu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+      </mat-toolbar>
+      <!-- <div class="control"> 
+        <mat-form-field style="width: 100%;" appearance="outline">
+        <mat-label>{{'input.search' | transloco }}</mat-label>
+       <input matInput placeholder="Search"  type="text" (keyup)="doFilter($event.target.value)" />
+        <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field></div> -->
+    </div>
       
 
        
