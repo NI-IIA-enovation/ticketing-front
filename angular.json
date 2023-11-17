@@ -244,6 +244,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "swiftimmo"
+    }
+  },
+  "defaultProject": "swiftimmo",
+  "cli": {
+    "analytics": "a89abe6b-2946-4f14-8516-df2bdfa99e21"
+  }
 }

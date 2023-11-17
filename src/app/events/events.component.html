@@ -1,0 +1,12 @@
+
+
+<div fxLayout="row">
+<div class="container">
+  <app-action-events *responsive="{bootstrap : ['lg','xl','md','sm']}"></app-action-events>
+ <lib-controls [type]="eventControlComponent"  (datasearch)="dataevents($event)"  [data]="dataSource" ></lib-controls>
+  <lib-table *transloco="let t; read: 'table.header'"   [row]="eventComponent" [data]="dataSource"  [displayedColumns]="t('events')" ></lib-table>
+  </div>
+<div fxLayout="column" fxFlex="30" fxFlexOffset="2" *responsive="{ bootstrap:['xl','lg']}">
+    <lib-side-panel  [components]="components" ></lib-side-panel>
+</div>
+</div>

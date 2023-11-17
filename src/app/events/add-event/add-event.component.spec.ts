@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddGoodComponent } from './add-good.component';
+import { AddeventComponent } from './add-event.component';
 
-describe('AddGoodComponent', () => {
-  let component: AddGoodComponent;
-  let fixture: ComponentFixture<AddGoodComponent>;
+describe('AddeventComponent', () => {
+  let component: AddeventComponent;
+  let fixture: ComponentFixture<AddeventComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddGoodComponent ]
+      declarations: [ AddeventComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddGoodComponent);
+    fixture = TestBed.createComponent(AddeventComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GoodEditComponent } from './good-edit.component';
+import { eventComponent } from './event.component';
 
-describe('GoodEditComponent', () => {
-  let component: GoodEditComponent;
-  let fixture: ComponentFixture<GoodEditComponent>;
+describe('eventComponent', () => {
+  let component: eventComponent;
+  let fixture: ComponentFixture<eventComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GoodEditComponent ]
+      declarations: [ eventComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GoodEditComponent);
+    fixture = TestBed.createComponent(eventComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

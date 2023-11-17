@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { SlideshowService } from 'projects/snitem/src/lib/slide-panel/services/slideshow.service';
 import { ComponentsService } from 'src/app/services/components.service';
-import { Good } from 'src/app/services/data/data';
+import { event } from 'src/app/services/data/data';
 @Component({
   selector: 'app-action-contacts',
   templateUrl: './action-contacts.component.html',
   styleUrls: ['./action-contacts.component.scss']
 })
 export class ActionContactsComponent implements OnInit {
-  element = new Good();
+  element = new event();
   constructor(
     private slidepanelservice: SlideshowService,
     private componentservice: ComponentsService,) { }

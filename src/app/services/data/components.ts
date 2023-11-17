@@ -1,9 +1,9 @@
-import { GoodEditComponent } from '../../goods/good-edit/good-edit.component';
+import { eventEditComponent } from '../../events/event-edit/event-edit.component';
 import { AddNoteComponent } from '../../add-note/add-note.component';
-import { GoodViewComponent } from '../../goods/good-view/good-view.component';
+import { eventViewComponent } from '../../events/event-view/event-view.component';
 import { AppointmentComponent } from '../../appointment/appointment.component';
 import { ActivityLogComponent } from '../../activity-log/activity-log.component';
-import { AddGoodComponent } from '../../goods/add-good/add-good.component';
+import { AddeventComponent } from '../../events/add-event/add-event.component';
 import { AddContactComponent } from '../../contacts/add-contact/add-contact.component';
 export class Itemcomonent {
   name: string;
@@ -14,15 +14,15 @@ export class Itemcomonent {
 export const components: Itemcomonent[] = [
   {
     name: 'Edit',
-    source: 'GoodComponent',
+    source: 'eventComponent',
     objet: 'SNOffer',
-    component: GoodEditComponent,
+    component: eventEditComponent,
   },
   {
     name: 'View',
-    source: 'GoodComponent',
+    source: 'eventComponent',
     objet: 'SNOffer',
-    component: GoodViewComponent,
+    component: eventViewComponent,
   },
   {
     name: 'Insert',
@@ -32,38 +32,38 @@ export const components: Itemcomonent[] = [
   },
   {
     name: 'panel',
-    source: 'GoodsComponent',
-    objet: 'GoodsComponent',
+    source: 'eventsComponent',
+    objet: 'eventsComponent',
     component: AppointmentComponent,
   },
   {
     name: 'panel',
-    source: 'GoodsComponent',
-    objet: 'GoodsComponent',
+    source: 'eventsComponent',
+    objet: 'eventsComponent',
     component: ActivityLogComponent,
   },
   {
     name: 'Add',
-    source: 'ActionGoodsComponent',
-    objet: 'Good',
-    component: AddGoodComponent,
+    source: 'ActioneventsComponent',
+    objet: 'event',
+    component: AddeventComponent,
   },
   {
     name: 'Add',
     source: 'NavigationMobileHeaderComponent',
-    objet: 'Good',
-    component: AddGoodComponent,
+    objet: 'event',
+    component: AddeventComponent,
   },
   {
     name: 'Add-contact',
     source: 'NavigationMobileHeaderComponent',
-    objet: 'Good',
+    objet: 'event',
     component: AddContactComponent,
   },
   {
     name: 'Add',
     source: 'ActionContactsComponent',
-    objet: 'Good',
+    objet: 'event',
     component: AddContactComponent,
   }
 ];

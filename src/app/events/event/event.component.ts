@@ -1,19 +1,19 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Good, Action } from 'src/app/services/data/data';
-import { GoodService } from 'src/app/services/good.service';
+import { event, Action } from 'src/app/services/data/data';
+import { eventService } from 'src/app/services/event.service';
 import { SlideshowService } from 'projects/snitem/src/lib/slide-panel/services/slideshow.service';
 import { ComponentsService } from 'src/app/services/components.service';
 @Component({
-  selector: 'app-good',
-  templateUrl: './good.component.html',
-  styleUrls: ['./good.component.scss']
+  selector: 'app-event',
+  templateUrl: './event.component.html',
+  styleUrls: ['./event.component.scss']
 })
-export class GoodComponent implements OnInit {
-  @Input() element: Good;
+export class eventComponent implements OnInit {
+  @Input() element: event;
   @Input() column: string;
   actions: Action[];
   constructor(
-    private service: GoodService,
+    private service: eventService,
     private slidepanelservice: SlideshowService,
     private componentservice: ComponentsService,
   ) {
@@ -25,7 +25,7 @@ export class GoodComponent implements OnInit {
     // console.log(this.actions)
   }
 
-  public EditGood(element, target): void {
+  public Editevent(element, target): void {
     const components = this.componentservice.getCurrentComponents(target, element, this);
     this.service.setForm(element);
     this.slidepanelservice.setContentComponents(components);

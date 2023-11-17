@@ -1,6 +1,6 @@
 {
   "header": {
-      "goods": "Goods",
+      "events": "events",
       "contacts": "Contacts"
   },
   "panel": {
@@ -22,7 +22,7 @@
   "menu" : {
       "start": {
           "dashboard":"Dashbord",
-          "goods":"Goods",
+          "events":"events",
           "contacts":"Contacts",
           "agenda":"Agenda",
           "marketplace":"Marketplace",
@@ -32,7 +32,7 @@
   },
   "table" : {
       "header": {
-         "goods":["title",  "user", "visite", "notif", "house_category", "finance_price", "status", "actions"]
+         "events":["title",  "user", "visite", "notif", "house_category", "finance_price", "status", "actions"]
       }
 
   }

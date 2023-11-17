@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { ProgressBarMode } from '@angular/material/progress-bar';
-import { GoodService } from 'src/app/services/good.service';
-import { Good } from 'src/app/services/data/data';
+import { eventService } from 'src/app/services/event.service';
+import { event } from 'src/app/services/data/data';
 import { SNOffer } from 'src/app/services/models/snoffer';
 import { SNItemFactory } from 'projects/snitem/src/lib/apisnitem/models/snitemfactory';
 @Component({
-  selector: 'app-add-good',
-  templateUrl: './add-good.component.html',
-  styleUrls: ['./add-good.component.scss']
+  selector: 'app-add-event',
+  templateUrl: './add-event.component.html',
+  styleUrls: ['./add-event.component.scss']
 })
-export class AddGoodComponent implements OnInit {
+export class AddeventComponent implements OnInit {
   obj = new SNOffer();
   step;
   value = 0;
   mode: ProgressBarMode = 'determinate';
-  constructor(public goodservice: GoodService, public factory: SNItemFactory) { }
+  constructor(public eventservice: eventService, public factory: SNItemFactory) { }
   setStep(index: number) {
     this.step = index;
     this.value = this.step * 14
@@ -41,7 +41,7 @@ export class AddGoodComponent implements OnInit {
       status: "OPTION"
     }
     // this.factory.addItem('SNItem.SNOffer', this.obj);
-    // this.goodservice.setForm(this.obj)
+    // this.eventservice.setForm(this.obj)
   }
   ngOnInit(): void {
   }

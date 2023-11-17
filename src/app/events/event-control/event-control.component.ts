@@ -2,11 +2,11 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
-  selector: 'app-good-control',
-  templateUrl: './good-control.component.html',
-  styleUrls: ['./good-control.component.scss']
+  selector: 'app-event-control',
+  templateUrl: './event-control.component.html',
+  styleUrls: ['./event-control.component.scss']
 })
-export class GoodControlComponent implements OnInit {
+export class eventControlComponent implements OnInit {
   @Input() data: MatTableDataSource<any>;
   @Output() datasearch  = new EventEmitter();
   constructor() { }

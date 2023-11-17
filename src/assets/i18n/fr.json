@@ -1,11 +1,11 @@
 {
   "header": {
-    "goods": "Tous les biens",
-    "contacts": "Les contacts"
+    "events": "Tous les evenements",
+    "contacts": "Les spectateurs"
   },
   "panel": {
-    "appointment": "Mes rendez-vous",
-    "activity-log": "Journal d'activité"
+    "appointment": "Mes evenements actual",
+    "activity-log": "Journal Operateurs"
   },
   "href": {
     "see-all": "Tout voir"
@@ -21,26 +21,70 @@
   },
   "menu": {
     "start": {
-      "dashboard": "Tableau de bord",
-      "goods": "Biens",
-      "contacts": "Contacts",
-      "agenda": "Agenda",
-      "marketplace": "Marketplace",
-      "settings": "Paramètre"
+      
+      "events":{
+        "name" : "Evénements",
+        "sub":{
+           "manifestations":"Manifestations",
+           "Saisons":"saisons",
+           "Groupe":"groupe"
+        }
+      } ,
+      
+      "tarifs": {
+        "name" : "Tarifs",
+        "sub":{
+          
+        }
+      } ,
+      "ventes": {
+        "name" : "Ventes",
+        "sub":{
+          "plan":"Plan",
+          "commandes":"Commandes"
+        }
+      },
+      "plan": {
+        "name" : "Plan physique",
+        "sub":{
+           "reserves":"Reserves",
+          "rarametre_plan":"Parametre plan"
+        }
+      },
+      "maquettes": {
+        "name" : "Maquettes",
+        "sub":{
+          "lists":"Lists",
+          "rarametre_maquettes":"Parametre maquettes"
+        }
+      },
+      "users": {
+        "name" : "Utilisateurs",
+        "sub":{
+          "lists":"Lists",
+          "profils":"Profils",
+          "roles":"Roles"
+        }
+      },
+      "repports": {
+        "name" : "Rapports",
+        "sub":{
+
+        }
+      },
+      "parameter": {
+        "name" : "Paramètres",
+        "sub":{
+          "syntheses":"Syntheses",
+          "encaissement":"Encaissement",
+          "rapport-link":"Rapport link"
+        }
+      }
     }
   },
   "table": {
     "header": {
-      "goods": [
-        "title",
-        "user",
-        "visite",
-        "notif",
-        "house_category",
-        "finance_price",
-        "status",
-        "actions"
-      ]
+      "events":["manifistations",  "date_Heure", "group", "saison", "emplacement", "status", "actions"]
     }
   }
 }

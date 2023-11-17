@@ -1,11 +1,13 @@
  <!--DiskTop-->
-<div fxLayout="row"  fxFlexFill class="layout-home" *responsive="{ bootstrap:['xl','lg']}">
-    <div fxLayout="row" fxFlex="15" class="nav"><lib-menu [list]="listmenu" [name]="'star'" [type]="navigationDesktopComponent"></lib-menu></div>
-    <div fxLayout="column" fxFlex="auto" fxFlexOffset="1">
-        <div fxLayout="column">
-            <!--Zone Header-->
-             <app-header></app-header>
-        </div>
+ <div fxLayout="column">
+    <!--Zone Header-->
+     <app-header></app-header>
+</div>
+<div fxLayout="row"  fxFlexFill class="layout-home" >
+    <div fxLayout="column" fxFlex="15" class="nav"><lib-menu [list]="listmenu" [name]="'star'" [type]="navigationDesktopComponent"></lib-menu></div>
+    <div fxLayout="column" fxFlex="auto" fxFlexOffset="2">
+        
+        
         <div fxLayout="column">
             <!--Zone Work-->
             <app-work></app-work>
@@ -13,8 +15,8 @@
     </div>
   </div>
   <!--Mobile-->
-  <div fxLayout="row"  fxFlexFill class="layout-home" *responsive="{ bootstrap:['xs', 'sm','md']}">
+  <!--<div fxLayout="row"  fxFlexFill class="layout-home" *responsive="{ bootstrap:['xs', 'sm','md']}">
       <!--Zone Work-->
-      <app-work></app-work>
+      <!--<app-work></app-work>
   </div>
-<app-mobile [menu]="listmenu" *responsive="{ bootstrap:['xs', 'sm','md']}"></app-mobile>
+<app-mobile [menu]="listmenu" *responsive="{ bootstrap:['xs', 'sm','md']}"></app-mobile>-->

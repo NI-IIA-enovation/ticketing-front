@@ -10,10 +10,10 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { GoodComponent } from './goods/good/good.component';
+import { eventComponent } from './events/event/event.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatBadgeModule } from '@angular/material/badge';
-import { GoodsComponent } from './goods/goods.component';
+import { eventsComponent } from './events/events.component';
 import { IResponsiveConfig, ResponsiveModule } from 'ngx-responsive';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
@@ -44,18 +44,18 @@ import { ActionUserComponent } from './action-user/action-user.component';
 import { ContactListComponent } from './contacts/contact-list/contact-list.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ActionContactsComponent } from './action-contacts/action-contacts.component';
-import { ActionGoodsComponent } from './action-goods/action-goods.component';
-import { GoodEditComponent } from './goods/good-edit/good-edit.component';
+import { ActioneventsComponent } from './action-events/action-events.component';
+import { eventEditComponent } from './events/event-edit/event-edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { GoodViewComponent } from './goods/good-view/good-view.component';
+import { eventViewComponent } from './events/event-view/event-view.component';
 import { ComponentsService } from './services/components.service';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco/transloco-root.module';
-import { GoodControlComponent } from './goods/good-control/good-control.component';
+import { eventControlComponent } from './events/event-control/event-control.component';
 import { HomeComponent } from './home/home.component';
 import { MobileComponent } from './mobile/mobile.component';
 import { OAuthModule } from 'angular-oauth2-oidc';
-import { AddGoodComponent } from './goods/add-good/add-good.component';
+import { AddeventComponent } from './events/add-event/add-event.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { AddContactComponent } from './contacts/add-contact/add-contact.component'
 import { MatRadioModule } from '@angular/material/radio';
@@ -74,8 +74,8 @@ const config: IResponsiveConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    GoodComponent,
-    GoodsComponent,
+    eventComponent,
+    eventsComponent,
     NavigationDesktopComponent,
     NavigationMobileHeaderComponent,
     NavigationMobileFooterComponent,
@@ -91,13 +91,13 @@ const config: IResponsiveConfig = {
     ContactListComponent,
     ContactsComponent,
     ActionContactsComponent,
-    ActionGoodsComponent,
-    GoodEditComponent,
-    GoodViewComponent,
-    GoodControlComponent,
+    ActioneventsComponent,
+    eventEditComponent,
+    eventViewComponent,
+    eventControlComponent,
     HomeComponent,
     MobileComponent,
-    AddGoodComponent,
+    AddeventComponent,
     AddContactComponent,
 
 

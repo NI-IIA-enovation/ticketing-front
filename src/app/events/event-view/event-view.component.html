@@ -1,0 +1,14 @@
+
+
+<form [formGroup]="eventservice.form" fxLayout="column" fxLayoutAlign="space-between none" >
+<h1 mat-dialog-title>{{eventservice.form.controls['name'].value}} - {{eventservice.form.controls['city'].value}}</h1> 
+<div mat-dialog-content>
+  <p> {{eventservice.form.controls['status'].value}}</p>
+  <p>id : {{eventservice.form.controls['id'].value}} </p>
+  <p>{{eventservice.form.controls['room'].value}} rooms - {{eventservice.form.controls['bathroom'].value}} bathrooms - {{eventservice.form.controls['area'].value}} area</p>
+</div>
+</form>
+
+
+ 
+ 

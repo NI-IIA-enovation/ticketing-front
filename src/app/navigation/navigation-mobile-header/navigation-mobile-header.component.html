@@ -20,12 +20,12 @@
       <div *responsive="{bootstrap : ['xs']}">
       <mat-toolbar  color="primary" class="menu-mobile-header">
         <img src="https://i.pinimg.com/280x280_RS/cd/2d/99/cd2d99cb7a56908d5b71630ff3f8e2fb.jpg">
-        <span>{{currentComp == 'list-good' ? 'Biens' : 'Contacts'}}</span>
+        <span>{{currentComp == 'list-event' ? 'Biens' : 'Contacts'}}</span>
         <mat-menu #appMenu="matMenu">
           <ng-template matMenuContent>
             <div> 
-               <button *ngIf="currentComp == 'list-good'" (click)="AddGood(element,'Add')" mat-menu-item  class="mat-btn">Ajouter un bien </button>
-               <button *ngIf="currentComp != 'list-good'" (click)="AddContact(element,'Add-contact')" mat-menu-item  class="mat-btn">Ajouter un contact </button>
+               <button *ngIf="currentComp == 'list-event'" (click)="Addevent(element,'Add')" mat-menu-item  class="mat-btn">Ajouter un bien </button>
+               <button *ngIf="currentComp != 'list-event'" (click)="AddContact(element,'Add-contact')" mat-menu-item  class="mat-btn">Ajouter un contact </button>
                <button  mat-menu-item  class="mat-btn">Action 2</button>
                <button  mat-menu-item  class="mat-btn">Action 3</button>
               </div>

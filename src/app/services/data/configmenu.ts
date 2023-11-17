@@ -18,43 +18,57 @@ export const dataconfig: Configmenu[] =
     responsive: ['xs', 'sm', 'md'],
     listmenu: [{
       position: 0,
-      icon: 'fa-home',
-      name: 'dashboard',
+      icon: 'fa-add',
+      name: 'Evénements',
       target: 'work',
       action: 'set',
       component: '#'
     }, {
       position: 1,
-      icon: 'fa-building',
-      name: 'goods',
+      icon: 'fa-add',
+      name: 'Tarifs',
       target: 'work',
       action: 'set',
-      component: '/list-good'
+      component: '/list-event'
     }, {
       position: 2,
-      icon: 'fa-card',
-      name: 'contacts',
+      icon: 'fa-add',
+      name: 'Ventes',
       target: 'work',
       action: 'set',
       component: '/list-contact'
     }, {
       position: 3,
-      icon: 'fa-calendar',
-      name: 'agenda',
+      icon: 'fa-add',
+      name: 'Plan physique',
       target: 'work',
       action: 'set',
       component: '#'
     }, {
       position: 4,
-      icon: 'fa-shoppingbasket',
-      name: 'marketplace',
+      icon: 'fa-add',
+      name: 'Maquettes',
       target: 'work',
       action: 'set',
       component: '#'
     }, {
-      position: 5,
-      icon: 'fa-cog',
-      name: 'settings',
+      position: 6,
+      icon: 'fa-add',
+      name: 'Utilisateurs',
+      target: 'work',
+      action: 'set',
+      component: '#'
+    }, {
+      position: 7,
+      icon: 'fa-add',
+      name: 'Rapports',
+      target: 'work',
+      action: 'set',
+      component: '#'
+    }, {
+      position: 8,
+      icon: 'fa-add',
+      name: 'Paramètres',
       target: 'work',
       action: 'set',
       component: '#'
@@ -133,7 +147,7 @@ export const dataconfig: Configmenu[] =
       name: 'Biens',
       target: 'work',
       action: 'set',
-      component: 'list-good'
+      component: 'list-event'
     }, {
       position: 2,
       icon: 'fa-card',
@@ -169,43 +183,51 @@ export const dataconfig: Configmenu[] =
     responsive: ['lg', 'xl'],
     listmenu: [{
       position: 0,
-      icon: 'fa-home',
-      name: 'dashboard',
+      icon: 'fa-add',
+      name: 'events.name',
       target: 'work',
       action: 'set',
       component: '#'
     }, {
       position: 1,
-      icon: 'fa-building',
-      name: 'goods',
+      icon: 'fa-add',
+      name: 'tarifs.name',
       target: 'work',
       action: 'set',
-      component: 'list-good'
+      component: 'list-event'
     }, {
       position: 2,
-      icon: 'fa-card',
-      name: 'contacts',
+      icon: 'fa-add',
+      name: 'ventes.name',
       target: 'work',
       action: 'set',
       component: 'list-contact'
     }, {
       position: 3,
-      icon: 'fa-calendar',
-      name: 'agenda',
+      icon: 'fa-add',
+      name: 'maquettes.name',
       target: 'work',
       action: 'set',
       component: '#'
     }, {
       position: 4,
-      icon: 'fa-shoppingbasket',
-      name: 'marketplace',
+      icon: 'fa-add',
+      name: 'users.name',
       target: 'work',
       action: 'set',
       component: '#'
     }, {
       position: 5,
-      icon: 'fa-cog',
-      name: 'settings',
+      icon: 'fa-add',
+      name: 'repports.name',
+      target: 'work',
+      action: 'set',
+      component: '#'
+      // tslint:disable-next-line: eofline
+    }, {
+      position: 6,
+      icon: 'fa-add',
+      name: 'parameter.name',
       target: 'work',
       action: 'set',
       component: '#'

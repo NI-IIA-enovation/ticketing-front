@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Good, Action } from 'src/app/services/data/data';
+import { event, Action } from 'src/app/services/data/data';
 import { SlideshowService } from 'projects/snitem/src/lib/slide-panel/services/slideshow.service';
 import { ComponentsService } from 'src/app/services/components.service';
-import { GoodService } from 'src/app/services/good.service';
+import { eventService } from 'src/app/services/event.service';
 
 @Component({
   selector: 'app-navigation-mobile',
@@ -15,8 +15,8 @@ export class NavigationMobileHeaderComponent implements OnInit {
   @Input() position: string;
   menu;
   currentComp;
-  element = new Good();
-  constructor(private _router: Router, private route: ActivatedRoute, private service: GoodService,
+  element = new event();
+  constructor(private _router: Router, private route: ActivatedRoute, private service: eventService,
     private slidepanelservice: SlideshowService,
     private componentservice: ComponentsService,) {
   }
@@ -36,7 +36,7 @@ export class NavigationMobileHeaderComponent implements OnInit {
     this.currentComp = parm
     this._router.navigate(['/home/' + parm]);
   }
-  public AddGood(element, target): void {
+  public Addevent(element, target): void {
     console.log(this.element)
     const components = this.componentservice.getCurrentComponents(target, element, this);
     this.slidepanelservice.setContentComponents(components);

@@ -1,6 +1,6 @@
 {
   "header": {
-      "goods": "Eigendom",
+      "events": "Eigendom",
       "contacts": "Contacten"
   },
   "panel": {
@@ -22,7 +22,7 @@
   "menu" : {
       "start": {
           "dashboard":"Dashboard",
-          "goods":"Goederen",
+          "events":"Goederen",
           "contacts":"Contacten",
           "agenda":"Agenda",
           "marketplace":"Marktplaats",
@@ -32,7 +32,7 @@
   },
   "table" : {
       "header": {
-         "goods":["title",  "user", "visite", "notif", "house_category", "finance_price", "status", "actions"]
+         "events":["title",  "user", "visite", "notif", "house_category", "finance_price", "status", "actions"]
       }
 
   }
